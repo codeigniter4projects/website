@@ -11,4 +11,12 @@ class BasicPagesTest extends FeatureTestCase
         $result->assertStatus(200);
         $result->assertSee('The small framework with powerful features');
     }
+
+    public function testCanViewDiscuss()
+    {
+        $result = $this->get('/discuss');
+
+        $result->assertStatus(200);
+        $result->assertSee('Security issues should be reported');
+    }
 }
