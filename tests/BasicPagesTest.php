@@ -25,6 +25,14 @@ class BasicPagesTest extends FeatureTestCase
         $result = $this->get('/contribute');
 
         $result->assertStatus(200);
-        $result->assertSee('Security issues should be reported');
+        $result->assertSee('Contribute to CodeIgniter');
+    }
+
+    public function testCanViewDownload()
+    {
+        $result = $this->get('/download');
+
+        $result->assertStatus(200);
+        $result->assertSee('Download');
     }
 }

@@ -33,6 +33,7 @@ $routes->setAutoRoute(false);
 $routes->get('/', 'Home::index');
 $routes->get('discuss', 'Discuss::index');
 $routes->get('contribute', 'Contribute::index');
+$routes->get('download', 'Download::index');
 
 /**
  * --------------------------------------------------------------------
