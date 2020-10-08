@@ -19,4 +19,12 @@ class BasicPagesTest extends FeatureTestCase
         $result->assertStatus(200);
         $result->assertSee('Security issues should be reported');
     }
+
+    public function testCanViewContribute()
+    {
+        $result = $this->get('/contribute');
+
+        $result->assertStatus(200);
+        $result->assertSee('Security issues should be reported');
+    }
 }

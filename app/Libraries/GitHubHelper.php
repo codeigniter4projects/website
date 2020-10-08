@@ -103,53 +103,53 @@ class GitHubHelper
     {
         $ttl = config('App')->gitHubExpires;
 
-        // get the framework heros
-        if ( ! $info = cache('fw_heros'))
+        // get the framework heroes
+        if ( ! $info = cache('fw_heroes'))
         {
             $info = $this->api->getContributors('bcit-ci', 'CodeIgniter');
-            cache()->save('fw_heros', $info, $ttl);
+            cache()->save('fw_heroes', $info, $ttl);
         }
-        $data['fw_heros'] = $this->hitparade($info);
+        $data['fw_heroes'] = $this->hitparade($info);
 
-        // get the translation heros
-        if ( ! $info = cache('trans_heros'))
+        // get the translation heroes
+        if ( ! $info = cache('trans_heroes'))
         {
             $info = $this->api->getContributors('bcit-ci', 'codeigniter3-translations');
-            cache()->save('trans_heros', $info, $ttl);
+            cache()->save('trans_heroes', $info, $ttl);
         }
-        $data['trans_heros'] = $this->hitparade($info);
+        $data['trans_heroes'] = $this->hitparade($info);
 
-        // get the CodeIgniter4 heros
-        if ( ! $info = cache('ci4_heros'))
+        // get the CodeIgniter4 heroes
+        if ( ! $info = cache('ci4_heroes'))
         {
             $info = $this->api->getContributors('codeigniter4', 'CodeIgniter4');
-            cache()->save('ci4_heros', $info, $ttl);
+            cache()->save('ci4_heroes', $info, $ttl);
         }
-        $data['ci4_heros'] = $this->hitparade($info);
+        $data['ci4_heroes'] = $this->hitparade($info);
 
-        // get the translation heros
-        if ( ! $info = cache('trans4_heros'))
+        // get the translation heroes
+        if ( ! $info = cache('trans4_heroes'))
         {
             $info = $this->api->getContributors('codeigniter4', 'translations');
-            cache()->save('trans4_heros', $info, $ttl);
+            cache()->save('trans4_heroes', $info, $ttl);
         }
-        $data['trans4_heros'] = $this->hitparade($info);
+        $data['trans4_heroes'] = $this->hitparade($info);
 
-        // get the website heros
-        if ( ! $info = cache('web_heros'))
+        // get the website heroes
+        if ( ! $info = cache('web_heroes'))
         {
             $info = $this->api->getContributors('bcit-ci', 'codeigniter-website');
-            cache()->save('web_heros', $info, $ttl);
+            cache()->save('web_heroes', $info, $ttl);
         }
-        $data['web_heros'] = $this->hitparade($info);
+        $data['web_heroes'] = $this->hitparade($info);
 
-        // and the new website heros
-        if ( ! $info = cache('new_web_heros'))
+        // and the new website heroes
+        if ( ! $info = cache('new_web_heroes'))
         {
             $info = $this->api->getContributors('codeigniter4projects', 'website2');
-            cache()->save('new_web_heros', $info, $ttl);
+            cache()->save('new_web_heroes', $info, $ttl);
         }
-        $data['new_web_heros'] = $this->hitparade($info);
+        $data['new_web_heroes'] = $this->hitparade($info);
 
         return $data;
     }
@@ -163,22 +163,24 @@ class GitHubHelper
      */
     protected function hitparade($info)
     {
-        $heros = [];
-        if ( ! empty($info))
+        if (empty($info))
         {
-            foreach ($info as $val)
-            {
-                $heros[] = [
-                    'avatar' => $val['avatar_url'],
-                    'name'	 => $val['login'],
-                    'url'	 => $val['html_url'],
-                    'stars'	 => $this->stars($val['contributions'])
-                ];
-            }
-            return view('theme/_heros', ['heros' => $heros]);
-        }
-        else
             return '';
+        }
+
+        $heroes = [];
+
+        foreach ($info as $val)
+        {
+            $heroes[] = [
+                'avatar' => $val['avatar_url'],
+                'name'	 => $val['login'],
+                'url'	 => $val['html_url'],
+                'stars'	 => $this->stars($val['contributions'])
+            ];
+        }
+
+        return $heroes;
     }
 
     /**

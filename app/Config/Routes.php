@@ -32,6 +32,7 @@ $routes->setAutoRoute(false);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('discuss', 'Discuss::index');
+$routes->get('contribute', 'Contribute::index');
 
 /**
  * --------------------------------------------------------------------
