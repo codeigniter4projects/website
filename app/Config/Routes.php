@@ -35,6 +35,7 @@ $routes->get('discuss', 'Discuss::index');
 $routes->get('contribute', 'Contribute::index');
 $routes->get('download', 'Download::index');
 $routes->get('policies', 'Policies::index');
+$routes->get('the-fine-print', 'FinePrint::index');
 
 /**
  * --------------------------------------------------------------------
