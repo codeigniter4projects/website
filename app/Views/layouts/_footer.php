@@ -10,7 +10,7 @@
         </div><!--footer-inner-left ends here-->
 
         <div id="footer-inner-right">
-            <a href="https://github.com/bcit-ci/CodeIgniter" target="_blank">
+            <a href="https://github.com/codeigniter4/CodeIgniter4" target="_blank">
                 <div class="links-icons">
                     <div class="icon">
                         <img src="/assets/icons/footer-github-red-03.png" />

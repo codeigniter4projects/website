@@ -37,6 +37,11 @@ $routes->get('download', 'Download::index');
 $routes->get('policies', 'Policies::index');
 $routes->get('the-fine-print', 'FinePrint::index');
 
+// Blog
+$routes->get('news', 'Blog::index');
+$routes->get('news/c/(:segment)', 'Blog::category/$1');
+$routes->get('news/(:segment)', 'Blog::post/$1');
+
 /**
  * --------------------------------------------------------------------
  * Additional Routing
