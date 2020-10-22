@@ -3,16 +3,19 @@
         <a href="<?= $post->link() ?>"><?= esc($post->title) ?></a>
     </div>
 
-    <p class="meta">
+    <div class="meta">
+        <?= $post->date ?>
         <?= ! empty($post->author) ? 'by '. esc($post->author) : '' ?>
 
+        <br><br>Filed under:
         <ul class="tags">
             <?php foreach($post->tags as $tag) : ?>
                 <li><a href="/news/c/<?= $tag ?>"><?= esc($tag) ?></a></li>
             <?php endforeach ?>
-        </>
-    </p>
-    <div class="news-date"><?= $post->date ?>></div>
+        </ul>
+    </div>
+
+    <br>
 
     <div class="clr"></div>
 

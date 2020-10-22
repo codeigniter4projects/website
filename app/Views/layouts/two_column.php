@@ -18,10 +18,6 @@
     <section id="content-outer-news">
         <div id="content-inner-news">
             <div id="news-left-column">
-                <a href="#" class="news-left-years-active">2020</a>
-                <a href="#" class="news-left-years">2019</a>
-                <a href="#" class="news-left-years">2018</a>
-
                 <?= $this->renderSection('sidebar') ?>
             </div>
 

@@ -41,11 +41,11 @@ class Blog extends BaseController
      */
     public function category(string $category)
     {
-        $this->data['posts'] = $this->blog->getRecentPosts($this->config->perPage, 0, $category);
-        $this->data['title'] = "News ({$category})";
-        $this->data['category'] = $category;
-
-        echo $this->render('blog/list');
+        echo $this->render('blog/list', [
+            'posts' => $this->blog->getRecentPosts($this->config->perPage, 0, $category),
+            'pageTitle' => "Category: {$category}",
+            'category' => $category
+        ]);
     }
 
     /**
@@ -61,14 +61,14 @@ class Blog extends BaseController
             throw PageNotFoundException::forPageNotFound();
         }
 
-        $this->data['post'] = $this->blog->getPost($slug);
-        $this->data['title'] = $post->title ?? 'Some Post';
-
         // Save a hit to this page. Will go simple for now and
         // just record every time someone refreshes the page
         // but at some point we might need to make it a little smarter.
         $this->blog->recordVisit($slug);
 
-        echo $this->render('blog/single');
+        echo $this->render('blog/single', [
+            'post' => $this->blog->getPost($slug),
+            'title' => $post->title ?? "Some Post",
+        ]);
     }
 }

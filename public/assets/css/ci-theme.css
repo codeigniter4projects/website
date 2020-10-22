@@ -967,22 +967,30 @@ section#content-outer-discover{
 	border-right:1px solid var(--section-border);
 }
 
-a.news-left-years:link,a.news-left-years:visited{
+#news-left-column h4 {
+	margin-bottom: 0;
+}
+
+.widget {
+	margin-bottom: 3rem;
+	padding-right: 1rem;
+}
+
+.widget a:link,
+.widget a:visited{
+	display:block;
 	text-decoration:none;
-	float:left;
-	width:80%;
-	height:20px;
 	padding:10px 0;
 	color:var(--secondary-color);
 	border-bottom:1px dotted var(--secondary-color);
 	transition:all 0.3s;
 }
-a.news-left-years:hover{
+.widget a:hover{
 	color:var(--primary-color);
 	border-bottom:1px dotted var(--primary-color);
-	margin-left:2px;
 }
-a.news-left-years-active:link,a.news-left-years-active:visited{
+a.news-left-years-active:link,
+a.news-left-years-active:visited{
 	text-decoration:none;
 	float:left;
 	width:80%;
@@ -1012,13 +1020,7 @@ a.news-left-years-active:link,a.news-left-years-active:visited{
 	border-bottom:1px dashed var(--primary-color);
 	transition:all 0.5s;
 }
-/*
-.news-box:hover{
-	border:1px dashed var(--primary-color);
-}
-*/
 .news-box-title{
-	float:left;
 	font-size:24px;
 	color:var(--primary-color);
 }
@@ -1055,6 +1057,18 @@ a.news-left-years-active:link,a.news-left-years-active:visited{
 	height:auto;
 	margin:10px 0;
 	border:1px solid #eee;
+}
+.meta {
+	color: #333;
+}
+ul.tags {
+	display: inline;
+	padding-left: 0;
+}
+ul.tags li {
+	list-style-type: none;
+	display: inline-block;
+	margin-right: 0.625rem;
 }
 /* DISCOVER Page -------------------------------------------------------------- */
 

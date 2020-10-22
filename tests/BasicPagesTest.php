@@ -35,4 +35,20 @@ class BasicPagesTest extends FeatureTestCase
         $result->assertStatus(200);
         $result->assertSee('Download');
     }
+
+    public function testCanViewPolicies()
+    {
+        $result = $this->get('/policies');
+
+        $result->assertStatus(200);
+        $result->assertSee('Terms of Service');
+    }
+
+    public function testCanViewFinePrint()
+    {
+        $result = $this->get('/the-fine-print');
+
+        $result->assertStatus(200);
+        $result->assertSee('Trademarks');
+    }
 }

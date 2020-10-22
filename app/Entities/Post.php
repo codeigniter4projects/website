@@ -22,19 +22,11 @@ class Post extends Entity
     }
 
     /**
-     * Renders the page
-     */
-    public function html()
-    {
-
-    }
-
-    /**
      * Returns all tags for this post.
      *
      * @return array|string[]
      */
-    protected function getTags(): array
+    public function getTags(): array
     {
         if (empty($this->attributes['tags'])) {
             return [];

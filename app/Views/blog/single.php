@@ -1,4 +1,4 @@
-<?= $this->extend('theme/two_column_template') ?>
+<?= $this->extend('layouts/two_column') ?>
 
 <?= $this->section('content') ?>
 
@@ -7,3 +7,7 @@
     <?php endif ?>
 
 <?= $this->endsection() ?>
+
+<?= $this->section('sidebar') ?>
+    <?= $this->include('blog/_news_sidebar') ?>
+<?= $this->endSection() ?>

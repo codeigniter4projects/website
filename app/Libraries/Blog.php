@@ -45,11 +45,17 @@ class Blog
             helper('filesystem');
 
             if (! is_dir($this->config->contentPath)) {
-                log_message('Blog Content Path is not a valid directory: '. $this->config->contentPath);
+                log_message('error', 'Blog Content Path is not a valid directory: '. $this->config->contentPath);
                 throw BlogException::forInvalidContent();
             }
 
-            $files = get_filenames($this->config->contentPath);
+            // Restrict files to the main directory for now - no sub-directories.
+            $files = directory_map($this->config->contentPath, 1);
+
+            // We only want .md files.
+            $files = array_filter($files, function($file) {
+                return substr(strrchr($file,'.'),1) == 'md';
+            });
 
             if (! count($files)) {
                 throw BlogException::forInvalidContent();
@@ -82,6 +88,7 @@ class Blog
 
     public function getPopularPosts(int $limit = 5)
     {
+        helper('filesystem');
         $path = WRITEPATH .'blog_visits.txt';
 
         if (! is_file($path)) {
@@ -97,7 +104,15 @@ class Blog
         arsort($lines);
 
         $slugs = array_slice($lines, 0, $limit);
-        $files = get_filenames($this->config->contentPath);
+
+        // Restrict files to the main directory for now - no sub-directories.
+        $files = directory_map($this->config->contentPath, 1);
+
+        // We only want .md files.
+        $files = array_filter($files, function($file) {
+            return substr(strrchr($file,'.'),1) == 'md';
+        });
+
         $posts = [];
 
         foreach($files as $file) {
@@ -185,13 +200,10 @@ class Blog
             return '';
         }
 
-        $html = '';
-
-        foreach ($posts as $post) {
-            $html .= "<li><a href='{$post->link()}'>{$post->title}</a></li>\n";
-        }
-
-        return "<h5>Recent Posts</h5>\n<ul>\n{$html}</ul>\n";
+        return view('blog/_widget', [
+            'title' => 'Recent Posts',
+            'rows' => $posts
+        ]);
     }
 
     /**
@@ -210,13 +222,10 @@ class Blog
             return '';
         }
 
-        $html = '';
-
-        foreach ($posts as $post) {
-            $html .= "<li><a href='{$post->link()}'>{$post->title}</a></li>\n";
-        }
-
-        return "<h5>Popular Posts</h5>\n<ul>\n{$html}</ul>\n";
+        return view('blog/_widget', [
+            'title' => 'Popular Posts',
+            'rows' => $posts
+        ]);
     }
 
     /**
