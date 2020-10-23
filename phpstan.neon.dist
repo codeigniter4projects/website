@@ -10,7 +10,6 @@ parameters:
 		- app/Config/Routes.php
 		- app/Views/*
 	ignoreErrors:
-		- '#Cannot access property [\$a-z_]+ on (array|object)#'
 		- '#Unsafe usage of new static\(\)*#'
 	universalObjectCratesClasses:
 		- CodeIgniter\Entity

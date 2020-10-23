@@ -26,16 +26,16 @@ class GithubAPI
 	public function __construct()
 	{
 		$this->client = new Github\Client(
-				new\Github\HttpClient\CachedHttpClient(array('cache_dir' => '/tmp/github-api-cache'))
+				new \Github\HttpClient\CachedHttpClient(array('cache_dir' => '/tmp/github-api-cache'))
 		);
 	}
 
 	/**
 	 * Retrieves extended information about a repository given its username and repository name
 	 *
-	 * @param string    the username
-	 * @param string	the repository name
-	 * @return array    repository information
+	 * @param string $username   the username
+	 * @param string $repository the repository name
+	 * @return array|bool repository information
 	 */
 	public function getRepoInfo($username, $repository)
 	{
@@ -44,9 +44,9 @@ class GithubAPI
 			$info = $this->client->api('repo')->show($username, $repository);
 			return ( ! empty($info)) ? $info : FALSE;
 		}
-		catch (Exception $e)
+		catch (\Exception $e)
 		{
-			return FALSE;
+			return false;
 		}
 	}
 
@@ -56,9 +56,9 @@ class GithubAPI
 	 * 
 	 * Use this for CodeIgniter4.
 	 * 
-	 * @param string    the username
-	 * @param string	the repository name
-	 * @return array    releases information
+	 * @param string $username the username
+	 * @param string $repository the repository name
+	 * @return array|bool releases information
 	 */
 	public function getRepoReleases($username, $repository)
 	{
@@ -67,9 +67,9 @@ class GithubAPI
 			$info = $this->client->api('repo')->releases()->all($username, $repository);
 			return ( ! empty($info)) ? $info : FALSE;
 		}
-		catch (Exception $e)
+		catch (\Exception $e)
 		{
-			return FALSE;
+			return false;
 		}
 	}
 
@@ -78,9 +78,9 @@ class GithubAPI
 	 * 
 	 * Use this for CodeIgniter4.
 	 * 
-	 * @param string    the username
-	 * @param string	the repository name
-	 * @return array    releases information
+	 * @param string $username the username
+	 * @param string $repository the repository name
+	 * @return array|bool releases information
 	 */
 	public function getLatestRelease($username, $repository)
 	{
@@ -89,9 +89,9 @@ class GithubAPI
 			$info = $this->client->api('repo')->releases()->all($username, $repository);
 			return ( ! empty($info)) ? $info[0] : FALSE;
 		}
-		catch (Exception $e)
+		catch (\Exception $e)
 		{
-			return FALSE;
+			return false;
 		}
 	}
 
@@ -101,9 +101,9 @@ class GithubAPI
 	 * 
 	 * Use this for CodeIgniter3.
 	 * 
-	 * @param string    the username
-	 * @param string	the repository name
-	 * @return array    releases information
+	 * @param string $username the username
+	 * @param string $repository the repository name
+	 * @return array|bool releases information
 	 */
 	public function getRepoTags($username, $repository)
 	{
@@ -116,9 +116,9 @@ class GithubAPI
 					$results[] = $value;
 			return ( ! empty($results)) ? $results : FALSE;
 		}
-		catch (Exception $e)
+		catch (\Exception $e)
 		{
-			return FALSE;
+			return false;
 		}
 	}
 
@@ -127,9 +127,9 @@ class GithubAPI
 	 * 
 	 * Use this for CodeIgniter3.
 	 * 
-	 * @param string    the username
-	 * @param string	the repository name
-	 * @return array    releases information
+	 * @param string $username the username
+	 * @param string $repository the repository name
+	 * @return array|bool releases information
 	 */
 	public function getLatestTag($username, $repository)
 	{
@@ -146,18 +146,18 @@ class GithubAPI
 			}
 			return ( ! empty($results)) ? $results[0] : FALSE;
 		}
-		catch (Exception $e)
+		catch (\Exception $e)
 		{
-			return FALSE;
+			return false;
 		}
 	}
 
 	/**
 	 * Retrieves top 12contributors information for a repository given its username and repository name
 	 *
-	 * @param string    the username
-	 * @param string	the repository name
-	 * @return array    contributor information
+	 * @param string $username the username
+	 * @param string $repository the repository name
+	 * @return array|bool contributor information
 	 */
 	public function getContributors($username, $repository)
 	{
@@ -166,9 +166,9 @@ class GithubAPI
 			$info = array_slice($this->client->api('repo')->contributors($username, $repository), 0, 12);
 			return ( ! empty($info)) ? $info : FALSE;
 		}
-		catch (Exception $e)
+		catch (\Exception $e)
 		{
-			return FALSE;
+			return false;
 		}
 	}
 

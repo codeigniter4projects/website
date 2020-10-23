@@ -157,9 +157,9 @@ class GitHubHelper
     /**
      * build the hit parade for this group of contributors
      *
-     * @param $info
+     * @param array $info
      *
-     * @return string
+     * @return array|string
      */
     protected function hitparade($info)
     {
@@ -186,7 +186,7 @@ class GitHubHelper
     /**
      * determine how many stars a contributor earns
      *
-     * @param $contributions
+     * @param int $contributions
      *
      * @return string
      */
