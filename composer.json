@@ -7,7 +7,7 @@
     "require": {
         "php": ">=7.2",
         "codeigniter4/codeigniter4": "dev-develop",
-        "knplabs/github-api": "~1.5.1",
+        "knplabs/github-api": "~1.7.1",
         "league/commonmark": "^1.5"
     },
     "require-dev": {
