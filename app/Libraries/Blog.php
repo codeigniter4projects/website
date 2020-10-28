@@ -283,7 +283,43 @@ class Blog
         // Convert body using Markdown
         $markdown = new CommonMarkConverter();
         $post->html = $markdown->convertToHtml($post->body);
+        $post->html = $this->parseVideoTags($post->html);
 
         return $post;
+    }
+
+    /**
+     * Parses the post body for our custom video tags
+     * and provides embeds for the video.
+     *
+     * Embed syntax:
+     *   !video[ https://www.youtube.com/watch?v=1GYoEMiXcX0&feature=youtu.be ]
+     *
+     * @param string|null $html
+     *
+     * @return string|string[]|null
+     */
+    protected function parseVideoTags(string $html = null)
+    {
+        helper('video');
+
+        // Since the plugin doesn't support video embeds, yet,
+        // wire our own up. The syntax for video embeds is
+        //     ![[ http://youtube.com/watch?v=xlkjsdfhlk ]]
+        preg_match_all('|!video\[([\s\w:/.?=&;]*)\]|i', $html, $matches);
+
+        if (! count($matches)) {
+            return $html;
+        }
+
+        for($i=0; $i < count($matches) -1; $i++) {
+            if (empty($matches[0]) || empty($matches[1])) {
+                continue;
+            }
+
+            $html = str_replace($matches[0][$i], embedVideo($matches[1][$i]), $html);
+        }
+
+        return $html;
     }
 }
