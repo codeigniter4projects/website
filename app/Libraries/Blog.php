@@ -232,7 +232,8 @@ class Blog
      * Reads in a post from file and parses it
      * into a Post Entity.
      *
-     * @param string $path
+     * @param string $folder
+     * @param string $filename
      */
     protected function readPost(string $folder, string $filename)
     {

@@ -1,18 +1,19 @@
-<?php namespace Config;
+<?php
 
-/*
-| -------------------------------------------------------------------
-| MIME TYPES
-| -------------------------------------------------------------------
-| This file contains an array of mime types.  It is used by the
-| Upload class to help identify allowed file types.
-|
-| When more than one variation for an extension exist (like jpg, jpeg, etc)
-| the most common one should be first in the array to aid the guess*
-| methods. The same applies when more than one mime-type exists for a
-| single extension.
-|
-*/
+namespace Config;
+
+/**
+ * Mimes
+ *
+ * This file contains an array of mime types.  It is used by the
+ * Upload class to help identify allowed file types.
+ *
+ * When more than one variation for an extension exist (like jpg, jpeg, etc)
+ * the most common one should be first in the array to aid the guess*
+ * methods. The same applies when more than one mime-type exists for a
+ * single extension.
+ */
+
 class Mimes
 {
 	/**
@@ -453,6 +454,7 @@ class Mimes
 		],
 		'svg'   => [
 			'image/svg+xml',
+			'image/svg',
 			'application/xml',
 			'text/xml',
 		],
@@ -471,8 +473,6 @@ class Mimes
 			'image/vnd.microsoft.icon',
 		],
 	];
-
-	//--------------------------------------------------------------------
 
 	/**
 	 * Attempts to determine the best mime type for the given file extension.
@@ -493,25 +493,23 @@ class Mimes
 		return is_array(static::$mimes[$extension]) ? static::$mimes[$extension][0] : static::$mimes[$extension];
 	}
 
-	//--------------------------------------------------------------------
-
 	/**
 	 * Attempts to determine the best file extension for a given mime type.
 	 *
-	 * @param string $type
-	 * @param string $proposed_extension - default extension (in case there is more than one with the same mime type)
+	 * @param string      $type
+	 * @param string|null $proposedExtension - default extension (in case there is more than one with the same mime type)
 	 *
 	 * @return string|null The extension determined, or null if unable to match.
 	 */
-	public static function guessExtensionFromType(string $type, ?string $proposed_extension = null)
+	public static function guessExtensionFromType(string $type, string $proposedExtension = null)
 	{
 		$type = trim(strtolower($type), '. ');
 
-		$proposed_extension = trim(strtolower($proposed_extension));
+		$proposedExtension = trim(strtolower($proposedExtension));
 
-		if (! is_null($proposed_extension) && array_key_exists($proposed_extension, static::$mimes) && in_array($type, is_string(static::$mimes[$proposed_extension]) ? [static::$mimes[$proposed_extension]] : static::$mimes[$proposed_extension]))
+		if ($proposedExtension !== '' && array_key_exists($proposedExtension, static::$mimes) && in_array($type, is_string(static::$mimes[$proposedExtension]) ? [static::$mimes[$proposedExtension]] : static::$mimes[$proposedExtension]))
 		{
-			return $proposed_extension;
+			return $proposedExtension;
 		}
 
 		foreach (static::$mimes as $ext => $types)
@@ -524,7 +522,4 @@ class Mimes
 
 		return null;
 	}
-
-	//--------------------------------------------------------------------
-
 }
