@@ -1,6 +1,6 @@
 <?php namespace App\Libraries;
 
-use App\Models\Mybb;
+use App\Models\MyBBModel;
 
 /**
  * Provides View Cell functionality
@@ -9,7 +9,7 @@ use App\Models\Mybb;
 class Forums
 {
     /**
-     * @var Mybb
+     * @var MyBBModel
      */
     protected $mybb;
 
@@ -24,7 +24,7 @@ class Forums
 
     public function __construct()
     {
-        $this->mybb = new Mybb();
+        $this->mybb = new MyBBModel();
         $this->forumUrl = config('App')->mybbForumURL;
     }
 
