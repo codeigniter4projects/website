@@ -74,7 +74,7 @@ class BlogLibraryTest extends CIUnitTestCase
 
     public function testRecordVisit()
     {
-        unlink(WRITEPATH .'blog_visits.txt');
+        @unlink(WRITEPATH .'blog_visits.txt');
 
         $this->blog->recordVisit('codeigniter-404-released');
 
