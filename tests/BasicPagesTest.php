@@ -1,9 +1,12 @@
 <?php
 
-use CodeIgniter\Test\FeatureTestCase;
+use Tests\Support\DatabaseTestCase;
+use CodeIgniter\Test\FeatureTestTrait;
 
-class BasicPagesTest extends FeatureTestCase
+class BasicPagesTest extends DatabaseTestCase
 {
+	use FeatureTestTrait;
+
     public function testCanViewHome()
     {
         $result = $this->get('/');

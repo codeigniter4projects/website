@@ -1,5 +1,7 @@
 <?php namespace Tests\Support;
 
+use App\Database\Seeds\ForumSeeder;
+
 class DatabaseTestCase extends \CodeIgniter\Test\CIDatabaseTestCase
 {
 	/**
@@ -15,7 +17,7 @@ class DatabaseTestCase extends \CodeIgniter\Test\CIDatabaseTestCase
 	 *
 	 * @var string|array
 	 */
-	protected $seed = 'Tests\Support\Database\Seeds\ExampleSeeder';
+	protected $seed = ForumSeeder::class;
 
 	/**
 	 * The path to the seeds directory.
@@ -23,7 +25,7 @@ class DatabaseTestCase extends \CodeIgniter\Test\CIDatabaseTestCase
 	 *
 	 * @var string
 	 */
-	protected $basePath = SUPPORTPATH . 'Database/';
+	protected $basePath = APPPATH . 'Database/';
 
 	/**
 	 * The namespace(s) to help us find the migration classes.
@@ -33,7 +35,7 @@ class DatabaseTestCase extends \CodeIgniter\Test\CIDatabaseTestCase
 	 *
 	 * @var string|array|null
 	 */
-	protected $namespace = 'Tests\Support';
+	protected $namespace = 'App';
 
 	public function setUp(): void
 	{
