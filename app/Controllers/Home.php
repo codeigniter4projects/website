@@ -6,10 +6,10 @@ class Home extends BaseController
 {
 	public function index()
 	{
-	    $data = [];
+		$data = [];
 
-	    // get the framework release info
-	    $data = $this->github->fillReleaseInfo($data);
+		// get the framework release info
+		$data = $this->github->fillReleaseInfo($data);
 
 		echo $this->render('home', $data);
 	}
