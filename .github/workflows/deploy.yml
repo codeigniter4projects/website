@@ -34,7 +34,7 @@ jobs:
           envs: RELEASE_DIR,CONFIG_FILE
           script: |
             cd ~/
-            RELEASE=$(cat ~/.active_deployment)
+            RELEASE=`date +"%d-%m-%Y-%H-%M-%S"`
 
             echo $'Move TarBall \n'
             sudo mkdir -p $RELEASE_DIR/releases
@@ -52,7 +52,7 @@ jobs:
 
             echo $'Link current user guide\n'
             cd $RELEASE_DIR/releases/$RELEASE
-            sudo ln -nsf $USERGUIDE_DIR/user_guide_4 user_guide
+            sudo ln -nsf $USERGUIDE_DIR/user_guide_4 public/user_guide
 
             echo $'Set up Links\n'
             cd $RELEASE_DIR
@@ -61,4 +61,3 @@ jobs:
 
             echo $'Clean Up Files\n'
             sudo rm $RELEASE_DIR/releases/$RELEASE.tar.gz
-            sudo rm ~/.active_deployment
