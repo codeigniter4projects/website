@@ -20,10 +20,22 @@ jobs:
           name: id_rsa
           known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
 
-      - name: Run Webserver Deployment
+      - name: Deploy to Webserver
+        uses: AEnterprise/rsync-deploy@v1.0
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          ARGS: "-avr --delete"
+          SERVER_PORT: ${{ secrets.SERVER_PORT }}
+          FOLDER: "./"
+          SERVER_IP: ${{ secrets.DEPLOY_SSH_BOX }}
+          USERNAME: ${{ secrets.DEPLOY_USER }}
+          SERVER_DESTINATION: "/home/public_html/site/latest"
+
+      - name: Finalize deployment
         uses: appleboy/ssh-action@master
         env:
-          RELEASE_DIR: "/home/public_html/site/"
+          RELEASE_DIR: "/home/public_html/site/releases/"
+          RSYNC_DIR: "/home/public_html/site/latest/"
           USERGUIDE_DIR: "/home/public_html/userguides/"
           CONFIG_FILE: "/home/public_html/config/.env.site"
         with:
@@ -31,33 +43,27 @@ jobs:
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
           script_stop: true
-          envs: RELEASE_DIR,CONFIG_FILE
+          envs: RELEASE_DIR,CONFIG_FILE,RSYNC_DIR,USERGUIDE_DIR
           script: |
             cd ~/
             RELEASE=`date +"%d-%m-%Y-%H-%M-%S"`
 
-            echo $'Move TarBall \n'
-            sudo mkdir -p $RELEASE_DIR/releases
-            sudo mv $RELEASE.tar.gz $RELEASE_DIR/releases/
-            cd $RELEASE_DIR/releases
-            sudo mkdir -p $RELEASE
+            echo $'Copy current release\n'
+            cd $RELEASE_DIR
+            cp ../latest ./$RELEASE
 
-            echo $'Extract TarBall \n'
-            sudo tar -xzf $RELEASE.tar.gz -C $RELEASE
-
-            echo $'Set up FS\n'
-            cd $RELEASE_DIR/releases/$RELEASE
+            echo $'Setup FS\n'
+            cd $RELEASE_DIR/$RELEASE
             sudo chmod -R 777 writable
             sudo ln -nsf $CONFIG_FILE .env
 
             echo $'Link current user guide\n'
-            cd $RELEASE_DIR/releases/$RELEASE
             sudo ln -nsf $USERGUIDE_DIR/user_guide_4 public/user_guide
 
             echo $'Set up Links\n'
             cd $RELEASE_DIR
-            sudo ln -nsf releases/$RELEASE current
-            sudo service php7.2-fpm reload
+            sudo ln -nsf $RELEASE ../current
+            sudo service php7.4-fpm reload
 
             echo $'Clean Up Files\n'
             sudo rm $RELEASE_DIR/releases/$RELEASE.tar.gz
