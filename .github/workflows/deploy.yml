@@ -21,7 +21,7 @@ jobs:
           known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
 
       - name: Deploy to Webserver
-        uses: AEnterprise/rsync-deploy@v1.0
+        uses: AEnterprise/rsync-deploy@1.0.1
         env:
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
           ARGS: "-avr --delete"
