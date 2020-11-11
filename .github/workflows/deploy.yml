@@ -52,6 +52,10 @@ jobs:
             cd $RELEASE_DIR
             cp -r ../latest ./$RELEASE
 
+            echo $'Install composer dependencies\n'
+            cd $RELEASE_DIR/$RELEASE
+            composer install
+
             echo $'Setup FS\n'
             cd $RELEASE_DIR/$RELEASE
             sudo chmod -R 777 writable
@@ -64,6 +68,3 @@ jobs:
             cd $RELEASE_DIR
             sudo ln -nsf $RELEASE ../current
             sudo service php7.4-fpm reload
-
-            echo $'Clean Up Files\n'
-            sudo rm $RELEASE_DIR/releases/$RELEASE.tar.gz
