@@ -24,9 +24,9 @@
 
         <div id="top-menu">
             <!--<a href="discover.html" class="top-menu-item hidden" title="CodeIgniter.com">Discover</a>-->
-            <a href="/news" class="top-menu-item hidden">News</a>
-            <a href="/discuss" class="top-menu-item hidden">Discuss</a>
-            <a href="/contribute" class="top-menu-item hidden">Contribute</a>
+            <a href="/news" class="top-menu-item hidden <?php if(url_is('/news*')) : ?>top-menu-item-active<?php endif ?>">News</a>
+            <a href="/discuss" class="top-menu-item hidden <?php if(url_is('/discuss')) : ?>top-menu-item-active<?php endif ?>">Discuss</a>
+            <a href="/contribute" class="top-menu-item hidden <?php if(url_is('/contribute')) : ?>top-menu-item-active<?php endif ?>">Contribute</a>
             <a href="javascript:void(0)" id="search" class="top-menu-item">Search</a>
             <a href="/download" class="top-menu-item-download">Download</a>
         </div><!--top-menu ende-->

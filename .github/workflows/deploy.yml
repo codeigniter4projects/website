@@ -1,0 +1,63 @@
+name: 'Deploy to Production'
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    name: 'Deploy to Production'
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: master
+
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.DEPLOY_KEY }}
+          name: id_rsa
+
+      - name: Run Webserver Deployment
+        uses: appleboy/ssh-action@master
+        env:
+          RELEASE_DIR: "/home/public_html/site/"
+          USERGUIDE_DIR: "/home/public_html/userguides/"
+          CONFIG_FILE: "/home/public_html/config/.env.site"
+        with:
+          host: ${{ secrets.DEPLOY_SSH_BOX }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          script_stop: true
+          envs: RELEASE_DIR,CONFIG_FILE
+          script: |
+            cd ~/
+            RELEASE=$(cat ~/.active_deployment)
+
+            echo $'Move TarBall \n'
+            sudo mkdir -p $RELEASE_DIR/releases
+            sudo mv $RELEASE.tar.gz $RELEASE_DIR/releases/
+            cd $RELEASE_DIR/releases
+            sudo mkdir -p $RELEASE
+
+            echo $'Extract TarBall \n'
+            sudo tar -xzf $RELEASE.tar.gz -C $RELEASE
+
+            echo $'Set up FS\n'
+            cd $RELEASE_DIR/releases/$RELEASE
+            sudo chmod -R 777 writable
+            sudo ln -nsf $CONFIG_FILE .env
+
+            echo $'Link current user guide\n'
+            cd $RELEASE_DIR/releases/$RELEASE
+            sudo ln -nsf $USERGUIDE_DIR/user_guide_4 user_guide
+
+            echo $'Set up Links\n'
+            cd $RELEASE_DIR
+            sudo ln -nsf releases/$RELEASE current
+            sudo service php7.2-fpm reload
+
+            echo $'Clean Up Files\n'
+            sudo rm $RELEASE_DIR/releases/$RELEASE.tar.gz
+            sudo rm ~/.active_deployment
