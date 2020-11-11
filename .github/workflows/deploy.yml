@@ -25,7 +25,7 @@ jobs:
         env:
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
           ARGS: "-avr --delete"
-          SERVER_PORT: ${{ secrets.SERVER_PORT }}
+          SERVER_PORT: ${{ secrets.DEPLOY_PORT }}
           FOLDER: "./"
           SERVER_IP: ${{ secrets.DEPLOY_SSH_BOX }}
           USERNAME: ${{ secrets.DEPLOY_USER }}
@@ -50,7 +50,7 @@ jobs:
 
             echo $'Copy current release\n'
             cd $RELEASE_DIR
-            cp ../latest ./$RELEASE
+            cp -r ../latest ./$RELEASE
 
             echo $'Setup FS\n'
             cd $RELEASE_DIR/$RELEASE
