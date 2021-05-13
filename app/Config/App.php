@@ -6,21 +6,6 @@ use CodeIgniter\Config\BaseConfig;
 
 class App extends BaseConfig
 {
-	// Cache expiration time for GitHub data
-	public $gitHubExpires = 14400; // 4 hours
-
-	/*
-	|--------------------------------------------------------------------------
-	| MY BB Forum configurations
-	|--------------------------------------------------------------------------
-	| @mybb_news_forum_id - Code for the news forum in our MyBB
-	| @mybb_news_usernames - An array of user names to restrict our search for news articles to. This simply helps limit the work to do.
-	| @mybb_forum_url - The link to direct visitors to for our forum
-	 */
-	public $mybbNewsForum_id = 2;
-	public $mybbNewsUsernames = ['ciadmin', 'jlp', 'kilishan', 'Narf'];
-	public $mybbForumURL = 'https://forum.codeigniter.com';
-
 	/**
 	 * --------------------------------------------------------------------------
 	 * Base Site URL

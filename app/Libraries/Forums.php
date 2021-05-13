@@ -25,7 +25,7 @@ class Forums
     public function __construct()
     {
         $this->mybb = new MyBBModel();
-        $this->forumUrl = config('App')->mybbForumURL;
+        $this->forumUrl = config('MyBB')->forumURL;
     }
 
     /**

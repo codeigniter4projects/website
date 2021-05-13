@@ -39,7 +39,7 @@ class GitHubHelper
      */
     public function fillReleaseInfo(array $data): array
     {
-        $ttl = config('App')->gitHubExpires;
+        $ttl = config('GitHub')->expires;
 
         if (! $info4 = cache('info4')) {
             $info4 = $this->api->getLatestRelease('codeigniter4', 'framework');
@@ -73,7 +73,7 @@ class GitHubHelper
      */
     public function fillRepoInfo(array $data): array
     {
-        $ttl = config('App')->gitHubExpires;
+        $ttl = config('GitHub')->expires;
 
         // get the repo stats
         if ( ! $info = cache('repo_info'))
@@ -101,7 +101,7 @@ class GitHubHelper
      */
     public function fillHeroes(array $data): array
     {
-        $ttl = config('App')->gitHubExpires;
+        $ttl = config('GitHub')->expires;
 
         // get the framework heroes
         if ( ! $info = cache('fw_heroes'))
