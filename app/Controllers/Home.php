@@ -1,4 +1,6 @@
-<?php namespace App\Controllers;
+<?php
+
+namespace App\Controllers;
 
 use App\Libraries\GitHubHelper;
 

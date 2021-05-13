@@ -1,8 +1,11 @@
 <?php
+
 namespace App\Controllers;
 
 use App\Libraries\GitHubHelper;
 use CodeIgniter\Controller;
+use CodeIgniter\HTTP\CLIRequest;
+use CodeIgniter\HTTP\IncomingRequest;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
@@ -16,12 +19,16 @@ use Psr\Log\LoggerInterface;
  *     class Home extends BaseController
  *
  * For security be sure to declare any new methods as protected or private.
- *
- * @package CodeIgniter
  */
 
 class BaseController extends Controller
 {
+	/**
+	 * Instance of the main Request object.
+	 *
+	 * @var IncomingRequest|CLIRequest
+	 */
+	protected $request;
 
 	/**
 	 * An array of helpers to be loaded automatically upon
@@ -44,6 +51,10 @@ class BaseController extends Controller
 
 	/**
 	 * Constructor.
+	 *
+	 * @param RequestInterface  $request
+	 * @param ResponseInterface $response
+	 * @param LoggerInterface   $logger
 	 */
 	public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
 	{
