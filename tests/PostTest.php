@@ -1,8 +1,9 @@
 <?php
 
 use App\Entities\Post;
+use CodeIgniter\Test\CIUnitTestCase;
 
-class PostTest extends \CodeIgniter\Test\CIUnitTestCase
+class PostTest extends CIUnitTestCase
 {
     /**
      * @var Post
@@ -14,11 +15,11 @@ class PostTest extends \CodeIgniter\Test\CIUnitTestCase
         parent::setUp();
 
         $this->post = new Post([
-            'title' => 'A Simple Post',
-            'slug' => 'a-simple-post',
-            'date' => date('Y-m-d', strtotime('-1 week')),
+            'title'  => 'A Simple Post',
+            'slug'   => 'a-simple-post',
+            'date'   => date('Y-m-d', strtotime('-1 week')),
             'author' => 'Ian Fleming',
-            'tags'=> 'news, releases'
+            'tags'   => 'news, releases'
         ]);
     }
 

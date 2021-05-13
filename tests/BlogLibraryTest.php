@@ -1,8 +1,11 @@
 <?php
 
+use App\Exceptions\BlogException;
 use App\Libraries\Blog;
 use org\bovigo\vfs\vfsStream;
+use CodeIgniter\Config\Factories;
 use CodeIgniter\Test\CIUnitTestCase;
+use Config\Blog as BlogConfig;
 
 class BlogLibraryTest extends CIUnitTestCase
 {
@@ -22,20 +25,20 @@ class BlogLibraryTest extends CIUnitTestCase
         parent::setUp();
 
         $this->blog = new Blog();
-        $config = config(\Config\Blog::class);
+        $config = config(BlogConfig::class);
         $config->contentPath = TESTPATH.'_support/blog/';
-        \CodeIgniter\Config\Config::injectMock(Blog::class, $config);
+        Factories::injectMock('Config', BlogConfig::class, $config);
 
         cache()->clean();
     }
 
     public function testGetPostsNoData()
     {
-        $config = config(\Config\Blog::class);
+        $config = config(BlogConfig::class);
         $config->contentPath = WRITEPATH.'uploads';
-        \CodeIgniter\Config\Config::injectMock(Blog::class, $config);
+        Factories::injectMock('Config', BlogConfig::class, $config);
 
-        $this->expectException(\App\Exceptions\BlogException::class);
+        $this->expectException(BlogException::class);
         $this->expectExceptionMessage(lang('Blog.invalidContent'));
 
         $this->assertEquals([], $this->blog->getRecentPosts());
