@@ -11,7 +11,7 @@
         "league/commonmark": "^1.5"
     },
     "require-dev": {
-        "phpunit/phpunit": "^8.5",
+        "phpunit/phpunit": "^9.5",
 		"phpstan/phpstan": "^0.12",
         "fzaninotto/faker": "^1.9@dev",
         "mikey179/vfsstream": "^1.6",
