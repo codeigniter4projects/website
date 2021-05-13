@@ -7,9 +7,11 @@ parameters:
 	bootstrapFiles:
 		- vendor/codeigniter4/codeigniter4/system/Test/bootstrap.php
 	excludes_analyse:
+		- app/Commands/Test.php
 		- app/Config/Routes.php
 		- app/Views/*
 	ignoreErrors:
+		- '#Cannot access property [\$a-z_]+ on (array|object)#'
 		- '#Unsafe usage of new static\(\)*#'
 	universalObjectCratesClasses:
 		- CodeIgniter\Entity
