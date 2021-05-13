@@ -12,6 +12,9 @@ namespace Config;
  * the most common one should be first in the array to aid the guess*
  * methods. The same applies when more than one mime-type exists for a
  * single extension.
+ *
+ * When working with mime types, please make sure you have the ´fileinfo´
+ * extension enabled to reliably detect the media types.
  */
 
 class Mimes
@@ -33,7 +36,6 @@ class Mimes
 			'text/csv',
 			'text/x-comma-separated-values',
 			'text/comma-separated-values',
-			'application/octet-stream',
 			'application/vnd.ms-excel',
 			'application/x-csv',
 			'text/x-csv',
@@ -69,7 +71,6 @@ class Mimes
 			'application/pdf',
 			'application/force-download',
 			'application/x-download',
-			'binary/octet-stream',
 		],
 		'ai'    => [
 			'application/pdf',
@@ -148,6 +149,7 @@ class Mimes
 			'multipart/x-zip',
 		],
 		'rar'   => [
+			'application/vnd.rar',
 			'application/x-rar',
 			'application/rar',
 			'application/x-rar-compressed',
@@ -333,6 +335,8 @@ class Mimes
 			'application/msword',
 			'application/x-zip',
 		],
+		'xlsb'  => 'application/vnd.ms-excel.sheet.binary.macroEnabled.12',
+		'xlsm'  => 'application/vnd.ms-excel.sheet.macroEnabled.12',
 		'word'  => [
 			'application/msword',
 			'application/octet-stream',
@@ -472,6 +476,11 @@ class Mimes
 			'image/x-ico',
 			'image/vnd.microsoft.icon',
 		],
+		'stl'   => [
+			'application/sla',
+			'application/vnd.ms-pki.stl',
+			'application/x-navistyle',
+		],
 	];
 
 	/**
@@ -507,14 +516,23 @@ class Mimes
 
 		$proposedExtension = trim(strtolower($proposedExtension));
 
-		if ($proposedExtension !== '' && array_key_exists($proposedExtension, static::$mimes) && in_array($type, is_string(static::$mimes[$proposedExtension]) ? [static::$mimes[$proposedExtension]] : static::$mimes[$proposedExtension]))
+		if ($proposedExtension !== '')
 		{
-			return $proposedExtension;
+			if (array_key_exists($proposedExtension, static::$mimes) && in_array($type, is_string(static::$mimes[$proposedExtension]) ? [static::$mimes[$proposedExtension]] : static::$mimes[$proposedExtension], true))
+			{
+				// The detected mime type matches with the proposed extension.
+				return $proposedExtension;
+			}
+
+			// An extension was proposed, but the media type does not match the mime type list.
+			return null;
 		}
 
+		// Reverse check the mime type list if no extension was proposed.
+		// This search is order sensitive!
 		foreach (static::$mimes as $ext => $types)
 		{
-			if ((is_string($types) && $types === $type) || (is_array($types) && in_array($type, $types)))
+			if ((is_string($types) && $types === $type) || (is_array($types) && in_array($type, $types, true)))
 			{
 				return $ext;
 			}
