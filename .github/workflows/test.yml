@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        php-versions: ['7.3', '7.4', '8.0']
+        php-versions: ['7.3', '7.4']
 
     runs-on: ubuntu-latest
 
@@ -63,16 +63,18 @@ jobs:
         env:
           TERM: xterm-256color
 
-      - if: matrix.php-versions == '8.0'
+      - if: matrix.php-versions == '7.4'
         name: Mutate with Infection
         run: |
           composer global require infection/infection
           git fetch --depth=1 origin $GITHUB_BASE_REF
           infection --threads=2 --skip-initial-tests --coverage=build/phpunit --git-diff-base=origin/$GITHUB_BASE_REF --git-diff-filter=AM --logger-github --ignore-msi-with-no-mutations
 
-      - if: matrix.php-versions == '8.0'
+      - if: matrix.php-versions == '7.4'
         name: Run Coveralls
-        run: vendor/bin/php-coveralls --verbose --coverage_clover=build/phpunit/clover.xml --json_path build/phpunit/coveralls-upload.json
+        run: |
+          composer require php-coveralls/php-coveralls
+          vendor/bin/php-coveralls --verbose --coverage_clover=build/phpunit/clover.xml --json_path build/phpunit/coveralls-upload.json
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COVERALLS_PARALLEL: true

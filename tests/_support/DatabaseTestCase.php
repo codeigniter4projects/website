@@ -1,9 +1,13 @@
 <?php namespace Tests\Support;
 
 use App\Database\Seeds\ForumSeeder;
+use CodeIgniter\Test\CIUnitTestCase;
+use CodeIgniter\Test\DatabaseTestTrait;
 
-class DatabaseTestCase extends \CodeIgniter\Test\CIDatabaseTestCase
+class DatabaseTestCase extends CIUnitTestCase
 {
+	use DatabaseTestTrait;
+
 	/**
 	 * Should the database be refreshed before each test?
 	 *
@@ -36,18 +40,4 @@ class DatabaseTestCase extends \CodeIgniter\Test\CIDatabaseTestCase
 	 * @var string|array|null
 	 */
 	protected $namespace = 'App';
-
-	public function setUp(): void
-	{
-		parent::setUp();
-
-		// Extra code to run before each test
-	}
-
-	public function tearDown(): void
-	{
-		parent::tearDown();
-
-		// Extra code to run after each test
-	}
 }
