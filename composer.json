@@ -19,7 +19,9 @@
 	"require": {
 		"php": "^7.3 || ^8.0",
 		"codeigniter4/codeigniter4": "dev-develop",
-		"knplabs/github-api": "~1.7.1",
+		"guzzlehttp/guzzle": "^7.0.1",
+		"http-interop/http-factory-guzzle": "^1.0",
+		"knplabs/github-api": "^3.0",
 		"league/commonmark": "^1.5"
 	},
 	"require-dev": {
