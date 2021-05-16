@@ -129,6 +129,12 @@ class GitHub
 
 			foreach ($this->config->repos as $id => $segments)
 			{
+				// We only care about frameworks
+				if (strpos($id, 'framework') === false)
+				{
+					continue;
+				}
+
 				$this->storage['releases'][$id] = in_array($id, $this->config->tagged)
 					? $this->fetchTagsAsReleases($segments)
 					: $this->fetchReleasesAsReleases($segments);

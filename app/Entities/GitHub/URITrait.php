@@ -25,6 +25,11 @@ trait URITrait
 	{
 		$result = parent::__get($key);
 
-		return is_string($result) && is_int(strpos($key, 'url')) ? new URI($result) : $result;
+		if (is_string($result) && is_int(strpos($key, 'url')))
+		{
+			return empty($result) ? null : new URI($result);
+		}
+
+		return $result;
 	}
 }

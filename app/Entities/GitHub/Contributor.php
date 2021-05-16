@@ -24,24 +24,16 @@ class Contributor extends Entity
 		'contributions' => 'int',
 	];
 
-    /**
-     * Return numbers of contributions
-     * represetned as stars.
-     *
-     * @return string
-     */
-    protected function getStars(): string
-    {
-        $result         = self::STAR;
-        $$contributions = (int) $this->attributes['contributions'];
+	/**
+	 * Return numbers of contributions
+	 * represetned as stars.
+	 *
+	 * @return string
+	 */
+	protected function getStars(): string
+	{
+		$length = strlen((string) $this->attributes['contributions']);
 
-        while ($contributions > 9)
-        {
-            $result .= $this->astar;
-
-            $contributions /= 10;
-        }
-
-        return $result;
-    }
+		return str_repeat(self::STAR, $length);
+	}
 }

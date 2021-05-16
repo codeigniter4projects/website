@@ -29,18 +29,4 @@ class Repo extends Entity
 		'license'      => 'object',
 		'organization' => 'object',
 	];
-
-	/**
-	 * Intercepts magic access to check for URLs.
-	 *
-	 * @param string $key
-	 *
-	 * @return mixed
-	 */
-	public function __get(string $key)
-	{
-		$result = parent::__get($key);
-
-		return is_string($result) && is_int(strpos($key, 'url')) ? new URI($result) : $result;
-	}
 }
