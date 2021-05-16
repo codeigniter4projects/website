@@ -37,7 +37,7 @@ class ReleasePromise extends Release
 	 * Stores the resolver along with data.
 	 *
 	 * @param array|null $data
-	 * @param callable $resolver
+	 * @param Closure $resolver
 	 */
 	public function __construct(array $data = null, Closure $resolver)
 	{
@@ -56,11 +56,7 @@ class ReleasePromise extends Release
 	 *
 	 * @param string $key
 	 *
-	 * @throws Exception
-	 *
 	 * @return mixed
-	 *
-	 * @throws ExceptionInterface
 	 */
 	public function __get(string $key)
 	{

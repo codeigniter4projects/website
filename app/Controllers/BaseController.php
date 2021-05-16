@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Libraries\GitHub;
 use CodeIgniter\Controller;
 use CodeIgniter\HTTP\CLIRequest;
 use CodeIgniter\HTTP\IncomingRequest;
@@ -67,8 +68,6 @@ class BaseController extends Controller
      */
     protected function render(string $view, array $data = [])
     {
-//        $data = $this->github->fillRepoInfo($data);
-
         $this->response->noCache();
         // Prevent some security threats, per Kevin
         // Turn on IE8-IE9 XSS prevention tools

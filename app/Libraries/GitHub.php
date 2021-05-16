@@ -152,7 +152,7 @@ class GitHub
      * and standardizes each result as a Release (releases)
      * or ReleasePromise (tags).
      *
-     * @return Release[]
+     * @return array<string,Release[]>
      */
     public function getReleases(): array
     {
@@ -299,7 +299,7 @@ class GitHub
     /**
      * Retrieves contributor information for a repository.
      *
-     * @return Contributor[]
+     * @return array<string,Contributor[]>
      */
     public function getContributors(): array
     {

@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Libraries\GitHubHelper;
+use Github\Exception\ExceptionInterface;
 
 class Home extends BaseController
 {
