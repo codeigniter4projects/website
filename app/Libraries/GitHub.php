@@ -232,7 +232,7 @@ class GitHub
 				'prerelease'   => false,
 				'url'          => self::urlFromTag($segments, $result['name']),
 				'download_url' => $result['zipball_url'],
-			], $this->getResolver([...$segments, $sha]));
+			], $this->getResolver(array_merge($segments, [$sha])));
 		}
 
 		return $releases;
