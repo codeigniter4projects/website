@@ -18,6 +18,7 @@
 	],
 	"require": {
 		"php": "^7.3 || ^8.0",
+		"codeigniter4/cache": "dev-develop",
 		"codeigniter4/codeigniter4": "dev-develop",
 		"guzzlehttp/guzzle": "^7.0.1",
 		"http-interop/http-factory-guzzle": "^1.0",
@@ -44,6 +45,10 @@
 		}
 	},
 	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/codeigniter4/cache"
+		},
 		{
 			"type": "vcs",
 			"url": "https://github.com/codeigniter4/codeigniter4"
