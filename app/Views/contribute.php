@@ -158,6 +158,8 @@
 
         <div class="clr"></div>
 
+		<?php if (isset($contributors)): ?>
+
         <div class="inner-page-text-box">
             <div class="inner-page-text-box-title">Acknowledging Our Top Contributors</div>
             <div class="clr"></div>
@@ -165,7 +167,7 @@
             <div class="inner-page-text-sub-box">
                 <div class="inner-page-text-sub-box-title">CodeIgniter 3</div>
 
-                <?= $this->setData(['heroes' => $fw_heroes])->include('layouts/_heroes') ?>
+                <?= $this->setData(['heroes' => $contributors['framework3']])->include('layouts/_heroes') ?>
 
             </div><!--inner-page-text-sub-box ends here-->
 
@@ -174,7 +176,7 @@
             <div class="inner-page-text-sub-box">
                 <div class="inner-page-text-sub-box-title">CodeIgniter 3 Translations</div>
 
-                <?= $this->setData(['heroes' => $trans_heroes])->include('layouts/_heroes') ?>
+                <?= $this->setData(['heroes' => $contributors['translations3']])->include('layouts/_heroes') ?>
 
             </div><!--inner-page-text-sub-box ends here-->
 
@@ -183,7 +185,7 @@
             <div class="inner-page-text-sub-box">
                 <div class="inner-page-text-sub-box-title">CodeIgniter 4</div>
 
-                <?= $this->setData(['heroes' => $ci4_heroes])->include('layouts/_heroes') ?>
+                <?= $this->setData(['heroes' => $contributors['framework4']])->include('layouts/_heroes') ?>
 
             </div><!--inner-page-text-sub-box ends here-->
 
@@ -192,7 +194,7 @@
             <div class="inner-page-text-sub-box">
                 <div class="inner-page-text-sub-box-title">CodeIgniter 4 Translations</div>
 
-                <?= $this->setData(['heroes' => $trans4_heroes])->include('layouts/_heroes') ?>
+                <?= $this->setData(['heroes' => $contributors['translations4']])->include('layouts/_heroes') ?>
 
             </div><!--inner-page-text-sub-box ends here-->
 
@@ -203,7 +205,7 @@
             <div class="inner-page-text-sub-box">
                 <div class="inner-page-text-sub-box-title">our Original Website</div>
 
-                <?= $this->setData(['heroes' => $web_heroes])->include('layouts/_heroes') ?>
+                <?= $this->setData(['heroes' => $contributors['website3']])->include('layouts/_heroes') ?>
 
             </div><!--inner-page-text-sub-box ends here-->
 
@@ -212,11 +214,14 @@
             <div class="inner-page-text-sub-box">
                 <div class="inner-page-text-sub-box-title">our Revised Website</div>
 
-                <?= $this->setData(['heroes' => $new_web_heroes])->include('layouts/_heroes') ?>
+                <?= $this->setData(['heroes' => $contributors['website4']])->include('layouts/_heroes') ?>
 
             </div><!--inner-page-text-sub-box ends here-->
 
         </div><!--inner-page-text-box ende-->
+
+		<?php endif; ?>
+
     </div><!--content-inner ends here-->
     </div><!--section ende-->
 

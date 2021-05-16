@@ -70,6 +70,39 @@ class GitHub
 	}
 
 	/**
+	 * Converts tag parts into a browser URL.
+	 *
+	 * @param Release[] $releases
+	 *
+	 * @return void
+	 */
+	public static function sortReleases(array &$releases): void
+	{
+		usort($releases, function($releaseA, $releaseB)
+		{
+			if ($releaseA->version === '')
+			{
+				return -1;
+			}
+			if ($releaseB->version === '')
+			{
+				return 1;
+			}
+
+			// Strip leading "v"
+			$versionA = $releaseA->version[0] === 'v' ? substr($releaseA->version, 1) : $releaseA->version;
+			$versionB = $releaseB->version[0] === 'v' ? substr($releaseB->version, 1) : $releaseB->version;
+
+			if ($versionA === $versionB)
+			{
+				return 0;
+			}
+
+			return version_compare($versionA, $versionB);
+		});
+	}
+
+	/**
 	 * Stores the dependencies.
 	 *
 	 * @param GitHubConfig $config
@@ -135,9 +168,12 @@ class GitHub
 					continue;
 				}
 
-				$this->storage['releases'][$id] = in_array($id, $this->config->tagged)
+				$releases = in_array($id, $this->config->tagged)
 					? $this->fetchTagsAsReleases($segments)
 					: $this->fetchReleasesAsReleases($segments);
+
+				static::sortReleases($releases);
+				$this->storage['releases'][$id] = $releases;
 			}
 		}
 
@@ -165,7 +201,7 @@ class GitHub
 				'author'       => $result['author']['login'],
 				'prerelease'   => $result['prerelease'],
 				'url'          => $result['html_url'],
-				'download'     => $result['zipball_url'],
+				'download_url' => $result['zipball_url'],
 				'created_at'   => $result['created_at'],
 			]);
 		}
@@ -195,7 +231,7 @@ class GitHub
 				'tag'          => $result['name'],
 				'prerelease'   => false,
 				'url'          => self::urlFromTag($segments, $result['name']),
-				'download'     => $result['zipball_url'],
+				'download_url' => $result['zipball_url'],
 			], $this->getResolver([...$segments, $sha]));
 		}
 

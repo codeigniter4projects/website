@@ -4,7 +4,7 @@ namespace Tests\Support\Mock;
 
 use App\Libraries\GitHub;
 use Config\GitHub as GitHubConfig;
-use RuntimeException;
+use Github\Exception\RuntimeException;
 
 /**
  * Mock version of the API class
@@ -13,6 +13,14 @@ use RuntimeException;
  */
 class MockGitHub extends GitHub
 {
+	/**
+	 * Whether the next API call should throw
+	 * an exception.
+	 *
+	 * @var bool
+	 */
+	private $throws = false;
+
 	/**
 	 * Skips the need for parameters
 	 * since no client is needed.
@@ -23,10 +31,29 @@ class MockGitHub extends GitHub
 	}
 
 	/**
+	 * Sets the next API call to throw an exception.
+	 *
+	 * @param bool $throws
+	 *
+	 * @return $this
+	 */
+	public function throws(bool $throws = true): self
+	{
+		$this->throws = $throws;
+
+		return $this;
+	}
+
+	/**
 	 * Fakes the actual API repo calls.
 	 */
 	protected function api(array $methods, array $segments): array
 	{
+		if ($this->throws)
+		{
+			throw new RuntimeException('This is your requested exception.');
+		}
+
 		$name = array_shift($methods);
 		foreach ($methods as $method)
 		{

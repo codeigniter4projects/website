@@ -30,6 +30,7 @@ class Release extends Entity
 	];
 
 	protected $casts = [
+		'version'    => 'string',
 		'prerelease' => 'bool',
 	];
 }

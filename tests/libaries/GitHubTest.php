@@ -30,6 +30,50 @@ class GitHubTest extends CIUnitTestCase
 		$this->assertSame($expected, $result);
 	}
 
+	public function testSortReleases()
+	{
+		$input = [
+			'4.0.0-alpha.1',
+			'v4.1.1',
+			'v3.2',
+			'v4.0.0-rc1',
+			'v3.2-hotfix',
+			'4.0.0-alpha2',
+			'3.1.0',
+			'4.0.0-rc2',
+			'',
+			'v2',
+			'2',
+			'v',
+		];
+
+		$expected = [
+			'',
+			'v',
+			'v2',
+			'2',
+			'3.1.0',	
+			'v3.2-hotfix',	
+			'v3.2',
+			'4.0.0-alpha.1',
+			'4.0.0-alpha2',
+			'v4.0.0-rc1',
+			'4.0.0-rc2',
+			'v4.1.1',
+		];
+
+		$releases = [];
+		foreach ($input as $version)
+		{
+			$releases[] = new Release(['version' => $version]);
+		}
+
+		GitHub::sortReleases($releases);
+		$result = array_column($releases, 'version');
+
+		$this->assertSame($expected, $result);
+	}
+
 	public function testServiceDefault()
 	{
 		$result = service('github', null, null, false);
