@@ -1,5 +1,9 @@
 # CodeIgniter Website
 
+[![](https://github.com/lonnieezell/ci-website/workflows/PHPUnit/badge.svg)](https://github.com/lonnieezell/ci-website/actions?query=workflow%3A%22PHPUnit%22)
+[![](https://github.com/lonnieezell/ci-website/workflows/PHPStan/badge.svg)](https://github.com/lonnieezell/ci-website/actions?query=workflow%3A%PHPStan%22)
+[![Coverage Status](https://coveralls.io/repos/github/lonnieezell/ci-website/badge.svg?branch=develop)](https://coveralls.io/github/lonnieezell/ci-website?branch=develop)
+
 This is the official website for the CodeIgniter PHP framework. 
 
 The website has been open-sourced in the interest of transparency.
