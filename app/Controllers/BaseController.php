@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Libraries\GitHubHelper;
+use App\Libraries\GitHub;
 use CodeIgniter\Controller;
 use CodeIgniter\HTTP\CLIRequest;
 use CodeIgniter\HTTP\IncomingRequest;
@@ -40,14 +40,9 @@ class BaseController extends Controller
 	protected $helpers = [];
 
     /**
-     * @var GitHubHelper
+     * @var GitHub
      */
 	protected $github;
-
-    public function __construct()
-    {
-        $this->github = new GitHubHelper();
-	}
 
 	/**
 	 * Constructor.
@@ -61,11 +56,7 @@ class BaseController extends Controller
 		// Do Not Edit This Line
 		parent::initController($request, $response, $logger);
 
-		//--------------------------------------------------------------------
-		// Preload any models, libraries, etc, here.
-		//--------------------------------------------------------------------
-		// E.g.:
-		// $this->session = \Config\Services::session();
+        $this->github = service('github');
 	}
 
     /**
@@ -77,8 +68,6 @@ class BaseController extends Controller
      */
     protected function render(string $view, array $data = [])
     {
-        $data = $this->github->fillRepoInfo($data);
-
         $this->response->noCache();
         // Prevent some security threats, per Kevin
         // Turn on IE8-IE9 XSS prevention tools
