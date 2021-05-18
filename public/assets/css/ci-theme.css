@@ -1022,8 +1022,22 @@ a.news-left-years-active:visited{
 }
 .news-box-title{
 	font-size:24px;
-	color:var(--primary-color);
+	color:#fff;
+	background:var(--primary-color);
+	padding:4px 10px;
+	border-radius:3px;
+	margin:0 0 15px 0;
 }
+
+a.news-box-title-link:link,a.news-box-title-link:visited{
+	color:#fff;
+	text-decoration:none;
+}
+
+a.news-box-title-link:hover{
+	border-bottom:1px dotted #fff;
+}
+
 .news-date{
 	float:left;
 	margin:10px;
