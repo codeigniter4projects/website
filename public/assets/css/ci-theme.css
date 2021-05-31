@@ -239,6 +239,16 @@ a {
 
 /* HEADER =================================================================== */
 
+#home header {
+	float:left;
+	width:100%;
+	border-bottom: 1px solid var(--section-border);
+	background-color: #fff;
+	padding: 0;
+	margin:0;
+	height:100%;
+	}
+	
 header {
 	float:left;
 	width:100%;
