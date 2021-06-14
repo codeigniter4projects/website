@@ -1,16 +1,16 @@
 <?php
 
 use App\Entities\Post;
-use CodeIgniter\Test\CIUnitTestCase;
+use Tests\Support\ProjectTestCase;
 
-class PostTest extends CIUnitTestCase
+class PostTest extends ProjectTestCase
 {
     /**
      * @var Post
      */
     protected $post;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
 

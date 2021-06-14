@@ -31,5 +31,4 @@ class Home extends BaseController
 
 		echo $this->render('home', $data);
 	}
-
 }

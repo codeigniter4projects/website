@@ -1,9 +1,9 @@
 <?php
 
 use App\Entities\GitHub\Contributor;
-use CodeIgniter\Test\CIUnitTestCase;
+use Tests\Support\ProjectTestCase;
 
-class ContributorTest extends CIUnitTestCase
+class ContributorTest extends ProjectTestCase
 {
 	/**
 	 * @dataProvider contributionsProvider
