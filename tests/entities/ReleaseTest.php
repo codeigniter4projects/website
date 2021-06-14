@@ -2,9 +2,9 @@
 
 use App\Entities\GitHub\Release;
 use CodeIgniter\HTTP\URI;
-use CodeIgniter\Test\CIUnitTestCase;
+use Tests\Support\ProjectTestCase;
 
-class ReleaseTest extends CIUnitTestCase
+class ReleaseTest extends ProjectTestCase
 {
 	public function testUrlsReturnURI()
 	{

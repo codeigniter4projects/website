@@ -2,12 +2,9 @@
 
 use App\Database\Seeds\ForumSeeder;
 use CodeIgniter\Test\CIUnitTestCase;
-use CodeIgniter\Test\DatabaseTestTrait;
 
-class DatabaseTestCase extends CIUnitTestCase
+class ProjectTestCase extends CIUnitTestCase
 {
-	use DatabaseTestTrait;
-
 	/**
 	 * Should the database be refreshed before each test?
 	 *
@@ -40,4 +37,11 @@ class DatabaseTestCase extends CIUnitTestCase
 	 * @var string|array|null
 	 */
 	protected $namespace = 'App';
+
+	protected function tearDown(): void
+	{
+		parent::tearDown();
+
+		$this->resetServices();
+	}
 }

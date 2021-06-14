@@ -3,18 +3,18 @@
 namespace App\Entities\GitHub;
 
 use App\Libraries\GitHub;
-use CodeIgniter\Test\CIUnitTestCase;
 use Config\Services;
 use Tests\Support\Mock\MockGitHub;
+use Tests\Support\ProjectTestCase;
 
-class GitHubTest extends CIUnitTestCase
+class GitHubTest extends ProjectTestCase
 {
 	/**
 	 * @var MockGitHub
 	 */
 	private $github;
 
-	public function setUp(): void
+	protected function setUp(): void
 	{
 		parent::setUp();
 
