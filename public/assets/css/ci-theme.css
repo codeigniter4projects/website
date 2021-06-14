@@ -1022,15 +1022,15 @@ a.news-left-years-active:visited{
 }
 .news-box-title{
 	font-size:24px;
-	color:#fff;
-	background:var(--primary-color);
-	padding:4px 10px;
+	font-weight: bold;
+	color:var(--primary-color);
+	background:#fff;
+	padding:4px 0;
 	border-radius:3px;
 	margin:0 0 15px 0;
 }
 
 a.news-box-title-link:link,a.news-box-title-link:visited{
-	color:#fff;
 	text-decoration:none;
 }
 
