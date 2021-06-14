@@ -1,5 +1,12 @@
 <?= $this->extend('layouts/app') ?>
 
+<?= $this->section('headerAssets') ?>
+<style>
+header {
+    background-color: white;
+}
+</style>
+<?= $this->endSection() ?>
 <?= $this->section('content') ?>
 
 <section id="spotlight-outer">
