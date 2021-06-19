@@ -1288,13 +1288,12 @@ section#content-outer-discover{
 
 
 .ci-version-boxes{
-
 	float:left;
-	width:31%;
-	min-height:700px; /*240px*/
+	width:100%;/*31%*/
+	min-height:300px;
 	margin-top:30px;
 	margin-bottom:45px;
-	margin-right:2%;
+	/*margin-right:2%;*/
 	padding-bottom:30px;
 	border:1px solid var(--section-border);
 	border-radius:5px;
@@ -1319,11 +1318,11 @@ section#content-outer-discover{
 
 
 .cv-boxes-version{
-		.float:left;
+		float:left;
 		width:180px;
 		height:180px;
-		margin:30px auto;
-		.margin-left:10px;
+		margin:30px; /*30px auto;*/
+		/*margin-left:10px;*/
 		background: transparent;
 		display: table;
 		border:1px solid var(--primary-color);
@@ -1357,11 +1356,11 @@ span.version-no{
 
 .cv-boxes-buttons-area	{
 	float:left;
-	width:80%;
+	width:70%;/*80%*/
 	height:100px;
 	position:absolute;
 	bottom:0;
-	left:10%;
+	left:22%; /*10%*/
 }
 	/*
 a.download-buttons:nth-of-type(1){
