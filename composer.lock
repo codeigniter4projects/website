@@ -2359,16 +2359,16 @@
         },
         {
             "name": "nexusphp/tachycardia",
-            "version": "v1.3.3",
+            "version": "v1.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NexusPHP/tachycardia.git",
-                "reference": "e144cd7b2071a5e5c541f82f9d649e81eb8af244"
+                "reference": "a687cfe10834bd2c6f34acd77bff784feca99e1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NexusPHP/tachycardia/zipball/e144cd7b2071a5e5c541f82f9d649e81eb8af244",
-                "reference": "e144cd7b2071a5e5c541f82f9d649e81eb8af244",
+                "url": "https://api.github.com/repos/NexusPHP/tachycardia/zipball/a687cfe10834bd2c6f34acd77bff784feca99e1a",
+                "reference": "a687cfe10834bd2c6f34acd77bff784feca99e1a",
                 "shasum": ""
             },
             "require": {
@@ -2378,9 +2378,8 @@
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3.0",
-                "nexusphp/cs-config": "^3.0",
-                "phpstan/phpstan": "^0.12.82",
-                "phpstan/phpstan-strict-rules": "^0.12.9"
+                "nexusphp/cs-config": "^3.2",
+                "phpstan/phpstan": "^0.12.82"
             },
             "type": "library",
             "extra": {
@@ -2409,7 +2408,7 @@
                 "slack": "https://nexusphp.slack.com",
                 "source": "https://github.com/NexusPHP/tachycardia.git"
             },
-            "time": "2021-06-01T16:01:30+00:00"
+            "time": "2021-06-19T17:59:41+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -4189,20 +4188,21 @@
                     "type": "github"
                 }
             ],
+            "abandoned": true,
             "time": "2020-09-28T06:45:17+00:00"
         },
         {
             "name": "sebastian/type",
-            "version": "2.3.2",
+            "version": "2.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/type.git",
-                "reference": "0d1c587401514d17e8f9258a27e23527cb1b06c1"
+                "reference": "b8cd8a1c753c90bc1a0f5372170e3e489136f914"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/0d1c587401514d17e8f9258a27e23527cb1b06c1",
-                "reference": "0d1c587401514d17e8f9258a27e23527cb1b06c1",
+                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/b8cd8a1c753c90bc1a0f5372170e3e489136f914",
+                "reference": "b8cd8a1c753c90bc1a0f5372170e3e489136f914",
                 "shasum": ""
             },
             "require": {
@@ -4237,7 +4237,7 @@
             "homepage": "https://github.com/sebastianbergmann/type",
             "support": {
                 "issues": "https://github.com/sebastianbergmann/type/issues",
-                "source": "https://github.com/sebastianbergmann/type/tree/2.3.2"
+                "source": "https://github.com/sebastianbergmann/type/tree/2.3.4"
             },
             "funding": [
                 {
@@ -4245,7 +4245,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-06-04T13:02:07+00:00"
+            "time": "2021-06-15T12:49:02+00:00"
         },
         {
             "name": "sebastian/version",
