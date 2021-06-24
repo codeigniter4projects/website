@@ -1289,11 +1289,10 @@ section#content-outer-discover{
 
 .ci-version-boxes{
 	float:left;
-	width:100%;/*31%*/
+	width:100%;
 	min-height:300px;
 	margin-top:30px;
 	margin-bottom:45px;
-	/*margin-right:2%;*/
 	padding-bottom:30px;
 	border:1px solid var(--section-border);
 	border-radius:5px;
@@ -1321,8 +1320,7 @@ section#content-outer-discover{
 		float:left;
 		width:180px;
 		height:180px;
-		margin:30px; /*30px auto;*/
-		/*margin-left:10px;*/
+		margin:30px;
 		background: transparent;
 		display: table;
 		border:1px solid var(--primary-color);
@@ -1356,11 +1354,11 @@ span.version-no{
 
 .cv-boxes-buttons-area	{
 	float:left;
-	width:70%;/*80%*/
+	width:70%;
 	height:100px;
 	position:absolute;
 	bottom:0;
-	left:22%; /*10%*/
+	left:22%;
 }
 	/*
 a.download-buttons:nth-of-type(1){
