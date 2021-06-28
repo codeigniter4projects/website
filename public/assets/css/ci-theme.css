@@ -306,7 +306,6 @@ a.top-menu-item:link,a.top-menu-item:visited {
 	padding: 10px 15px 10px 15px;
 	text-align: center;
 	color: var(--secondary-color);
-	border-bottom:1px solid var(--soft-white);
 	}
 
 a.top-menu-item:hover{
