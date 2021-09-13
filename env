@@ -10,6 +10,9 @@
 # at the beginning of the line.
 #--------------------------------------------------------------------
 
+MOCK_MYBB = true
+GITHUB_ACCESS_TOKEN=
+
 #--------------------------------------------------------------------
 # ENVIRONMENT
 #--------------------------------------------------------------------
@@ -91,7 +94,7 @@
 # ENCRYPTION
 #--------------------------------------------------------------------
 
-# encryption.key = 
+# encryption.key =
 # encryption.driver = OpenSSL
 # encryption.blockSize = 16
 # encryption.digest = SHA512

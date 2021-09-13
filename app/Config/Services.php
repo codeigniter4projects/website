@@ -44,6 +44,9 @@ class Services extends BaseService
 			$client->addCache(new Pool(), ['default_ttl' => DAY]);
 		}
 
+		// Authenticate against GH
+		$client->authenticate(env('GITHUB_ACCESS_TOKEN'), Client::AUTH_ACCESS_TOKEN);
+
 		return new GitHub($config ?? config(GitHubConfig::class), $client);
 	}
 }
