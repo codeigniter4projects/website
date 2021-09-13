@@ -47,7 +47,7 @@ class Forums
             cache()->save('bb_posts', $items, $ttl);
         }
 
-        if (! empty($items) && is_array($items) && count($items))
+        if (! empty($items) && is_array($items))
         {
             // massage the date formats
             foreach ($items as &$item)
