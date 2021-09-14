@@ -7,6 +7,7 @@ use CodeIgniter\Config\BaseService;
 use CodeIgniter\Psr\Cache\Pool;
 use Config\GitHub as GitHubConfig;
 use Github\Client;
+use RuntimeException;
 
 /**
  * Services Configuration file.
@@ -44,8 +45,13 @@ class Services extends BaseService
 			$client->addCache(new Pool(), ['default_ttl' => DAY]);
 		}
 
+		if (null === $token = env('GITHUB_ACCESS_TOKEN'))
+		{
+			throw new RuntimeException('You must set an access token before using the GitHub service.'); // @codeCoverageIgnore
+		}
+
 		// Authenticate against GH
-		$client->authenticate(env('GITHUB_ACCESS_TOKEN'), Client::AUTH_ACCESS_TOKEN);
+		$client->authenticate($token, Client::AUTH_ACCESS_TOKEN);
 
 		return new GitHub($config ?? config(GitHubConfig::class), $client);
 	}
