@@ -46,6 +46,8 @@ class Cache extends BaseConfig
 	 * system.
 	 *
 	 * @var string
+	 *
+	 * @deprecated Use the driver-specific variant under $file
 	 */
 	public $storePath = WRITEPATH . 'cache/';
 
@@ -79,6 +81,35 @@ class Cache extends BaseConfig
 	 * @var string
 	 */
 	public $prefix = '';
+
+	/**
+	 * --------------------------------------------------------------------------
+	 * Default TTL
+	 * --------------------------------------------------------------------------
+	 *
+	 * The default number of seconds to save items when none is specified.
+	 *
+	 * WARNING: This is not used by framework handlers where 60 seconds is
+	 * hard-coded, but may be useful to projects and modules. This will replace
+	 * the hard-coded value in a future release.
+	 *
+	 * @var integer
+	 */
+	public $ttl = 60;
+
+	/**
+	 * --------------------------------------------------------------------------
+	 * File settings
+	 * --------------------------------------------------------------------------
+	 * Your file storage preferences can be specified below, if you are using
+	 * the File driver.
+	 *
+	 * @var array<string, string|int|null>
+	 */
+	public $file = [
+		'storePath' => WRITEPATH . 'cache/',
+		'mode'      => 0640,
+	];
 
 	/**
 	 * -------------------------------------------------------------------------

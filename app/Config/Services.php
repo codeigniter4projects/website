@@ -1,6 +1,12 @@
-<?php namespace Config;
+<?php
 
-use CodeIgniter\Config\Services as CoreServices;
+namespace Config;
+
+use App\Libraries\GitHub;
+use CodeIgniter\Config\BaseService;
+use CodeIgniter\Psr\Cache\Pool;
+use Config\GitHub as GitHubConfig;
+use Github\Client;
 
 /**
  * Services Configuration file.
@@ -15,16 +21,32 @@ use CodeIgniter\Config\Services as CoreServices;
  * method format you should use for your service methods. For more examples,
  * see the core Services file at system/Config/Services.php.
  */
-class Services extends CoreServices
+class Services extends BaseService
 {
+	/**
+	 * Creates or returns the GitHub API wrapper.
+	 *
+	 * @param GitHubConfig|null $config
+	 * @param Client|null $client
+	 *
+	 * @return GitHub
+	 */
+	public static function github(GitHubConfig $config = null, Client $client = null, $getShared = true): GitHub
+	{
+		if ($getShared)
+		{
+			return static::getSharedInstance('github', $config, $client);
+		}
 
-	//    public static function example($getShared = true)
-	//    {
-	//        if ($getShared)
-	//        {
-	//            return static::getSharedInstance('example');
-	//        }
-	//
-	//        return new \CodeIgniter\Example();
-	//    }
+		if (is_null($client))
+		{
+			$client = new Client();
+			$client->addCache(new Pool(), ['default_ttl' => DAY]);
+		}
+
+		// Authenticate against GH
+		$client->authenticate(env('GITHUB_ACCESS_TOKEN'), Client::AUTH_ACCESS_TOKEN);
+
+		return new GitHub($config ?? config(GitHubConfig::class), $client);
+	}
 }

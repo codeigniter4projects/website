@@ -92,13 +92,13 @@ class Blog
         $path = WRITEPATH .'blog_visits.txt';
 
         if (! is_file($path)) {
-            return '';
+            return [];
         }
 
         $lines = unserialize(file_get_contents($path));
 
         if (! count($lines)) {
-            return '';
+            return [];
         }
 
         arsort($lines);

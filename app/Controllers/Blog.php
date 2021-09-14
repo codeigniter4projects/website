@@ -18,10 +18,8 @@ class Blog extends BaseController
 
     public function __construct()
     {
-        parent::__construct();
-
         $this->config = config(BlogConfig::class);
-        $this->blog = new BlogLibrary();
+        $this->blog   = new BlogLibrary();
     }
 
     /**

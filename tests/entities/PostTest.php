@@ -1,24 +1,25 @@
 <?php
 
 use App\Entities\Post;
+use Tests\Support\ProjectTestCase;
 
-class PostTest extends \CodeIgniter\Test\CIUnitTestCase
+class PostTest extends ProjectTestCase
 {
     /**
      * @var Post
      */
     protected $post;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
 
         $this->post = new Post([
-            'title' => 'A Simple Post',
-            'slug' => 'a-simple-post',
-            'date' => date('Y-m-d', strtotime('-1 week')),
+            'title'  => 'A Simple Post',
+            'slug'   => 'a-simple-post',
+            'date'   => date('Y-m-d', strtotime('-1 week')),
             'author' => 'Ian Fleming',
-            'tags'=> 'news, releases'
+            'tags'   => 'news, releases'
         ]);
     }
 

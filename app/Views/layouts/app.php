@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/assets/css/ci-theme.css">
     <link rel="stylesheet" href="/assets/css/ci-responsive.css?ver=1.0">
     <link rel="stylesheet" href="/assets/css/animate.css">
+
+	<?= $this->renderSection('headerAssets') ?>
 </head>
 <body>
     <?= $this->include('layouts/_top_nav') ?>
@@ -17,5 +19,7 @@
     <?= $this->renderSection('content') ?>
 
     <?= $this->include('layouts/_footer') ?>
+
+	<?= $this->renderSection('footerAssets') ?>
 </body>
 </html>

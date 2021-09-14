@@ -1,6 +1,6 @@
 <div class="news-box">
     <div class="news-box-title">
-        <a href="<?= $post->link() ?>"><?= esc($post->title) ?></a>
+        <a class="news-box-title-link" href="<?= $post->link() ?>"><?= esc($post->title) ?></a>
     </div>
 
     <div class="meta">

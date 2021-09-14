@@ -51,7 +51,9 @@
         <div class="inner-page-text-box">
             <div class="inner-page-text-box-title">Slack</div>
             <p>
-                CodeIgniter has a Slack channel, where you can engage with other members of the community. Anyone can <a href="http://codeignitersignup.ciblox.com/" class="link-primary">signup</a> for it :)
+                CodeIgniter has a Slack channel, where you can engage with other members of the community. Anyone can
+                <a href="https://join.slack.com/t/codeigniterchat/shared_invite/zt-rl30zw00-obL1Hr1q1ATvkzVkFp8S0Q"
+                   class="link-primary">signup</a> for it :)
             </p>
 
             <p>

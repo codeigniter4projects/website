@@ -1,11 +1,12 @@
 <?php
 
-use Tests\Support\DatabaseTestCase;
+use CodeIgniter\Test\DatabaseTestTrait;
 use CodeIgniter\Test\FeatureTestTrait;
+use Tests\Support\ProjectTestCase;
 
-class BasicPagesTest extends DatabaseTestCase
+class BasicPagesTest extends ProjectTestCase
 {
-	use FeatureTestTrait;
+	use DatabaseTestTrait, FeatureTestTrait;
 
     public function testCanViewHome()
     {

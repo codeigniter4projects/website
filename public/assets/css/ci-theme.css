@@ -306,7 +306,6 @@ a.top-menu-item:link,a.top-menu-item:visited {
 	padding: 10px 15px 10px 15px;
 	text-align: center;
 	color: var(--secondary-color);
-	border-bottom:1px solid var(--soft-white);
 	}
 
 a.top-menu-item:hover{
@@ -424,8 +423,8 @@ section#spotlight-outer{
 	width: 50px;
 	height: 50px;
 	position: absolute;
-	top: 20px;
-	right: 0;
+	top: 15px;
+	right: -15px;
 	font-size: 2rem;
 	color: var(--primary-color);
 	text-align: center;
@@ -1022,8 +1021,22 @@ a.news-left-years-active:visited{
 }
 .news-box-title{
 	font-size:24px;
+	font-weight: bold;
 	color:var(--primary-color);
+	background:#fff;
+	padding:4px 0;
+	border-radius:3px;
+	margin:0 0 15px 0;
 }
+
+a.news-box-title-link:link,a.news-box-title-link:visited{
+	text-decoration:none;
+}
+
+a.news-box-title-link:hover{
+	border-bottom:1px dotted #fff;
+}
+
 .news-date{
 	float:left;
 	margin:10px;
@@ -1274,13 +1287,11 @@ section#content-outer-discover{
 
 
 .ci-version-boxes{
-
 	float:left;
-	width:31%;
-	min-height:700px; /*240px*/
+	width:100%;
+	min-height:300px;
 	margin-top:30px;
 	margin-bottom:45px;
-	margin-right:2%;
 	padding-bottom:30px;
 	border:1px solid var(--section-border);
 	border-radius:5px;
@@ -1305,11 +1316,10 @@ section#content-outer-discover{
 
 
 .cv-boxes-version{
-		.float:left;
+		float:left;
 		width:180px;
 		height:180px;
-		margin:30px auto;
-		.margin-left:10px;
+		margin:30px;
 		background: transparent;
 		display: table;
 		border:1px solid var(--primary-color);
@@ -1343,11 +1353,11 @@ span.version-no{
 
 .cv-boxes-buttons-area	{
 	float:left;
-	width:80%;
+	width:70%;
 	height:100px;
 	position:absolute;
 	bottom:0;
-	left:10%;
+	left:22%;
 }
 	/*
 a.download-buttons:nth-of-type(1){
