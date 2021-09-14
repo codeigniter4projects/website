@@ -27,15 +27,10 @@
             <a href="/news" class="top-menu-item hidden <?php if(url_is('/news*')) : ?>top-menu-item-active<?php endif ?>">News</a>
             <a href="/discuss" class="top-menu-item hidden <?php if(url_is('/discuss')) : ?>top-menu-item-active<?php endif ?>">Discuss</a>
             <a href="/contribute" class="top-menu-item hidden <?php if(url_is('/contribute')) : ?>top-menu-item-active<?php endif ?>">Contribute</a>
-            <a href="javascript:void(0)" id="search" class="top-menu-item">Search</a>
+            <a href="/user_guide/index.html" class="top-menu-item hidden">Learn</a>
             <a href="/download" class="top-menu-item-download">Download</a>
         </div><!--top-menu ende-->
         <div class="clr"></div>
-        <div id="search-bar">
-            <input type="text" placeholder="Search.." id="search-bar-input" name="search" />
-            <button type="submit"><img src="/assets/icons/search-icon.png" alt="search button"></button>
-        </div><!--search-bar ends here-->
     </div><!--header inner ende-->
-    <!--<a href="#" class="download-button" class="top-menu-item hidden" title="Github">Download</a>-->
 
 </header>
