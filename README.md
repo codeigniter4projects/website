@@ -1,7 +1,8 @@
 # CodeIgniter Website
 
-[![](https://github.com/lonnieezell/ci-website/workflows/PHPUnit/badge.svg)](https://github.com/lonnieezell/ci-website/actions?query=workflow%3A%22PHPUnit%22)
-[![](https://github.com/lonnieezell/ci-website/workflows/PHPStan/badge.svg)](https://github.com/lonnieezell/ci-website/actions?query=workflow%3A%PHPStan%22)
+[![](https://github.com/lonnieezell/ci-website/workflows/PHPUnit/badge.svg)](https://github.com/lonnieezell/ci-website/actions/workflows/test.yml)
+[![](https://github.com/lonnieezell/ci-website/workflows/PHPStan/badge.svg)](https://github.com/lonnieezell/ci-website/actions/workflows/analyze.yml)
+[![](https://github.com/lonnieezell/ci-website/workflows/Deptrac/badge.svg)](https://github.com/lonnieezell/ci-website/actions/workflows/inspect.yml)
 [![Coverage Status](https://coveralls.io/repos/github/lonnieezell/ci-website/badge.svg?branch=develop)](https://coveralls.io/github/lonnieezell/ci-website?branch=develop)
 
 This is the official website for the CodeIgniter PHP framework. 
