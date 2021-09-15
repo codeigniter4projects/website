@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "83d9077622635400e4277f6104b54fac",
+    "content-hash": "836c216cde35140f77835760542bfee1",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -74,16 +74,16 @@
         },
         {
             "name": "codeigniter4/cache",
-            "version": "dev-develop",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/codeigniter4/cache.git",
-                "reference": "d860fc125615b807d306e3ba9a0388f6729d33d3"
+                "reference": "b965e7f51a1575a1fce49035886c7fbdaf87190a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codeigniter4/cache/zipball/d860fc125615b807d306e3ba9a0388f6729d33d3",
-                "reference": "d860fc125615b807d306e3ba9a0388f6729d33d3",
+                "url": "https://api.github.com/repos/codeigniter4/cache/zipball/b965e7f51a1575a1fce49035886c7fbdaf87190a",
+                "reference": "b965e7f51a1575a1fce49035886c7fbdaf87190a",
                 "shasum": ""
             },
             "require": {
@@ -97,30 +97,22 @@
             },
             "require-dev": {
                 "cache/integration-tests": "^0.17.0",
+                "codeigniter/coding-standard": "^1.1",
                 "codeigniter4/codeigniter4": "dev-develop",
-                "codeigniter4/codeigniter4-standard": "^1.0",
-                "phpstan/phpstan": "0.12.86",
-                "phpunit/phpunit": "^9.1",
-                "squizlabs/php_codesniffer": "^3.3"
+                "nexusphp/cs-config": "^3.1",
+                "nexusphp/tachycardia": "^1.0",
+                "php-coveralls/php-coveralls": "^2.4",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^9.5",
+                "roave/security-advisories": "dev-latest"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "CodeIgniter\\Psr\\Cache\\": "src"
                 }
             },
-            "scripts": {
-                "analyze": [
-                    "phpstan analyze"
-                ],
-                "style": [
-                    "phpcbf --standard=./vendor/codeigniter4/codeigniter4-standard/CodeIgniter4 tests/ src/"
-                ],
-                "test": [
-                    "phpunit"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -144,10 +136,10 @@
                 "simplecache"
             ],
             "support": {
-                "source": "https://github.com/codeigniter4/cache/tree/develop",
-                "issues": "https://github.com/codeigniter4/cache/issues"
+                "issues": "https://github.com/codeigniter4/cache/issues",
+                "source": "https://github.com/codeigniter4/cache/tree/v1.0.0"
             },
-            "time": "2021-05-29T19:45:17+00:00"
+            "time": "2021-09-14T22:33:52+00:00"
         },
         {
             "name": "codeigniter4/codeigniter4",
@@ -155,12 +147,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/codeigniter4/CodeIgniter4.git",
-                "reference": "04a31f00f6b293bf82587179cab9bd93e54ebb86"
+                "reference": "3ab742eb6ab6d655e357c8a35493d2b84d63c643"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codeigniter4/CodeIgniter4/zipball/04a31f00f6b293bf82587179cab9bd93e54ebb86",
-                "reference": "04a31f00f6b293bf82587179cab9bd93e54ebb86",
+                "url": "https://api.github.com/repos/codeigniter4/CodeIgniter4/zipball/3ab742eb6ab6d655e357c8a35493d2b84d63c643",
+                "reference": "3ab742eb6ab6d655e357c8a35493d2b84d63c643",
                 "shasum": ""
             },
             "require": {
@@ -233,7 +225,7 @@
                 "slack": "https://codeigniterchat.slack.com",
                 "issues": "https://github.com/codeigniter4/CodeIgniter4/issues"
             },
-            "time": "2021-09-12T13:13:09+00:00"
+            "time": "2021-09-15T09:42:02+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -4499,7 +4491,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "codeigniter4/cache": 20,
         "codeigniter4/codeigniter4": 20,
         "fakerphp/faker": 20
     },
@@ -4509,5 +4500,5 @@
         "php": "^7.3 || ^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }
