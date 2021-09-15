@@ -12,25 +12,25 @@ use CodeIgniter\I18n\Time;
  * Represents a GitHub release in a standardized
  * format from API releases and tags.
  *
+ * @property string     $author
+ * @property Time       $created_at
+ * @property URI        $download_url
  * @property int|string $id
- * @property string $name
- * @property string $tag
- * @property string $author
- * @property bool $prerelease
- * @property URI $url
- * @property URI $download_url
- * @property Time $created_at
+ * @property string     $name
+ * @property bool       $prerelease
+ * @property string     $tag
+ * @property URI        $url
  */
 class Release extends Entity
 {
-	use URITrait;
+    use URITrait;
 
-	protected $dates = [
-		'created_at',
-	];
+    protected $dates = [
+        'created_at',
+    ];
 
-	protected $casts = [
-		'version'    => 'string',
-		'prerelease' => 'bool',
-	];
+    protected $casts = [
+        'version'    => 'string',
+        'prerelease' => 'bool',
+    ];
 }

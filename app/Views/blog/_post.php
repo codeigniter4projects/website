@@ -5,11 +5,11 @@
 
     <div class="meta">
         <?= $post->date ?>
-        <?= ! empty($post->author) ? 'by '. esc($post->author) : '' ?>
+        <?= ! empty($post->author) ? 'by ' . esc($post->author) : '' ?>
 
         <br><br>Filed under:
         <ul class="tags">
-            <?php foreach($post->tags as $tag) : ?>
+            <?php foreach ($post->tags as $tag) : ?>
                 <li><a href="/news/c/<?= $tag ?>"><?= esc($tag) ?></a></li>
             <?php endforeach ?>
         </ul>

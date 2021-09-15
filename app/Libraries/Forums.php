@@ -1,4 +1,6 @@
-<?php namespace App\Libraries;
+<?php
+
+namespace App\Libraries;
 
 use App\Models\MyBBModel;
 
@@ -24,7 +26,7 @@ class Forums
 
     public function __construct()
     {
-        $this->mybb = new MyBBModel();
+        $this->mybb     = new MyBBModel();
         $this->forumUrl = config('MyBB')->forumURL;
     }
 
@@ -40,25 +42,23 @@ class Forums
         $limit = $params['limit'] ?? $this->limit;
 
         // get the forum posts
-        if ( ! $items = cache('bb_posts'))
-        {
+        if (! $items = cache('bb_posts')) {
             $items = $this->mybb->getRecentPosts($limit);
-            $ttl = 60 * 60 * 4; // time to live s/b 4 hours
+            $ttl   = 60 * 60 * 4; // time to live s/b 4 hours
             cache()->save('bb_posts', $items, $ttl);
         }
 
-        if (! empty($items) && is_array($items))
-        {
+        if (! empty($items) && is_array($items)) {
             // massage the date formats
-            foreach ($items as &$item)
-            {
-                $item['lastpost'] = date('Y.m.d', $item['lastpost']);
+            foreach ($items as &$item) {
+                $item['lastpost']       = date('Y.m.d', $item['lastpost']);
                 $item['mybb_forum_url'] = $this->forumUrl;
-                $item['subject'] = strip_tags($item['subject']); // fix #79
+                $item['subject']        = strip_tags($item['subject']); // fix #79
             }
+
             return view('forum/_posts', ['posts' => $items]);
         }
-        else
-            return view('forum/_drats');
+
+        return view('forum/_drats');
     }
 }

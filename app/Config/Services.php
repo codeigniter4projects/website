@@ -24,35 +24,29 @@ use RuntimeException;
  */
 class Services extends BaseService
 {
-	/**
-	 * Creates or returns the GitHub API wrapper.
-	 *
-	 * @param GitHubConfig|null $config
-	 * @param Client|null $client
-	 *
-	 * @return GitHub
-	 */
-	public static function github(GitHubConfig $config = null, Client $client = null, $getShared = true): GitHub
-	{
-		if ($getShared)
-		{
-			return static::getSharedInstance('github', $config, $client);
-		}
+    /**
+     * Creates or returns the GitHub API wrapper.
+     *
+     * @param mixed $getShared
+     */
+    public static function github(?GitHubConfig $config = null, ?Client $client = null, $getShared = true): GitHub
+    {
+        if ($getShared) {
+            return static::getSharedInstance('github', $config, $client);
+        }
 
-		if (is_null($client))
-		{
-			$client = new Client();
-			$client->addCache(new Pool(), ['default_ttl' => DAY]);
-		}
+        if (null === $client) {
+            $client = new Client();
+            $client->addCache(new Pool(), ['default_ttl' => DAY]);
+        }
 
-		if (null === $token = env('GITHUB_ACCESS_TOKEN'))
-		{
-			throw new RuntimeException('You must set an access token before using the GitHub service.'); // @codeCoverageIgnore
-		}
+        if (null === $token = env('GITHUB_ACCESS_TOKEN')) {
+            throw new RuntimeException('You must set an access token before using the GitHub service.'); // @codeCoverageIgnore
+        }
 
-		// Authenticate against GH
-		$client->authenticate($token, Client::AUTH_ACCESS_TOKEN);
+        // Authenticate against GH
+        $client->authenticate($token, Client::AUTH_ACCESS_TOKEN);
 
-		return new GitHub($config ?? config(GitHubConfig::class), $client);
-	}
+        return new GitHub($config ?? config(GitHubConfig::class), $client);
+    }
 }

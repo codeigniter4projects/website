@@ -3,30 +3,28 @@
 namespace App\Entities\GitHub;
 
 use CodeIgniter\Entity\Entity;
-use CodeIgniter\HTTP\URI;
 
 /**
  * Repo Entity
  *
  * Represents a GitHub repo.
- *
  */
 class Repo extends Entity
 {
-	use URITrait;
+    use URITrait;
 
-	protected $dates = [
-		'created_at',
-		'updated_at',
-		'pushed_at',
-	];
+    protected $dates = [
+        'created_at',
+        'updated_at',
+        'pushed_at',
+    ];
 
-	protected $casts = [
-		'id'           => 'int',
-		'private'      => 'bool',
-		'fork'         => 'bool',
-		'owner'        => 'object',
-		'license'      => 'object',
-		'organization' => 'object',
-	];
+    protected $casts = [
+        'id'           => 'int',
+        'private'      => 'bool',
+        'fork'         => 'bool',
+        'owner'        => 'object',
+        'license'      => 'object',
+        'organization' => 'object',
+    ];
 }
