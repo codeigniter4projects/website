@@ -78,18 +78,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<!--
-<script>
-  function togglseMenu() {
-    var menuItems = document.getElementsByClassName('menu-item');
-    for (var i = 0; i < menuItems.length; i++) {
-      var menuItem = menuItems[i];
-      menuItem.classList.toggle("hidden");
-    }
-  }
-</script>
--->
-
 <script>
     $('#menu-toggle button').click(function(){
         $("#top-menu").slideToggle("slow");
@@ -97,14 +85,5 @@
 
     $('#scroll-to-top').click(function(){
         $("html").animate({ scrollTop: 0 }, "slow");
-    });
-
-    $('#search').click(function(){
-        $maxHeight = 120;
-        if($('#header-inner').height() < $maxHeight){
-            $('#header-inner').animate({'height': '120'}, 400);
-        }else{
-            $('#header-inner').animate({'height': '60'}, 400);
-        }
     });
 </script>

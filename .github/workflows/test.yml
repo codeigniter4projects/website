@@ -62,6 +62,7 @@ jobs:
         run: vendor/bin/phpunit --verbose --coverage-text
         env:
           TERM: xterm-256color
+          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - if: matrix.php-versions == '8.0'
         name: Mutate with Infection
