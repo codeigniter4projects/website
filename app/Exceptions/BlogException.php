@@ -1,4 +1,6 @@
-<?php namespace App\Exceptions;
+<?php
+
+namespace App\Exceptions;
 
 class BlogException extends \Exception
 {

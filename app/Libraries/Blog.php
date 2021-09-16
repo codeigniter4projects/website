@@ -1,4 +1,6 @@
-<?php namespace App\Libraries;
+<?php
+
+namespace App\Libraries;
 
 use App\Entities\Post;
 use App\Exceptions\BlogException;
@@ -31,13 +33,9 @@ class Blog
      * If $category is present, will locate within a
      * subfolder of that name.
      *
-     * @param int         $limit
-     * @param int         $offset
-     * @param string|null $category
-     *
      * @throws BlogException
      */
-    public function getRecentPosts(int $limit=5, int $offset=0, string $category = null)
+    public function getRecentPosts(int $limit = 5, int $offset = 0, ?string $category = null)
     {
         $cacheKey = "blog_files_{$offset}_{$limit}_{$category}";
 
@@ -45,7 +43,8 @@ class Blog
             helper('filesystem');
 
             if (! is_dir($this->config->contentPath)) {
-                log_message('error', 'Blog Content Path is not a valid directory: '. $this->config->contentPath);
+                log_message('error', 'Blog Content Path is not a valid directory: ' . $this->config->contentPath);
+
                 throw BlogException::forInvalidContent();
             }
 
@@ -53,8 +52,8 @@ class Blog
             $files = directory_map($this->config->contentPath, 1);
 
             // We only want .md files.
-            $files = array_filter($files, function($file) {
-                return substr(strrchr($file,'.'),1) == 'md';
+            $files = array_filter($files, static function ($file) {
+                return substr(strrchr($file, '.'), 1) === 'md';
             });
 
             if (! count($files)) {
@@ -73,7 +72,7 @@ class Blog
                 $temp = $this->readPost($this->config->contentPath, $file);
 
                 // Only collect from the correct category.
-                if(! empty($category) && ! in_array($category, $temp->tags)) {
+                if (! empty($category) && ! in_array($category, $temp->tags, true)) {
                     continue;
                 }
 
@@ -89,7 +88,7 @@ class Blog
     public function getPopularPosts(int $limit = 5)
     {
         helper('filesystem');
-        $path = WRITEPATH .'blog_visits.txt';
+        $path = WRITEPATH . 'blog_visits.txt';
 
         if (! is_file($path)) {
             return [];
@@ -109,13 +108,13 @@ class Blog
         $files = directory_map($this->config->contentPath, 1);
 
         // We only want .md files.
-        $files = array_filter($files, function($file) {
-            return substr(strrchr($file,'.'),1) == 'md';
+        $files = array_filter($files, static function ($file) {
+            return substr(strrchr($file, '.'), 1) === 'md';
         });
 
         $posts = [];
 
-        foreach($files as $file) {
+        foreach ($files as $file) {
             foreach ($slugs as $slug => $count) {
                 try {
                     if (stripos($file, $slug) !== false) {
@@ -123,7 +122,7 @@ class Blog
                     }
                 }
                 // Don't fail if we can't find the file anymore...
-                catch(\Throwable $e) {
+                catch (\Throwable $e) {
                     continue;
                 }
             }
@@ -138,8 +137,6 @@ class Blog
 
     /**
      * Gets a single post
-     *
-     * @param string $slug
      */
     public function getPost(string $slug)
     {
@@ -163,12 +160,10 @@ class Blog
     /**
      * Records a single "hit", or visit to a page
      * so that we can track "popular" pages.
-     *
-     * @param string $slug
      */
     public function recordVisit(string $slug)
     {
-        $path = WRITEPATH .'blog_visits.txt';
+        $path = WRITEPATH . 'blog_visits.txt';
 
         $lines = file_exists($path)
             ? unserialize(file_get_contents($path))
@@ -176,8 +171,7 @@ class Blog
 
         if (! isset($lines[$slug])) {
             $lines[$slug] = 1;
-        }
-        else {
+        } else {
             $lines[$slug]++;
         }
 
@@ -189,8 +183,6 @@ class Blog
     /**
      * Displays the HTML "widget" for the list of recent posts
      * in the sidebar.
-     *
-     * @param int $limit
      */
     public function recentPostsWidget(int $limit): string
     {
@@ -202,17 +194,13 @@ class Blog
 
         return view('blog/_widget', [
             'title' => 'Recent Posts',
-            'rows' => $posts
+            'rows'  => $posts,
         ]);
     }
 
     /**
      * Displays the HTML "widget" for the list of popular posts
      * in the sidebar.
-     *
-     * @param int $limit
-     *
-     * @return string
      */
     public function popularPostsWidget(int $limit): string
     {
@@ -224,16 +212,13 @@ class Blog
 
         return view('blog/_widget', [
             'title' => 'Popular Posts',
-            'rows' => $posts
+            'rows'  => $posts,
         ]);
     }
 
     /**
      * Reads in a post from file and parses it
      * into a Post Entity.
-     *
-     * @param string $folder
-     * @param string $filename
      */
     protected function readPost(string $folder, string $filename)
     {
@@ -257,22 +242,24 @@ class Blog
 
         // Get the attributes from the front-matter of the file (between lines with ---)
         $inFrontMatter = false;
-        $inBody = false;
-        $body = [];
+        $inBody        = false;
+        $body          = [];
+
         foreach ($contents as $line) {
-            if (trim($line) == '---') {
+            if (trim($line) === '---') {
                 $inFrontMatter = ! $inFrontMatter;
                 if (! $inFrontMatter) {
                     $inBody = true;
                 }
+
                 continue;
             }
 
             if (! $inBody) {
-                $key = substr($line, 0, strpos($line, ':'));
-                $value = trim(substr($line, strpos($line, ':')+1));
+                $key   = substr($line, 0, strpos($line, ':'));
+                $value = trim(substr($line, strpos($line, ':') + 1));
 
-                $post->$key = $value;
+                $post->{$key} = $value;
 
                 continue;
             }
@@ -282,7 +269,7 @@ class Blog
         $post->body = implode("\n", $body);
 
         // Convert body using Markdown
-        $markdown = new CommonMarkConverter();
+        $markdown   = new CommonMarkConverter();
         $post->html = $markdown->convertToHtml($post->body);
         $post->html = $this->parseVideoTags($post->html);
 
@@ -296,11 +283,9 @@ class Blog
      * Embed syntax:
      *   !video[ https://www.youtube.com/watch?v=1GYoEMiXcX0&feature=youtu.be ]
      *
-     * @param string|null $html
-     *
      * @return string|string[]|null
      */
-    protected function parseVideoTags(string $html = null)
+    protected function parseVideoTags(?string $html = null)
     {
         helper('video');
 
@@ -313,7 +298,7 @@ class Blog
             return $html;
         }
 
-        for($i=0; $i < count($matches) -1; $i++) {
+        for ($i = 0; $i < count($matches) - 1; $i++) {
             if (empty($matches[0]) || empty($matches[1])) {
                 continue;
             }

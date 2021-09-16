@@ -1,8 +1,10 @@
-<?php namespace App\Controllers;
+<?php
 
+namespace App\Controllers;
+
+use App\Libraries\Blog as BlogLibrary;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use Config\Blog as BlogConfig;
-use App\Libraries\Blog as BlogLibrary;
 
 class Blog extends BaseController
 {
@@ -34,22 +36,18 @@ class Blog extends BaseController
 
     /**
      * Displays posts based on category.
-     *
-     * @param string $category
      */
     public function category(string $category)
     {
         echo $this->render('blog/list', [
-            'posts' => $this->blog->getRecentPosts($this->config->perPage, 0, $category),
+            'posts'     => $this->blog->getRecentPosts($this->config->perPage, 0, $category),
             'pageTitle' => "Category: {$category}",
-            'category' => $category
+            'category'  => $category,
         ]);
     }
 
     /**
      * Displays a single post
-     *
-     * @param string $slug
      */
     public function post(string $slug)
     {
@@ -65,8 +63,8 @@ class Blog extends BaseController
         $this->blog->recordVisit($slug);
 
         echo $this->render('blog/single', [
-            'post' => $this->blog->getPost($slug),
-            'title' => $post->title ?? "Some Post",
+            'post'  => $this->blog->getPost($slug),
+            'title' => $post->title ?? 'Some Post',
         ]);
     }
 }

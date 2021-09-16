@@ -3,7 +3,10 @@
 use App\Entities\Post;
 use Tests\Support\ProjectTestCase;
 
-class PostTest extends ProjectTestCase
+/**
+ * @internal
+ */
+final class PostTest extends ProjectTestCase
 {
     /**
      * @var Post
@@ -19,31 +22,31 @@ class PostTest extends ProjectTestCase
             'slug'   => 'a-simple-post',
             'date'   => date('Y-m-d', strtotime('-1 week')),
             'author' => 'Ian Fleming',
-            'tags'   => 'news, releases'
+            'tags'   => 'news, releases',
         ]);
     }
 
     public function testLink()
     {
-        $this->assertEquals(site_url('news/a-simple-post'), $this->post->link());
+        $this->assertSame(site_url('news/a-simple-post'), $this->post->link());
     }
 
     public function testLinkNoSlug()
     {
         $this->post->slug = null;
 
-        $this->assertEquals(site_url('news/'), $this->post->link());
+        $this->assertSame(site_url('news/'), $this->post->link());
     }
 
     public function testGetTagsNoData()
     {
         $this->post->tags = null;
 
-        $this->assertEquals([], $this->post->getTags());
+        $this->assertSame([], $this->post->getTags());
     }
 
     public function testGetTags()
     {
-        $this->assertEquals(['news', 'releases'], $this->post->getTags());
+        $this->assertSame(['news', 'releases'], $this->post->getTags());
     }
 }

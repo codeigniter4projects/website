@@ -1,4 +1,6 @@
-<?php namespace App\Controllers;
+<?php
+
+namespace App\Controllers;
 
 class Policies extends BaseController
 {

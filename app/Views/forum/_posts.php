@@ -1,4 +1,4 @@
-<?php foreach($posts as $post) : ?>
+<?php foreach ($posts as $post) : ?>
 <div class="rnapf-row">
     <div class="rnapf-date"><?= esc($post['lastpost']) ?></div>
     <div class="rnapf-title">
