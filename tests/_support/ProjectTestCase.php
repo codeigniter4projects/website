@@ -8,7 +8,7 @@ use CodeIgniter\Test\CIUnitTestCase;
 /**
  * @internal
  */
-final class ProjectTestCase extends CIUnitTestCase
+abstract class ProjectTestCase extends CIUnitTestCase
 {
     /**
      * Should the database be refreshed before each test?
