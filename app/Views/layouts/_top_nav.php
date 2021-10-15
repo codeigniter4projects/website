@@ -1,7 +1,7 @@
 <header>
     <div id="header-inner">
         <div id="logo">
-            <a href="<?= site_url() ?>" title="CodeIgniter.com">
+            <a href="/" title="CodeIgniter.com">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2100 500" width="185" height="44">
                     <style>
                         tspan { white-space:pre }
@@ -24,9 +24,9 @@
 
         <div id="top-menu">
             <!--<a href="discover.html" class="top-menu-item hidden" title="CodeIgniter.com">Discover</a>-->
-            <a href="/news" class="top-menu-item hidden <?php if(url_is('/news*')) : ?>top-menu-item-active<?php endif ?>">News</a>
-            <a href="/discuss" class="top-menu-item hidden <?php if(url_is('/discuss')) : ?>top-menu-item-active<?php endif ?>">Discuss</a>
-            <a href="/contribute" class="top-menu-item hidden <?php if(url_is('/contribute')) : ?>top-menu-item-active<?php endif ?>">Contribute</a>
+            <a href="/news" class="top-menu-item hidden <?php if (url_is('/news*')) : ?>top-menu-item-active<?php endif ?>">News</a>
+            <a href="/discuss" class="top-menu-item hidden <?php if (url_is('/discuss')) : ?>top-menu-item-active<?php endif ?>">Discuss</a>
+            <a href="/contribute" class="top-menu-item hidden <?php if (url_is('/contribute')) : ?>top-menu-item-active<?php endif ?>">Contribute</a>
             <a href="/user_guide/index.html" class="top-menu-item hidden">Learn</a>
             <a href="/download" class="top-menu-item-download">Download</a>
         </div><!--top-menu ende-->

@@ -1,4 +1,6 @@
-<?php namespace App\Entities;
+<?php
+
+namespace App\Entities;
 
 use CodeIgniter\Entity;
 
@@ -8,8 +10,6 @@ use CodeIgniter\Entity;
  * Represents a single blog post,
  * and provides utility methods to
  * simplify working with them in views.
- *
- * @package App\Entities
  */
 class Post extends Entity
 {
@@ -18,7 +18,7 @@ class Post extends Entity
      */
     public function link()
     {
-        return site_url('/news/'. $this->slug);
+        return site_url('/news/' . $this->slug);
     }
 
     /**
@@ -33,7 +33,7 @@ class Post extends Entity
         }
 
         $tags = explode(',', $this->attributes['tags']);
-        $tags = array_map(function($item) {
+        $tags = array_map(static function ($item) {
             return trim($item);
         }, $tags);
 

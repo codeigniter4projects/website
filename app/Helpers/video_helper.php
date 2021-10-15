@@ -17,15 +17,11 @@
  *
  * You can setup more data[] video variables that you need.
  */
-if ( ! function_exists('embedVideo'))
-{
+if (! function_exists('embedVideo')) {
     /**
      * embedVideo ()
      * -------------------------------------------------------------------
      *
-     * @param  string $code
-     * @param  string $width
-     * @param  string $height
      * @return false|string
      */
     function embedVideo(string $code, string $width = '640', string $height = '385')
@@ -35,24 +31,20 @@ if ( ! function_exists('embedVideo'))
         // Parse URL's to find the code
         $url = filter_var($code, FILTER_VALIDATE_URL);
         if (! empty($url)) {
-            parse_str(substr($url, strpos($url, '?') +1), $result);
+            parse_str(substr($url, strpos($url, '?') + 1), $result);
 
             $code = $result['v'] ?? null;
         }
 
-        if (isset($code) && ! empty($code))
-        {
-            $video = '
-				<iframe width="' . $width . '" height="' . $height . '" 
-					src="https://www.youtube.com/embed/' . $code . '" frameborder="0" 
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+        if (isset($code) && ! empty($code)) {
+            return '
+				<iframe width="' . $width . '" height="' . $height . '"
+					src="https://www.youtube.com/embed/' . $code . '" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media;
 					gyroscope; picture-in-picture" allowfullscreen>
 				</iframe>';
-
-            return $video;
         }
 
         return false;
     }
 }
-

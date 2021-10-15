@@ -16,21 +16,7 @@
                         <img src="/assets/icons/footer-github-red-03.png" />
                         <br />
                         <span class="data">
-						Star
-						<?= $stargazers_count ?? 'unknown' ?>
-					</span>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://github.com/codeigniter4/CodeIgniter4" target="_blank">
-                <div class="links-icons">
-                    <div class="icon">
-                        <img src="/assets/icons/footer-fork-red-03.png" />
-                        <br />
-                        <span class="data">
-						Fork
-						<?= $forks_count ?? 'unknown' ?>
+						GitHub
 					</span>
                     </div>
                 </div>

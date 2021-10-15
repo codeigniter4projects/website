@@ -24,7 +24,7 @@ header {
         </div> <!--slogan-note ends here-->
 
         <div id="spotlight-button-holder" class="animated fadeInDown">
-            <a href="" id="spotlight-link">Learn more</a>
+            <a href="/user_guide/index.html" id="spotlight-link">Learn more</a>
         </div><!--spotlight-button-ends here-->
 
         <div id="github-scores" class="animated fadeInDown">

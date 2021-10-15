@@ -18,7 +18,7 @@
 	],
 	"require": {
 		"php": "^7.3 || ^8.0",
-		"codeigniter4/cache": "dev-develop",
+		"codeigniter4/cache": "^1.0",
 		"codeigniter4/codeigniter4": "dev-develop",
 		"guzzlehttp/guzzle": "^7.0.1",
 		"http-interop/http-factory-guzzle": "^1.0",
@@ -26,13 +26,16 @@
 		"league/commonmark": "^1.5"
 	},
 	"require-dev": {
-		"codeigniter4/codeigniter4-standard": "^1.0",
-		"fakerphp/faker": "^1.9@dev",
+		"codeigniter/coding-standard": "^1.1",
+		"fakerphp/faker": "^1.9",
+		"friendsofphp/php-cs-fixer": "^3.0",
 		"mikey179/vfsstream": "^1.6",
+		"nexusphp/cs-config": "^3.1",
 		"nexusphp/tachycardia": "^1.0",
+		"php-coveralls/php-coveralls": "^2.4",
 		"phpstan/phpstan": "^0.12",
 		"phpunit/phpunit": "^9.5",
-		"squizlabs/php_codesniffer": "^3.5"
+		"roave/security-advisories": "dev-latest"
 	},
 	"autoload": {
 		"exclude-from-classmap": [
@@ -47,10 +50,6 @@
 	"repositories": [
 		{
 			"type": "vcs",
-			"url": "https://github.com/codeigniter4/cache"
-		},
-		{
-			"type": "vcs",
 			"url": "https://github.com/codeigniter4/codeigniter4"
 		}
 	],
@@ -58,8 +57,19 @@
 	"prefer-stable": true,
 	"scripts": {
 		"analyze": "phpstan analyze",
+		"ci": [
+			"Composer\\Config::disableProcessTimeout",
+			"@deduplicate",
+			"@analyze",
+			"@test",
+			"@mutate",
+			"@inspect",
+			"@style"
+		],
+		"deduplicate": "phpcpd app/ src/",
+		"inspect": "deptrac analyze --cache-file=build/deptrac.cache",
 		"mutate": "infection --threads=2 --skip-initial-tests --coverage=build/phpunit",
-		"style": "phpcbf --standard=./vendor/codeigniter4/codeigniter4-standard/CodeIgniter4 tests/ app/",
+		"style": "php-cs-fixer fix --verbose --ansi --using-cache=no",
 		"test": "phpunit"
 	},
 	"support": {

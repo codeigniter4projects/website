@@ -26,14 +26,13 @@ class ForumSeeder extends Seeder
         ['subject' => 'How i can select most common value with codeigniter', 'username' => 'Obi Wan Kenobi', 'lastpost' => '1414567370', 'tid' => '414'],
     ];
 
-	public function run()
-	{
-	    $this->db->table('fx_threads')->truncate();
-	    $model = new MyBBModel();
+    public function run()
+    {
+        $this->db->table('fx_threads')->truncate();
+        $model = new MyBBModel();
 
-        foreach ($this->threads as $thread)
-        {
+        foreach ($this->threads as $thread) {
             $model->insert($thread);
         }
-	}
+    }
 }
