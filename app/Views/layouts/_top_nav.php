@@ -1,7 +1,7 @@
 <header>
     <div id="header-inner">
         <div id="logo">
-            <a href="<?= site_url() ?>" title="CodeIgniter.com">
+            <a href="/" title="CodeIgniter.com">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2100 500" width="185" height="44">
                     <style>
                         tspan { white-space:pre }

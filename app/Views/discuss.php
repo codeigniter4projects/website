@@ -53,7 +53,7 @@
             <p>
                 CodeIgniter has a Slack channel, where you can engage with other members of the community. Anyone can
                 <a href="https://join.slack.com/t/codeigniterchat/shared_invite/zt-rl30zw00-obL1Hr1q1ATvkzVkFp8S0Q"
-                   class="link-primary">signup</a> for it :)
+                   class="link-primary" target="_blank">signup</a> for it :)
             </p>
 
             <p>
@@ -86,7 +86,7 @@
         <div class="clr"></div>
 
     </div><!--content-inner ends here-->
-</div><!--section ende-->
+</section><!--section ende-->
 
 <div class="clr"></div>
 

@@ -15,7 +15,7 @@
         <div class="inner-page-text-box">
             <div class="inner-page-text-box-title">Trademarks</div>
             <p>
-                CodeIgniter® is a registered trademark of the CodeIgniter Foundation, having being transferred from the
+                CodeIgniter® is a registered trademark of the CodeIgniter Foundation, having been transferred from the
                 British Columbia Institute of Technology in 2019.
             </p>
             <p>
@@ -94,7 +94,7 @@
         <div class="clr"></div>
 
     </div><!--content-inner ends here-->
-    </div><!--section ende-->
+</section><!--section end -->
 
 
     <div class="clr"></div>

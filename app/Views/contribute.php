@@ -33,10 +33,6 @@
                 Reporting issues is helpful but an even better approach is to send a Pull Request, which is done by “Forking”
                 the main repository and committing to your own copy. This will require you to use the version control system called Git.
             </p>
-            <p>
-                *Note: the two GitHub links above are for the CodeIgniter 3 repository. They will be replaced with the CodeIgniter 4
-                ones once it launches.*
-            </p>
         </div><!--inner-page-opening-text ends here-->
 
         <div class="clr"></div>
@@ -223,7 +219,7 @@
 		<?php endif; ?>
 
     </div><!--content-inner ends here-->
-    </div><!--section ende-->
+</section><!--section ende-->
 
 
     <div class="clr"></div>
