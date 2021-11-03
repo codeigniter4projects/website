@@ -28,7 +28,6 @@ class Release extends Entity
     protected $dates = [
         'created_at',
     ];
-
     protected $casts = [
         'version'    => 'string',
         'prerelease' => 'bool',

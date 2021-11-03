@@ -18,7 +18,6 @@ class Repo extends Entity
         'updated_at',
         'pushed_at',
     ];
-
     protected $casts = [
         'id'           => 'int',
         'private'      => 'bool',
