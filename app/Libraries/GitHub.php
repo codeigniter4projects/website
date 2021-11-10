@@ -72,16 +72,16 @@ class GitHub
     public static function sortReleases(array &$releases): void
     {
         usort($releases, static function ($releaseA, $releaseB) {
-            if ($releaseA->version === '') {
+            if ($releaseA->tag === '') {
                 return -1;
             }
-            if ($releaseB->version === '') {
+            if ($releaseB->tag === '') {
                 return 1;
             }
 
             // Strip leading "v"
-            $versionA = $releaseA->version[0] === 'v' ? substr($releaseA->version, 1) : $releaseA->version;
-            $versionB = $releaseB->version[0] === 'v' ? substr($releaseB->version, 1) : $releaseB->version;
+            $versionA = $releaseA->tag[0] === 'v' ? substr($releaseA->tag, 1) : $releaseA->tag;
+            $versionB = $releaseB->tag[0] === 'v' ? substr($releaseB->tag, 1) : $releaseB->tag;
 
             if ($versionA === $versionB) {
                 return 0;
