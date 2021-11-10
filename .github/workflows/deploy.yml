@@ -59,6 +59,7 @@ jobs:
             echo $'Setup FS\n'
             cd $RELEASE_DIR/$RELEASE
             sudo chmod -R 777 writable
+            sudo chmod -R a+rx vendor
             sudo ln -nsf $CONFIG_FILE .env
 
             echo $'Link current user guide\n'

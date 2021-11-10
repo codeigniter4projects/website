@@ -16,9 +16,8 @@ class MyBBModel extends Model
     protected $table            = 'fx_threads';
     protected $primaryKey       = 'tid';
     protected $useAutoIncrement = true;
-
-    protected $returnType    = 'array';
-    protected $allowedFields = [
+    protected $returnType       = 'array';
+    protected $allowedFields    = [
         'tid', 'subject', 'username', 'lastpost', 'lastposter', 'visible', 'deletetime',
     ];
 

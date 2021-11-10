@@ -37,6 +37,7 @@ $routes->get('contribute', 'Contribute::index');
 $routes->get('download', 'Download::index');
 $routes->get('policies', 'Policies::index');
 $routes->get('the-fine-print', 'FinePrint::index');
+$routes->get('security-disclosures', 'Disclosures::index');
 
 // Blog
 $routes->get('news', 'Blog::index');
