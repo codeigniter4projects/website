@@ -68,11 +68,11 @@ final class GitHubTest extends ProjectTestCase
         $releases = [];
 
         foreach ($input as $version) {
-            $releases[] = new Release(['version' => $version]);
+            $releases[] = new Release(['tag' => $version]);
         }
 
         GitHub::sortReleases($releases);
-        $result = array_column($releases, 'version');
+        $result = array_column($releases, 'tag');
 
         $this->assertSame($expected, $result);
     }

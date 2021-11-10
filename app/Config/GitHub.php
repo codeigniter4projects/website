@@ -24,7 +24,7 @@ class GitHub extends BaseConfig
         'translations3' => ['bcit-ci', 'codeigniter3-translations'],
         'translations4' => ['codeigniter4', 'translations'],
         'website3'      => ['bcit-ci', 'codeigniter-website'],
-        'website4'      => ['codeigniter4projects', 'website2'],
+        'website4'      => ['codeigniter4projects', 'website'],
     ];
 
     /**

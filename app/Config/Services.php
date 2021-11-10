@@ -40,7 +40,9 @@ class Services extends BaseService
             $client->addCache(new Pool(), ['default_ttl' => DAY]);
         }
 
-        if (null === $token = env('GITHUB_ACCESS_TOKEN')) {
+        $token = env('GITHUB_ACCESS_TOKEN');
+        // $token may be null or empty string
+        if (empty($token)) {
             throw new RuntimeException('You must set an access token before using the GitHub service.'); // @codeCoverageIgnore
         }
 
