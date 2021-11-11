@@ -161,7 +161,7 @@ header {
 
 <section id="important-links-outer">
     <div id="important-links-inner">
-        <a href="#" class="important-link">
+        <a href="/download" class="important-link">
             <div class="important-link-boxes">
                 <span class="boldy600 dark">Download Page</span>
                 <br />
@@ -171,7 +171,7 @@ header {
             </div> <!--important-link-boxes ends here-->
         </a>
 
-        <a href="#" class="important-link">
+        <a href="/user_guide/index.html" class="important-link">
             <div class="important-link-boxes">
                 <span class="boldy600 dark">Clear Documentation</span>
                 <br />
@@ -181,7 +181,7 @@ header {
             </div> <!--important-link-boxes ends here-->
         </a>
 
-        <a href="#" class="important-link">
+        <a href="https://forum.codeigniter.com/" class="important-link" target="_blank">
             <div class="important-link-boxes">
                 <span class="boldy600 dark">Get Support & Discuss Things</span>
                 <br />
@@ -191,7 +191,7 @@ header {
             </div> <!--important-link-boxes ends here-->
         </a>
 
-        <a href="#" class="important-link">
+        <a href="https://github.com/codeigniter4/CodeIgniter4" class="important-link" target="_blank">
             <div class="important-link-boxes">
                 <span class="boldy600 dark">Fix Bugs or Add Features</span>
                 <br />
