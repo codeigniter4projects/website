@@ -12,12 +12,7 @@
                 </svg>
             </a>
         </div>
-
-        <div id="mobile-search">
-            <input type="text" placeholder="Search.." id="search-bar-input" name="search" />
-            <button type="submit"><img src="/assets/icons/search-icon.png" alt="search button"></button>
-        </div><!--mobile-search ends-->
-
+        
         <div id="menu-toggle">
             <button onclick="toggleMenu();">&#9776;</button>
         </div>
