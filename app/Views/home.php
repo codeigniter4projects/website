@@ -20,7 +20,7 @@ header {
 
         <div id="slogan-text" class="animated fadeInDown">
             CodeIgniter is a powerful PHP framework with a very small footprint,
-            built for developers who need a simple and elegant toolkit to create full-featured web applications.</a>
+            built for developers who need a simple and elegant toolkit to create full-featured web applications.
         </div> <!--slogan-note ends here-->
 
         <div id="spotlight-button-holder" class="animated fadeInDown">
@@ -31,7 +31,7 @@ header {
             <a href="https://github.com/codeigniter4/CodeIgniter4" class="github-link" target="_blank">
                 <div class="githubs">
                     <div class="github-icon">
-                        <img src="/assets/icons/spotlight-github-stars.png" />
+                        <img src="/assets/icons/spotlight-github-stars.png" alt="Github Stars"/>
                         <div class="github-data">
                             <span class="boldy700">Star</span> <?= $stargazers_count ?>
                         </div>
@@ -42,7 +42,7 @@ header {
             <a href="https://github.com/codeigniter4/CodeIgniter4" class="github-link" target="_blank">
                 <div class="githubs">
                     <div class="github-icon">
-                        <img src="/assets/icons/spotlight-github-fork.png" />
+                        <img src="/assets/icons/spotlight-github-fork.png" alt="Github Fork"/>
                         <div class="github-data">
                             <span class="boldy700">Fork</span> <?= $forks_count ?>
                         </div>
@@ -55,8 +55,8 @@ header {
 
 <div class="clr"></div>
 
-<section id="content-outer">
-    <div id="content-inner">
+<section class="content-outer">
+    <div class="content-inner">
 
         <div class="clr"></div>
 
@@ -66,7 +66,7 @@ header {
         <div class="why-rows">
             <div class="ci-features-box">
                 <div class="ci-features-box-icon">
-                    <img src="/assets/icons/star-02a.png" />
+                    <img src="/assets/icons/star-02a.png" alt="Star Icon"/>
                 </div><!--ci-features-box-icon ends here-->
                 <div class="ci-features-box-text-area">
                     <div class="ci-features-box-title">Framework with a small footprint</div>
@@ -79,7 +79,7 @@ header {
 
             <div class="ci-features-box">
                 <div class="ci-features-box-icon">
-                    <img src="/assets/icons/speed-02a.png" />
+                    <img src="/assets/icons/speed-02a.png" alt="Performance Icon"/>
                 </div><!--ci-features-box-icon ends here-->
                 <div class="ci-features-box-text-area">
                     <div class="ci-features-box-title">Exceptional performance</div>
@@ -96,7 +96,7 @@ header {
         <div class="why-rows">
             <div class="ci-features-box">
                 <div class="ci-features-box-icon">
-                    <img src="/assets/icons/paper-plane-02b.png" />
+                    <img src="/assets/icons/paper-plane-02b.png" alt="Paper Plane Icon"/>
                 </div><!--ci-features-box-icon ends here-->
                 <div class="ci-features-box-text-area">
                     <div class="ci-features-box-title">Simple solutions over complexity</div>
@@ -109,7 +109,7 @@ header {
 
             <div class="ci-features-box">
                 <div class="ci-features-box-icon">
-                    <img src="/assets/icons/security-02a.png" />
+                    <img src="/assets/icons/security-02a.png" alt="Security Shield Icon"/>
                 </div><!--ci-features-box-icon ends here-->
                 <div class="ci-features-box-text-area">
                     <div class="ci-features-box-title">Strong Security</div>
@@ -127,7 +127,7 @@ header {
         <div class="why-rows">
             <div class="ci-features-box">
                 <div class="ci-features-box-icon">
-                    <img src="/assets/icons/book-02a.png" />
+                    <img src="/assets/icons/book-02a.png" alt="Documentation Icon"/>
                 </div><!--ci-features-box-icon ends here-->
                 <div class="ci-features-box-text-area">
                     <div class="ci-features-box-title">Clear documentation</div>
@@ -140,7 +140,7 @@ header {
 
             <div class="ci-features-box">
                 <div class="ci-features-box-icon">
-                    <img src="/assets/icons/configuration-02a.png" />
+                    <img src="/assets/icons/configuration-02a.png" alt="Configuration Icon"/>
                 </div><!--ci-features-box-icon ends here-->
                 <div class="ci-features-box-text-area">
                     <div class="ci-features-box-title">Nearly zero configuration</div>
@@ -161,43 +161,43 @@ header {
 
 <section id="important-links-outer">
     <div id="important-links-inner">
-        <a href="#" class="important-link">
+        <a href="/download" class="important-link">
             <div class="important-link-boxes">
                 <span class="boldy600 dark">Download Page</span>
                 <br />
                 Find All The Releases
                 <br /><br />
-                <img src="/assets/icons/download.png" />
+                <img src="/assets/icons/download.png" alt="Download Icon"/>
             </div> <!--important-link-boxes ends here-->
         </a>
 
-        <a href="#" class="important-link">
+        <a href="/user_guide/index.html" class="important-link">
             <div class="important-link-boxes">
                 <span class="boldy600 dark">Clear Documentation</span>
                 <br />
                 Read The Manual
                 <br /><br />
-                <img src="/assets/icons/documentation.png" />
+                <img src="/assets/icons/documentation.png" alt="Documentation Icon"/>
             </div> <!--important-link-boxes ends here-->
         </a>
 
-        <a href="#" class="important-link">
+        <a href="https://forum.codeigniter.com/" class="important-link" target="_blank">
             <div class="important-link-boxes">
                 <span class="boldy600 dark">Get Support & Discuss Things</span>
                 <br />
                 View The Forums
                 <br /><br />
-                <img src="/assets/icons/forum.png" />
+                <img src="/assets/icons/forum.png" alt="Forum Icon"/>
             </div> <!--important-link-boxes ends here-->
         </a>
 
-        <a href="#" class="important-link">
+        <a href="https://github.com/codeigniter4/CodeIgniter4" class="important-link" target="_blank">
             <div class="important-link-boxes">
                 <span class="boldy600 dark">Fix Bugs or Add Features</span>
                 <br />
                 On Github
                 <br /><br />
-                <img src="/assets/icons/github.png" />
+                <img src="/assets/icons/github.png" alt="Github Icon"/>
             </div> <!--important-link-boxes ends here-->
         </a>
         <div class="clr"></div>
@@ -206,8 +206,8 @@ header {
 
 <div class="clr"></div>
 
-<section id="content-outer">
-    <div id="content-inner">
+<section class="content-outer">
+    <div class="content-inner">
 
         <div class="section-title">CodeIgniter Forum</div>
 

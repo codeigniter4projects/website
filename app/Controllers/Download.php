@@ -13,10 +13,10 @@ class Download extends BaseController
             $releases = $this->github->getReleases();
 
             $data = [
-                'v3name' => $releases['framework3'][0]->tag,
-                'v4name' => $releases['framework4'][0]->tag,
-                'v3link' => $releases['framework3'][0]->download_url,
-                'v4link' => $releases['framework4'][0]->download_url,
+                'v3name' => end($releases['framework3'])->tag,
+                'v4name' => end($releases['framework4'])->tag,
+                'v3link' => end($releases['framework3'])->download_url,
+                'v4link' => end($releases['framework4'])->download_url,
             ];
         } catch (ExceptionInterface $e) {
             $data = [

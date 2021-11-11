@@ -57,8 +57,8 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 
 Use these steps to create a local installation for development and testing.
 
-1. Clone the repo: `git clone https://github.com/lonnieezell/ci-website`
-2. Work in the repo directory: `cd ci-website`
+1. Clone the repo: `git clone https://github.com/codeigniter4projects/website`
+2. Work in the repo directory: `cd website`
 3. Make sure the **writable** folder is accessible: `chmod -R 777 writable`
 4. Install dependencies: `composer install`
 5. Create your **.env** file: `cp env .env`
