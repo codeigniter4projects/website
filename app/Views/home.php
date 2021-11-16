@@ -31,10 +31,10 @@ header {
             <a href="https://github.com/codeigniter4/CodeIgniter4" class="github-link" target="_blank">
                 <div class="githubs">
                     <div class="github-icon">
-                        <img src="/assets/icons/spotlight-github-stars.png" alt="Github Stars"/>
-                        <div class="github-data">
-                            <span class="boldy700">Star</span> <?= $stargazers_count ?>
-                        </div>
+                      <svg height="32" viewBox="0 0 32 32" width="32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M16.003 0C7.17 0 .008 7.162.008 15.997c0 7.067 4.582 13.063 10.94 15.179.8.146 1.052-.328 1.052-.752 0-.38.008-1.442 0-2.777-4.449.967-5.371-2.107-5.371-2.107-.727-1.848-1.775-2.34-1.775-2.34-1.452-.992.109-.973.109-.973 1.605.113 2.451 1.649 2.451 1.649 1.427 2.443 3.743 1.737 4.654 1.329.146-1.034.56-1.739 1.017-2.139-3.552-.404-7.286-1.776-7.286-7.906 0-1.747.623-3.174 1.646-4.292-.165-.404-.715-2.031.157-4.234 0 0 1.343-.43 4.398 1.641a15.31 15.31 0 0 1 4.005-.538c1.359.006 2.727.183 4.005.538 3.055-2.07 4.396-1.641 4.396-1.641.872 2.203.323 3.83.159 4.234 1.023 1.118 1.644 2.545 1.644 4.292 0 6.146-3.74 7.498-7.304 7.893C19.479 23.548 20 24.508 20 26v4.428c0 .428.258.901 1.07.746C27.422 29.055 32 23.062 32 15.997 32 7.162 24.838 0 16.003 0z" fill="#181616" fill-rule="evenodd"/></svg>
+                      <div class="github-data">
+                          <span class="boldy700">Star</span> <?= $stargazers_count ?>
+                      </div>
                     </div>
                 </div>
             </a>
@@ -42,10 +42,10 @@ header {
             <a href="https://github.com/codeigniter4/CodeIgniter4" class="github-link" target="_blank">
                 <div class="githubs">
                     <div class="github-icon">
-                        <img src="/assets/icons/spotlight-github-fork.png" alt="Github Fork"/>
-                        <div class="github-data">
-                            <span class="boldy700">Fork</span> <?= $forks_count ?>
-                        </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="131 -131 512 512" xml:space="preserve"><path d="M569.9 15.3c0-40.9-32.2-73.1-73.1-73.1s-73.1 32.2-73.1 73.1c0 26.7 14.9 50.3 36.2 62.9v11c-.8 18.9-8.7 35.4-22.8 50.3-14.9 14.9-31.5 22-50.3 22.8-30.7.8-54.3 5.5-73.1 16.5V5.1c21.2-12.6 36.2-35.4 36.2-62.9 0-40.9-32.2-73.1-73.1-73.1s-72.7 32.1-72.7 73c0 26.7 14.9 50.3 36.2 62.9v239.9c-21.2 12.6-36.2 36.2-36.2 62.9 0 40.9 32.2 73.1 73.1 73.1s73.1-32.2 73.1-73.1c0-19.7-7.1-36.2-19.7-49.5 3.1-2.4 17.3-14.9 21.2-17.3 9.4-3.9 20.4-6.3 34.6-6.3 38.5-1.6 71.6-16.5 100.7-45.6 29.1-29.1 44-72.4 45.6-110.1h-.8c23-14.2 38-37 38-63.7zM278.1-101.9c24.4 0 44 20.4 44 44s-20.4 44-44 44-44-20.4-44-44 20.4-44 44-44zm0 453c-24.4 0-44-20.4-44-44s20.4-44 44-44 44 20.4 44 44c-.8 24.4-20.4 44-44 44zM496.7 59.3c-24.4 0-44-20.4-44-44s20.4-44 44-44 44 20.4 44 44c.1 23.6-20.4 44-44 44z"/></svg>
+                      <div class="github-data">
+                          <span class="boldy700">Fork</span> <?= $forks_count ?>
+                      </div>
                     </div>
                 </div>
             </a>

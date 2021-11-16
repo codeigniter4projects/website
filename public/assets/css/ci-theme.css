@@ -483,17 +483,19 @@ section#spotlight-outer{
 	}
 
 .github-icon{
-	float:left;
-	}
+	display: flex;
+	align-items: center;
+}
 
-.github-icon img{
-	float:left;
-	}
+.github-icon svg{
+	width: 24px;
+	height: 24px;
+	margin-right: 5px;
+}
+
 .github-data{
-	float:left;
-	font-size:11px;
-	margin-top:10px;
-	}
+	font-size: 11px;
+}
 
 a.github-link:link,a.github-link:visited{
 	text-decoration:none;
