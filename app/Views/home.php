@@ -167,7 +167,7 @@ header {
                 <br />
                 Find All The Releases
                 <br /><br />
-                <img src="/assets/icons/download.png" alt="Download Icon"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M9 12h2l-3 3-3-3h2V7h2v5zm3-8c0-.44-.91-3-4.5-3C5.08 1 3 2.92 3 5 1.02 5 0 6.52 0 8c0 1.53 1 3 3 3h3V9.7H3C1.38 9.7 1.3 8.28 1.3 8c0-.17.05-1.7 1.7-1.7h1.3V5c0-1.39 1.56-2.7 3.2-2.7 2.55 0 3.13 1.55 3.2 1.8v1.2H12c.81 0 2.7.22 2.7 2.2 0 2.09-2.25 2.2-2.7 2.2h-2V11h2c2.08 0 4-1.16 4-3.5C16 5.06 14.08 4 12 4z"/></svg>
             </div> <!--important-link-boxes ends here-->
         </a>
 
@@ -177,7 +177,7 @@ header {
                 <br />
                 Read The Manual
                 <br /><br />
-                <img src="/assets/icons/documentation.png" alt="Documentation Icon"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"/></svg>
             </div> <!--important-link-boxes ends here-->
         </a>
 
@@ -187,7 +187,7 @@ header {
                 <br />
                 View The Forums
                 <br /><br />
-                <img src="/assets/icons/forum.png" alt="Forum Icon"/>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 84" xml:space="preserve"><path d="M82 8.993H34c-1.1 0-2 .9-2 2v14H2c-1.1 0-2 .9-2 2v32c0 1.1.9 2 2 2h8v12c0 3 2.9 1.9 3.4 1.4l13.4-13.4H50c1.1 0 2-.9 2-2v-14h5.3l13.3 13.4c1.3 1.3 3.4.3 3.4-1.4v-12h8c1.1 0 2-.9 2-2v-32c0-1.1-.9-2-2-2zm-34 48H26c-.5 0-1 .2-1.4.6L14 68.193v-9.2c0-1.1-.9-2-2-2H4v-28h28v14c0 1.1.9 2 2 2h14v12zm32-16h-8c-1.1 0-2 .9-2 2v9.2l-10.5-10.6c-.4-.4-.9-.6-1.4-.6H36v-28h44v28z"/></svg>
             </div> <!--important-link-boxes ends here-->
         </a>
 
@@ -197,7 +197,7 @@ header {
                 <br />
                 On Github
                 <br /><br />
-                <img src="/assets/icons/github.png" alt="Github Icon"/>
+                <svg height="32" viewBox="0 0 32 32" width="32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M16.003 0C7.17 0 .008 7.162.008 15.997c0 7.067 4.582 13.063 10.94 15.179.8.146 1.052-.328 1.052-.752 0-.38.008-1.442 0-2.777-4.449.967-5.371-2.107-5.371-2.107-.727-1.848-1.775-2.34-1.775-2.34-1.452-.992.109-.973.109-.973 1.605.113 2.451 1.649 2.451 1.649 1.427 2.443 3.743 1.737 4.654 1.329.146-1.034.56-1.739 1.017-2.139-3.552-.404-7.286-1.776-7.286-7.906 0-1.747.623-3.174 1.646-4.292-.165-.404-.715-2.031.157-4.234 0 0 1.343-.43 4.398 1.641a15.31 15.31 0 0 1 4.005-.538c1.359.006 2.727.183 4.005.538 3.055-2.07 4.396-1.641 4.396-1.641.872 2.203.323 3.83.159 4.234 1.023 1.118 1.644 2.545 1.644 4.292 0 6.146-3.74 7.498-7.304 7.893C19.479 23.548 20 24.508 20 26v4.428c0 .428.258.901 1.07.746C27.422 29.055 32 23.062 32 15.997 32 7.162 24.838 0 16.003 0z" fill="#181616" fill-rule="evenodd"/></svg>
             </div> <!--important-link-boxes ends here-->
         </a>
         <div class="clr"></div>
