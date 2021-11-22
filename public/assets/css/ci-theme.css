@@ -847,10 +847,20 @@ a.footer-menu-item:hover {
 	}
 
 #footer-inner-right .links-icons .icon{
-	margin-bottom:0;
 	margin:20px auto;
 	transition: all 1s ease;
+	text-align: center;
 	}
+
+#footer-inner-right .links-icons .icon svg {
+	width: 25px;
+	height: 25px;
+	fill: #f4c3bd;
+}
+
+#footer-inner-right .links-icons .icon svg path {
+	fill: #f4c3bd;
+}
 
 #footer-inner-right .links-icons .data{
 	font-size:11px;
