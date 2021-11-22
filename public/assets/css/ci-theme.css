@@ -693,6 +693,11 @@ section#important-links-outer{
 	transition: all 0.5s;
 	}
 
+.important-link-boxes svg {
+	width: 64px;
+	height: 64px;
+}
+
 .important-link-boxes a:link, .important-link-boxes a:visited {
 	text-decoration: none;
 	}
