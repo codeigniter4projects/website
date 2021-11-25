@@ -51,8 +51,8 @@
 		</div><!--ci-version-boxes end-->
 
 	</div><!--content-inner end-->
-	</div><!--section end-->
+</section><!--section end-->
 
-	<div class="clr"></div>
+<div class="clr"></div>
 
 <?= $this->endSection() ?>

@@ -71,9 +71,8 @@
         <div class="clr"></div>
 
     </div><!--content-inner ends here-->
-    </div><!--section ende-->
+</section><!--section ende-->
 
-
-    <div class="clr"></div>
+<div class="clr"></div>
 
 <?= $this->endSection() ?>
