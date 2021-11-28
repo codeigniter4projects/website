@@ -636,6 +636,11 @@ section.content-outer{
 	display: block;
 	}
 
+.ci-features-box-icon svg {
+	width: 51px;
+	height: 59px;
+}
+
 .ci-features-box-text-area {
 	float: left;
 	display: inline-block;
