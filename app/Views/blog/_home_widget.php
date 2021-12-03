@@ -2,7 +2,7 @@
     <?php foreach ($rows as $row) : ?>
         <div class="rnapf-row">
             <div class="rnapf-date">
-                <?= $row->date ?>
+                <?= $row->formatDate() ?>
             </div>
             <div class="rnapf-title">
                 <a href="<?= $row->link() ?>" class="rnapf-title-link"><?= esc($row->title) ?></a>
