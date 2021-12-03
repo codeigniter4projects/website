@@ -1075,5 +1075,13 @@ a.footer-menu-item-active:link,a.footer-menu-item-active:visited{
 			width:100%;
 			height:auto;
 		}
-				
+			
+.ci-features-box-text-area {
+    float: left;
+    display: inline-block;
+    width: 65%;
+    height: 100%;
+    margin: 5px;
+}	
+	
 }
