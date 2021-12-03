@@ -716,8 +716,7 @@ section#important-links-outer{
 /* Forum posts -------------------------------------------------------------- */
 
 .recent-news-and-forum-posts {
-	float: none;
-	display: inline-block;
+	flex: auto;
 	width: 41%;
 	height: 100%;
 	margin: 38px 4%;
@@ -1511,3 +1510,14 @@ a.contributors-profile-link{
 	margin:10px auto;
 	transition:all 0.5s;
 	}
+
+
+/* FLEX --------------------------------------------------------------------------- */
+
+.flex-container {
+	display:flex;
+	resize: horizontal;
+	overflow: hidden;
+	flex-direction: row;
+	flex-wrap: wrap;
+}

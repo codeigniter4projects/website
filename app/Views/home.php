@@ -213,18 +213,20 @@ header {
 
         <div class="clr"></div>
 
-        <div class="recent-news-and-forum-posts margin-left-1">
-            <div class="rnafp-name">Recent News</div>
-            <div class="clr"></div>
+        <div class="flex-container">
+            <div class="recent-news-and-forum-posts">
+                <div class="rnafp-name">Recent News</div>
+                <div class="clr"></div>
 
-	        <?= view_cell('\App\Libraries\Blog::recentPostsWidget', 'limit=5, view=blog/_home_widget') ?>
-        </div><!--recent-news-and-forum-posts here-->
+                <?= view_cell('\App\Libraries\Blog::recentPostsWidget', 'limit=5, view=blog/_home_widget') ?>
+            </div><!--recent-news-and-forum-posts here-->
 
-        <div class="recent-news-and-forum-posts margin-left-3">
-            <div class="rnafp-name">Active Forum Threads</div>
-            <div class="clr"></div>
+            <div class="recent-news-and-forum-posts">
+                <div class="rnafp-name">Active Forum Threads</div>
+                <div class="clr"></div>
 
-            <?= view_cell('\App\Libraries\Forums::posts', 'limit=5') ?>
+                <?= view_cell('\App\Libraries\Forums::posts', 'limit=5') ?>
+            </div>
         </div>
 
     </div><!--features-inner ends here-->
