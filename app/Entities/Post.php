@@ -3,6 +3,7 @@
 namespace App\Entities;
 
 use CodeIgniter\Entity;
+use CodeIgniter\I18n\Time;
 
 /**
  * Class Post
@@ -39,4 +40,21 @@ class Post extends Entity
 
         return $tags;
     }
+
+	/**
+	 * Formats the post date.
+	 *
+	 * @param string $format
+	 *
+	 * @return string
+	 * @throws \Exception
+	 */
+	public function formatDate(string $format = 'Y.m.d'): string
+	{
+		if (empty($this->date)) {
+			return '';
+		}
+
+		return Time::parse($this->date)->format($format);
+	}
 }

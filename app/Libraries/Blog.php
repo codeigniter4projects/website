@@ -184,7 +184,7 @@ class Blog
      * Displays the HTML "widget" for the list of recent posts
      * in the sidebar.
      */
-    public function recentPostsWidget(int $limit): string
+    public function recentPostsWidget(int $limit, string $view = 'blog/_widget'): string
     {
         $posts = $this->getRecentPosts($limit);
 
@@ -192,7 +192,7 @@ class Blog
             return '';
         }
 
-        return view('blog/_widget', [
+        return view($view, [
             'title' => 'Recent Posts',
             'rows'  => $posts,
         ]);

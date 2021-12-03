@@ -217,50 +217,7 @@ header {
             <div class="rnafp-name">Recent News</div>
             <div class="clr"></div>
 
-            <div class="rnapf-row">
-                <div class="rnapf-date">
-                    2020.02.24
-                </div><!--rnapf-date ends here-->
-                <div class="rnapf-title">
-                    <a href="#" class="rnapf-title-link">CodeIgniter 4.0 is here! </a>
-                </div><!--rnapf-title ends here-->
-            </div><!--rnapf-row ends here-->
-
-            <div class="rnapf-row">
-                <div class="rnapf-date">
-                    2020.02.06
-                </div><!--rnapf-date ends here-->
-                <div class="rnapf-title">
-                    <a href="#" class="rnapf-title-link">CodeIgniter 4.0.0-rc.4  </a>
-                </div><!--rnapf-title ends here-->
-            </div><!--rnapf-row ends here-->
-
-            <div class="rnapf-row">
-                <div class="rnapf-date">
-                    2020.01.15
-                </div><!--rnapf-date ends here-->
-                <div class="rnapf-title">
-                    <a href="#" class="rnapf-title-link">Important News about Jim Parry and the Project </a>
-                </div><!--rnapf-title ends here-->
-            </div><!--rnapf-row ends here-->
-
-            <div class="rnapf-row">
-                <div class="rnapf-date">
-                    2019.11.25
-                </div><!--rnapf-date ends here-->
-                <div class="rnapf-title">
-                    <a href="#" class="rnapf-title-link">CodeIgniter 4 Playground </a>
-                </div><!--rnapf-title ends here-->
-            </div><!--rnapf-row ends here-->
-
-            <div class="rnapf-row">
-                <div class="rnapf-date">
-                    2019.10.19
-                </div><!--rnapf-date ends here-->
-                <div class="rnapf-title">
-                    <a href="#" class="rnapf-title-link">CodeIgniter 4.0.0-rc.3 released </a>
-                </div><!--rnapf-title ends here-->
-            </div><!--rnapf-row ends here-->
+	        <?= view_cell('\App\Libraries\Blog::recentPostsWidget', 'limit=5, view=blog/_home_widget') ?>
         </div><!--recent-news-and-forum-posts here-->
 
         <div class="recent-news-and-forum-posts margin-left-3">
