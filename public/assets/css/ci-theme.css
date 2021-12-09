@@ -483,17 +483,19 @@ section#spotlight-outer{
 	}
 
 .github-icon{
-	float:left;
-	}
+	display: flex;
+	align-items: center;
+}
 
-.github-icon img{
-	float:left;
-	}
+.github-icon svg{
+	width: 24px;
+	height: 24px;
+	margin-right: 5px;
+}
+
 .github-data{
-	float:left;
-	font-size:11px;
-	margin-top:10px;
-	}
+	font-size: 11px;
+}
 
 a.github-link:link,a.github-link:visited{
 	text-decoration:none;
@@ -634,6 +636,11 @@ section.content-outer{
 	display: block;
 	}
 
+.ci-features-box-icon svg {
+	width: 51px;
+	height: 59px;
+}
+
 .ci-features-box-text-area {
 	float: left;
 	display: inline-block;
@@ -691,6 +698,11 @@ section#important-links-outer{
 	transition: all 0.5s;
 	}
 
+.important-link-boxes svg {
+	width: 64px;
+	height: 64px;
+}
+
 .important-link-boxes a:link, .important-link-boxes a:visited {
 	text-decoration: none;
 	}
@@ -704,8 +716,7 @@ section#important-links-outer{
 /* Forum posts -------------------------------------------------------------- */
 
 .recent-news-and-forum-posts {
-	float: none;
-	display: inline-block;
+	flex: auto;
 	width: 41%;
 	height: 100%;
 	margin: 38px 4%;
@@ -845,10 +856,20 @@ a.footer-menu-item:hover {
 	}
 
 #footer-inner-right .links-icons .icon{
-	margin-bottom:0;
 	margin:20px auto;
 	transition: all 1s ease;
+	text-align: center;
 	}
+
+#footer-inner-right .links-icons .icon svg {
+	width: 25px;
+	height: 25px;
+	fill: #f4c3bd;
+}
+
+#footer-inner-right .links-icons .icon svg path {
+	fill: #f4c3bd;
+}
 
 #footer-inner-right .links-icons .data{
 	font-size:11px;
@@ -1489,3 +1510,14 @@ a.contributors-profile-link{
 	margin:10px auto;
 	transition:all 0.5s;
 	}
+
+
+/* FLEX --------------------------------------------------------------------------- */
+
+.flex-container {
+	display:flex;
+	resize: horizontal;
+	overflow: hidden;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
