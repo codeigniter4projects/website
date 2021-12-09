@@ -496,14 +496,14 @@ section#spotlight-outer{
 	margin: 16px auto;
 	font-size: 3rem;
 	color: var(--primary-color);
-	text-align: center;
+	display: flex;
+	justify-content: center;
 	}
 
 #spotlight-version {
-	width: 50px;
-	height: 50px;
-	position: absolute;
-	top: 0px;
+	width: 40px;
+	position: relative;
+	top: -5px;
 	right: 0;
 	font-size: 2rem;
 	color: var(--primary-color);
@@ -803,11 +803,11 @@ a.footer-menu-item-active:link,a.footer-menu-item-active:visited{
 @media(max-width:700px){
 
 #spotlight-version {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 0px;
-    right: -30px;
+    width: 16px;
+    position: relative;
+	top: -5px;
+    right: 0;
+	margin-left: 10px;
     font-size: 2rem;
     color: var(--primary-color);
     text-align: center;
