@@ -315,6 +315,10 @@ a.footer-menu-item:hover{padding-left:10px;margin-top: 0;}
 	width: 240px;
 	height: 60px;
 	}
+
+#news-left-column {
+	width: 20%;
+}
 }
 
 
