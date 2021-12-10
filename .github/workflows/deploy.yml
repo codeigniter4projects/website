@@ -67,5 +67,5 @@ jobs:
 
             echo $'Set up Links\n'
             cd $RELEASE_DIR
-            sudo ln -nsf $RELEASE "../current"
+            sudo ln -nsf $RELEASE_DIR/$RELEASE "../current"
             sudo service php7.4-fpm reload
