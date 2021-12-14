@@ -455,12 +455,13 @@ a.top-menu-item-download {
 	text-decoration:none;
 	float:left;
 	text-align:center;
-	width:90%;
+	width:100%;
 	background-color: var(--primary-color);
 	color: var(--white);
 	margin:14px auto;
 	padding: 6px 18px;
 	border-radius:5px;
+	box-sizing: border-box;
 	}
 
 a.download-button{
