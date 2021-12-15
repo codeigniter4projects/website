@@ -702,9 +702,16 @@ a.footer-menu-item-active:link,a.footer-menu-item-active:visited{
 #footer-inner-right {
 	float: left;
 	margin: 10px 0 0 10px;
-	width: 240px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
 	height: 60px;
 	}
+
+#footer-inner-right .links-icons {
+	width: auto;
+	height: auto;
+}
 
 #footer-copyrights {
 	float:left;
