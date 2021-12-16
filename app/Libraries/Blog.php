@@ -61,7 +61,7 @@ class Blog
             }
 
             // Don't trust filesystem, order by date.
-            asort($files);
+            arsort($files);
 
             // Get the current page's worth.
             $files = array_splice($files, $offset, $limit);
