@@ -224,7 +224,10 @@ footer#footer-outer {
 		padding-bottom:15px;
 		
 		
-	}	
+	}
+.cv-boxes-buttons-area {
+	left: -10px;
+}
 }
 
 

@@ -1391,11 +1391,8 @@ span.version-no{
 
 .cv-boxes-buttons-area	{
 	float:left;
-	width:70%;
-	height:100px;
-	position:absolute;
-	bottom:0;
-	left:22%;
+	position:relative;
+	left:15%;
 }
 	/*
 a.download-buttons:nth-of-type(1){
