@@ -58,7 +58,7 @@
     <p>&copy; <?= date('Y') ?> CodeIgniter Foundation. CodeIgniter is open source project released under the MIT
         open source licence.</p>
 
-    <img id="scroll-to-top" src="/assets/icons/ci-footer.png"/>
+    <img id="scroll-to-top" src="/assets/icons/ci-footer.png" alt="codeigniter logotype"/>
 
 </div>
 <!-- SCRIPTS -->
