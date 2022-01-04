@@ -7,7 +7,7 @@
 <section id="content-outer">
     <div id="content-inner">
         <div id="discuss-icon-holder">
-            <img src="/assets/icons/forum-new.png" id="discuss-icon"/>
+            <img src="/assets/icons/forum-new.png" id="discuss-icon" alt="discuss icon"/>
             <p>
                 CodeIgniter is a community-developed open source project, with several venues for the community members to gather
                 and exchange ideas.
