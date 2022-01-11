@@ -7,7 +7,7 @@
 <section id="content-outer">
     <div id="content-inner">
         <div id="policies-icon-holder">
-            <img src="/assets/icons/44521256.png" id="policies-icon"/>
+            <img src="/assets/icons/44521256.png" id="policies-icon" alt="policies icon"/>
         </div><!--icon ends here-->
 
         <div class="clr"></div>
