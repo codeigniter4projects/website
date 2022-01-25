@@ -133,7 +133,7 @@ header {
                     <div class="ci-features-box-title">Clear documentation</div>
                     <div class="clr"></div>
                     <div class="ci-features-box-text">
-                        CodeIgniter consistently outperforms most of its competitors.
+                        The User Guide contains an introduction, tutorial, a number of "how to" guides, and then reference documentation for the components that make up the framework.
                     </div><!--ci-features-box-text ends here-->
                 </div><!--ci-features-box-text ends here-->
             </div><!--ci-feature-box ends here-->
