@@ -955,7 +955,11 @@ a.footer-menu-item-active:link,a.footer-menu-item-active:visited{
     padding-bottom: 30px;
     box-sizing: border-box;
     border-right: 1px solid var(--section-border);
-}	
+}
+
+.content-inner {
+    width:90%;
+}
 			
 }
 
