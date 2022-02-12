@@ -1010,7 +1010,7 @@ Other notable changes:
 [webworkers]: https://github.com/isagalaev/highlight.js#web-workers
 [Jeremy Hull]: https://github.com/sourrust
 [#348]: https://github.com/isagalaev/highlight.js/issues/348
-[sg]: http://highlightjs.readthedocs.org/en/latest/style-guide.html
+[sg]: https://highlightjs.readthedocs.org/en/latest/style-guide.html
 [issues]: https://github.com/isagalaev/highlight.js/issues
 [Nebuleon Fumika]: https://github.com/Nebuleon
 [prince]: https://github.com/prince-0203
@@ -1288,7 +1288,7 @@ New languages in this release:
 - *ERB* (Ruby in HTML) by [Lucas Mazza][]
 - *Roboconf* by [Vincent Zurczak][]
 
-[b]: http://highlightjs.readthedocs.org/en/latest/building-testing.html
+[b]: https://highlightjs.readthedocs.org/en/latest/building-testing.html
 [Jeremy Hull]: https://github.com/sourrust
 [ik]: https://twitter.com/IvanKleshnin/status/514041599484231680
 [Max Mikhailov]: https://github.com/seven-phases-max
@@ -1419,7 +1419,7 @@ Other improvements:
 - Various improvements to Objective-C definition by [Matt Diephouse][].
 - Fixed highlighting of generics in Java.
 
-[ll]: http://highlightjs.readthedocs.org/en/latest/api.html#listlanguages
+[ll]: https://highlightjs.readthedocs.org/en/latest/api.html#listlanguages
 [Sindre Sorhus]: https://github.com/sindresorhus
 [Heiko August]: https://github.com/auge8472
 [Nikolay Lisienko]: https://github.com/neor-ru
@@ -1512,10 +1512,10 @@ Miscellaneous improvements:
 - Big overhaul of relevance counting for a number of languages. Please do report
   bugs about mis-detection of non-trivial code snippets!
 
-[API reference]: http://highlightjs.readthedocs.org/en/latest/api.html
+[API reference]: https://highlightjs.readthedocs.org/en/latest/api.html
 
-[cr]: http://highlightjs.readthedocs.org/en/latest/css-classes-reference.html
-[api docs]: http://highlightjs.readthedocs.org/en/latest/api.html
+[cr]: https://highlightjs.readthedocs.org/en/latest/css-classes-reference.html
+[api docs]: https://highlightjs.readthedocs.org/en/latest/api.html
 [variants]: https://groups.google.com/d/topic/highlightjs/VoGC9-1p5vk/discussion
 [beginKeywords]: https://github.com/isagalaev/highlight.js/commit/6c7fdea002eb3949577a85b3f7930137c7c3038d
 [php-html]: https://twitter.com/highlightjs/status/408890903017689088
@@ -1560,12 +1560,12 @@ Improvements:
 [mehdid]: https://github.com/mehdid
 [nbraud]: https://github.com/nbraud
 [revig]: https://github.com/revig
-[lcs]: http://livecode.com/developers/guides/server/
+[lcs]: https://livecode.com/developers/guides/server/
 [sylvestre]: https://github.com/sylvestre
 [isagalaev]: https://github.com/isagalaev
 [treep]: https://github.com/treep
 [sourrust]: https://github.com/sourrust
-[d]: http://highlightjs.org/download/
+[d]: https://highlightjs.org/download/
 
 
 ## New core developers
@@ -1593,7 +1593,7 @@ This long overdue version is a snapshot of the current source tree with all the
 changes that happened during the past year. Sorry for taking so long!
 
 Along with the changes in code highlight.js has finally got its new home at
-<http://highlightjs.org/>, moving from its cradle on Software Maniacs which it
+<https://highlightjs.org/>, moving from its cradle on Software Maniacs which it
 outgrew a long time ago. Be sure to report any bugs about the site to
 <mailto:info@highlightjs.org>.
 
@@ -1628,7 +1628,7 @@ New style themes:
 - Mono Blue by [Ivan Sagalaev][] (uses a single color hue for everything)
 - Foundation by [Dan Allen][]
 
-[noformnocontent]: http://nn.mit-license.org/
+[noformnocontent]: https://nn.mit-license.org/
 [Damien White]: https://github.com/visoft
 [Alexander Marenin]: https://github.com/ioncreature
 [Simon Madine]: https://github.com/thingsinjars
@@ -1669,7 +1669,7 @@ Other notable changes:
 - Also Oleg Efimov did a great job of moving all the docs for language and style
   developers and contributors from the old wiki under the source code in the
   "docs" directory. Now these docs are nicely presented at
-  <http://highlightjs.readthedocs.org/>.
+  <https://highlightjs.readthedocs.org/>.
 
 [ng]: https://github.com/nathan11g
 [dd]: https://github.com/drdrang
@@ -1703,7 +1703,7 @@ A Summer crop:
 [tm]: http://jmblog.github.com/color-themes-for-highlightjs/
 [tm0]: https://github.com/ChrisKempson/Tomorrow-Theme
 [cd]: https://github.com/caseman
-[amd]: http://requirejs.org/docs/whyamd.html
+[amd]: https://requirejs.org/docs/whyamd.html
 
 
 ## Version 7.0
@@ -1744,9 +1744,9 @@ language detection.
 
 Overall highlight.js currently supports 51 languages and 20 style themes.
 
-[node.js]: http://nodejs.org/
-[api]: http://softwaremaniacs.org/wiki/doku.php/highlight.js:api
-[p]: http://softwaremaniacs.org/blog/2012/05/10/http-and-json-in-highlight-js/en/
+[node.js]: https://nodejs.org/
+[api]: https://softwaremaniacs.org/wiki/doku.php/highlight.js:api
+[p]: https://softwaremaniacs.org/blog/2012/05/10/http-and-json-in-highlight-js/en/
 [pojoaque]: http://web-cms-designs.com/ftopict-10-pojoaque-style-for-highlight-js-code-highlighter.html
 [ao]: https://github.com/angelolloqui
 [ar]: https://github.com/raleksandar
@@ -1780,7 +1780,7 @@ from all this activity:
 [oe]: https://github.com/Sannis
 [db]: https://github.com/btd
 [jc]: https://github.com/seejohnrun
-[lm]: http://grigio.org/
+[lm]: https://grigio.org/
 [ak]: https://github.com/geekpanth3r
 [es]: https://github.com/bolknote
 [log]: https://github.com/isagalaev/highlight.js/commits/
@@ -1797,7 +1797,7 @@ This version also adds a new original style Arta. Its author pumbur maintains a
 [heavily modified fork of highlight.js][pb] on GitHub.
 
 [jh]: https://github.com/sourrust
-[solarized]: http://ethanschoonover.com/solarized
+[solarized]: https://ethanschoonover.com/solarized
 [pb]: https://github.com/pumbur/highlight.js
 
 
@@ -1817,7 +1817,7 @@ New languages are:
 - Go by [Stephan Kountso][steplg]
 
 [sourrust]: https://github.com/sourrust
-[desh]: http://desh.su/
+[desh]: https://desh.su/
 [arhibot]: https://github.com/arhibot
 [ignatov]: https://github.com/ignatov
 [vhbit]: https://github.com/vhbit
@@ -1830,7 +1830,7 @@ bugs.
 Developer overview of the new language syntax is available in a [blog post about
 recent beta release][beta].
 
-[beta]: http://softwaremaniacs.org/blog/2011/04/25/highlight-js-60-beta/en/
+[beta]: https://softwaremaniacs.org/blog/2011/04/25/highlight-js-60-beta/en/
 
 P.S. New version is not yet available on a Yandex CDN, so for now you have to
 download [your own copy][d].
@@ -1871,8 +1871,8 @@ Bug fixes:
   just replaces the contents.
 - Small fixes in browser compatibility and heuristics.
 
-[c++ 0x]: http://ru.wikipedia.org/wiki/C%2B%2B0x
-[html 5]: http://en.wikipedia.org/wiki/HTML5
+[c++ 0x]: https://ru.wikipedia.org/wiki/C%2B%2B0x
+[html 5]: https://en.wikipedia.org/wiki/HTML5
 [ik]: http://kalnitsky.org.ua/
 
 ### For developers
@@ -1901,8 +1901,8 @@ expected one. Test summary is displayed right above all language snippets.
 Fine people at [Yandex][] agreed to host highlight.js on their big fast servers.
 [Link up][l]!
 
-[yandex]: http://yandex.com/
-[l]: http://softwaremaniacs.org/soft/highlight/en/download/
+[yandex]: https://yandex.com/
+[l]: https://softwaremaniacs.org/soft/highlight/en/download/
 
 
 ## Version 5.10 — "Paris".
@@ -1936,8 +1936,8 @@ Fixes for existing languages:
 - the definition of SQL has become more solid and now it shouldn't be overly
   greedy when it comes to language detection
 
-[ls]: http://gnuu.org/
-[yard]: http://yardoc.org/
+[ls]: https://gnuu.org/
+[yard]: https://yardoc.org/
 
 The highlighter has become more usable as a library allowing to do highlighting
 from initialization code of JS frameworks and in ajax methods (see.
@@ -1946,7 +1946,7 @@ readme.eng.txt).
 Also this version drops support for the [WordPress][wp] plugin. Everyone is
 welcome to [pick up its maintenance][p] if needed.
 
-[wp]: http://wordpress.org/
+[wp]: https://wordpress.org/
 [p]: http://bazaar.launchpad.net/~isagalaev/+junk/highlight/annotate/342/src/wp_highlight.js.php
 
 
@@ -1992,9 +1992,9 @@ Also in this version:
 - Oleg Volchkov has sent a definition for [Parser 3][p3].
 
 [1]: http://softwaremaniacs.org/forum/highlightjs/6612/
-[p3]: http://www.parser.ru/
-[vp]: http://vasily.polovnyov.ru/
-[vd]: http://dolzhenko.blogspot.com/
+[p3]: https://www.parser.ru/
+[vp]: https://vasily.polovnyov.ru/
+[vd]: https://dolzhenko.blogspot.com/
 
 
 ## Version 5.2
@@ -2019,8 +2019,8 @@ contributions!
   the matter.
 
 [vooon]: http://vehq.ru/about/
-[rukeba]: http://rukeba.com/
-[drake]: http://drakeguan.org/
+[rukeba]: https://rukeba.com/
+[drake]: https://drakeguan.org/
 [ke]: http://k-evdokimenko.moikrug.ru/
 
 
