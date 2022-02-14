@@ -957,6 +957,10 @@ a.footer-menu-item-active:link,a.footer-menu-item-active:visited{
     border-right: 1px solid var(--section-border);
 }
 
+.news-box pre {
+    overflow: scroll;
+}
+
 .content-inner {
     width:90%;
 }
