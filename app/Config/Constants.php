@@ -60,9 +60,9 @@ defined('DECADE') || define('DECADE', 315360000);
 |       http://www.gnu.org/software/libc/manual/html_node/Exit-Status.html
 |       (This link also contains other GNU-specific conventions)
 |    BSD sysexits.h:
-|       http://www.gsp.com/cgi-bin/man.cgi?section=3&topic=sysexits
+|       https://www.gsp.com/cgi-bin/man.cgi?section=3&topic=sysexits
 |    Bash scripting:
-|       http://tldp.org/LDP/abs/html/exitcodes.html
+|       https://tldp.org/LDP/abs/html/exitcodes.html
 |
 */
 defined('EXIT_SUCCESS')        || define('EXIT_SUCCESS', 0); // no errors
