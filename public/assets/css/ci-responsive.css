@@ -1050,6 +1050,11 @@ a.footer-menu-item-active:link,a.footer-menu-item-active:visited{
 /* MEDIA 400px ============================== */
 
 @media(max-width:400px){
+
+.important-link-boxes{
+ 	font-size: 14px;
+}
+
 	#breadcrumb-inner{
 		width:80%;
 		margin:0 auto;
