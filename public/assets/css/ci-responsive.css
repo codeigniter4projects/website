@@ -1113,3 +1113,9 @@ a.footer-menu-item-active:link,a.footer-menu-item-active:visited{
 }	
 	
 }
+
+@media(min-width:901px){
+    #top-menu {
+        display: block !important;
+    }
+}
