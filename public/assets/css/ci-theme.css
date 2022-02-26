@@ -617,7 +617,6 @@ section.content-outer{
 	height: 150px;
 	padding: 10px;
 	box-sizing: border-box;
-	border: 1px solid var(--white);
 	margin: 18px 4%;
 	transition: box-shadow 0.5s;
 	transition: margin-top 0.5s;
@@ -625,7 +624,6 @@ section.content-outer{
 
 .ci-features-box:hover {
 	float: left;
-	border: 1px solid #f1f1f1;
 	background: var(--white);
 	box-shadow: 3px 3px 10px #eee;
 	margin-top: 14px;
