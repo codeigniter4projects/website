@@ -12,7 +12,7 @@
 				</div>
 			</div><!--cv-boxes-version end-->
 			<div class="cv-boxes-content">
-				<p>CodeIgniter 4 is the latest version of the framework, intended for use with PHP 7.3+ (including 8.0).</p>
+				<p>CodeIgniter 4 is the latest version of the framework, intended for use with PHP 7.3+ (including 8.1).</p>
 				<p>The initial release was February 24, 2020. The current version is <?= $v4name ?>. </p>
 				<p>
 					You *could* download this version of the framework using the button below, but we encourage you to check the
