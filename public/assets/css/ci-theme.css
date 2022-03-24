@@ -111,6 +111,10 @@
 
 /* HELPERS ================================================================== */
 
+pre {
+	overflow: auto;
+}
+
 .clr {
 	clear: both;
 	}
@@ -555,7 +559,6 @@ section#content-outer{
 	margin:0;
 	padding:3px 0;
 	background: #fff;
-	border-top:1px solid #f5f5f5;
 	border-bottom:1px solid #f5f5f5;
 	}
 
@@ -614,7 +617,6 @@ section.content-outer{
 	height: 150px;
 	padding: 10px;
 	box-sizing: border-box;
-	border: 1px solid var(--white);
 	margin: 18px 4%;
 	transition: box-shadow 0.5s;
 	transition: margin-top 0.5s;
@@ -622,7 +624,6 @@ section.content-outer{
 
 .ci-features-box:hover {
 	float: left;
-	border: 1px solid #f1f1f1;
 	background: var(--white);
 	box-shadow: 3px 3px 10px #eee;
 	margin-top: 14px;
@@ -1047,7 +1048,7 @@ a.news-left-years-active:visited{
 }
 .news-box{
 	float:left;
-	width:90%;
+	width:100%;
 	height:100%;
 	margin:15px;
 	padding:15px;
@@ -1391,11 +1392,8 @@ span.version-no{
 
 .cv-boxes-buttons-area	{
 	float:left;
-	width:70%;
-	height:100px;
-	position:absolute;
-	bottom:0;
-	left:22%;
+	position:relative;
+	left:15%;
 }
 	/*
 a.download-buttons:nth-of-type(1){

@@ -37,7 +37,7 @@ class Paths
      * can also be renamed or relocated anywhere on your getServer. If
      * you do, use a full getServer path.
      *
-     * @see http://codeigniter.com/user_guide/general/managing_apps.html
+     * @see https://codeigniter.com/user_guide/general/managing_apps.html
      *
      * @var string
      */

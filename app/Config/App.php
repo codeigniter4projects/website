@@ -118,7 +118,7 @@ class App extends BaseConfig
      * This determines which character set is used by default in various methods
      * that require a character set to be provided.
      *
-     * @see http://php.net/htmlspecialchars for a list of supported charsets.
+     * @see https://php.net/htmlspecialchars for a list of supported charsets.
      *
      * @var string
      */
@@ -455,8 +455,8 @@ class App extends BaseConfig
      *
      * For a better understanding of CSP, see these documents:
      *
-     * @see http://www.html5rocks.com/en/tutorials/security/content-security-policy/
-     * @see http://www.w3.org/TR/CSP/
+     * @see https://www.html5rocks.com/en/tutorials/security/content-security-policy/
+     * @see https://www.w3.org/TR/CSP/
      *
      * @var bool
      */

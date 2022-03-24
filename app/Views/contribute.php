@@ -6,7 +6,7 @@
 <section id="content-outer">
     <div id="content-inner">
         <div id="contribute-heart-holder">
-            <img src="/assets/icons/heart.png" id="contribute-heart"/>
+            <img src="/assets/icons/heart.png" id="contribute-heart" alt="heart icon"/>
             <p>Contribute to CodeIgniter</p>
         </div><!--heart ends here-->
 
