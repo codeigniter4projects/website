@@ -1,3 +1,4 @@
+<?php if (! empty($post)) : ?>
 <div class="news-box">
     <div class="news-box-title">
         <a class="news-box-title-link" href="<?= $post->link() ?>"><?= esc($post->title) ?></a>
@@ -24,3 +25,5 @@
 </div><!--news-box ends here-->
 
 <div class="clr"></div>
+
+<?php endif ?>
