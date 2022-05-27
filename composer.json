@@ -34,12 +34,6 @@
     "require-dev": {
         "codeigniter4/devkit": "^1.0"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/codeigniter4/codeigniter4"
-        }
-    ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
