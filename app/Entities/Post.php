@@ -2,7 +2,7 @@
 
 namespace App\Entities;
 
-use CodeIgniter\Entity;
+use CodeIgniter\Entity\Entity;
 use CodeIgniter\I18n\Time;
 
 /**
