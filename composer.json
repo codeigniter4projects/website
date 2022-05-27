@@ -1,78 +1,79 @@
 {
-	"name": "codeigniter4projects/website",
-	"type": "project",
-	"description": "CodeIgniter Website",
-	"keywords": [
-		"codeigniter",
-		"codeigniter4"
-	],
-	"homepage": "https://codeigniter.com",
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "CodeIgniter Foundation",
-			"email": "noreply@codeigniter.com",
-			"homepage": "https://codeigniter.com",
-			"role": "Owner"
-		}
-	],
-	"require": {
-		"php": "^7.3 || ^8.0",
-		"codeigniter4/cache": "^1.0",
-		"codeigniter4/codeigniter4": "dev-develop",
-		"guzzlehttp/guzzle": "^7.0.1",
-		"http-interop/http-factory-guzzle": "^1.0",
-		"knplabs/github-api": "^3.0",
-		"league/commonmark": "^1.5"
-	},
-	"require-dev": {
-		"codeigniter/coding-standard": "^1.1",
-		"fakerphp/faker": "^1.9",
-		"friendsofphp/php-cs-fixer": "^3.0",
-		"mikey179/vfsstream": "^1.6",
-		"nexusphp/cs-config": "^3.1",
-		"nexusphp/tachycardia": "^1.0",
-		"phpstan/phpstan": "^1.0",
-		"phpunit/phpunit": "^9.5",
-		"roave/security-advisories": "dev-latest"
-	},
-	"autoload": {
-		"exclude-from-classmap": [
-			"**/Database/Migrations/**"
-		]
-	},
-	"autoload-dev": {
-		"psr-4": {
-			"Tests\\Support\\": "tests/_support"
-		}
-	},
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "https://github.com/codeigniter4/codeigniter4"
-		}
-	],
-	"minimum-stability": "dev",
-	"prefer-stable": true,
-	"scripts": {
-		"analyze": "phpstan analyze",
-		"ci": [
-			"Composer\\Config::disableProcessTimeout",
-			"@deduplicate",
-			"@analyze",
-			"@test",
-			"@inspect",
-			"@style"
-		],
-		"deduplicate": "phpcpd app/ src/",
-		"inspect": "deptrac analyze --cache-file=build/deptrac.cache",
-		"mutate": "infection --threads=2 --skip-initial-tests --coverage=build/phpunit",
-		"style": "php-cs-fixer fix --verbose --ansi --using-cache=no",
-		"test": "phpunit"
-	},
-	"support": {
-		"forum": "https://forum.codeigniter.com/",
-		"source": "https://github.com/codeigniter4/CodeIgniter4",
-		"slack": "https://codeigniterchat.slack.com"
-	}
+    "name": "codeigniter4projects/website",
+    "description": "CodeIgniter Website",
+    "license": "MIT",
+    "type": "project",
+    "keywords": [
+        "codeigniter",
+        "codeigniter4"
+    ],
+    "authors": [
+        {
+            "name": "CodeIgniter Foundation",
+            "email": "noreply@codeigniter.com",
+            "homepage": "https://codeigniter.com",
+            "role": "Owner"
+        }
+    ],
+    "homepage": "https://codeigniter.com",
+    "support": {
+        "forum": "https://forum.codeigniter.com/",
+        "source": "https://github.com/codeigniter4/CodeIgniter4",
+        "slack": "https://codeigniterchat.slack.com"
+    },
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "codeigniter4/cache": "^1.0",
+        "codeigniter4/framework": "^4.1",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "http-interop/http-factory-guzzle": "^1.0",
+        "knplabs/github-api": "^3.0",
+        "league/commonmark": "^1.5"
+    },
+    "require-dev": {
+        "codeigniter4/devkit": "^1.0"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/codeigniter4/codeigniter4"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "exclude-from-classmap": [
+            "**/Database/Migrations/**"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Support\\": "tests/_support"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "scripts": {
+        "analyze": [
+            "phpstan analyze",
+            "psalm"
+        ],
+        "ci": [
+            "Composer\\Config::disableProcessTimeout",
+            "@deduplicate",
+            "@analyze",
+            "@test",
+            "@inspect",
+            "rector process",
+            "@style"
+        ],
+        "deduplicate": "phpcpd app/ src/",
+        "inspect": "deptrac analyze --cache-file=build/deptrac.cache",
+        "mutate": "infection --threads=2 --skip-initial-tests --coverage=build/phpunit",
+        "style": "php-cs-fixer fix --verbose --ansi --using-cache=no",
+        "test": "phpunit"
+    }
 }
