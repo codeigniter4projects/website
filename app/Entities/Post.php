@@ -35,9 +35,8 @@ class Post extends Entity
         }
 
         $tags = explode(',', $this->attributes['tags']);
-        $tags = array_map(static fn ($item) => trim($item), $tags);
 
-        return $tags;
+        return array_map(static fn ($item) => trim($item), $tags);
     }
 
     /**
