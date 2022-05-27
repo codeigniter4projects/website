@@ -7,6 +7,7 @@ use App\Exceptions\BlogException;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use Config\Blog as BlogConfig;
 use League\CommonMark\CommonMarkConverter;
+use Throwable;
 
 /**
  * Class Blog
@@ -52,9 +53,7 @@ class Blog
             $files = directory_map($this->config->contentPath, 1);
 
             // We only want .md files.
-            $files = array_filter($files, static function ($file) {
-                return substr(strrchr($file, '.'), 1) === 'md';
-            });
+            $files = array_filter($files, static fn ($file) => substr(strrchr($file, '.'), 1) === 'md');
 
             if (! count($files)) {
                 throw BlogException::forInvalidContent();
@@ -108,9 +107,7 @@ class Blog
         $files = directory_map($this->config->contentPath, 1);
 
         // We only want .md files.
-        $files = array_filter($files, static function ($file) {
-            return substr(strrchr($file, '.'), 1) === 'md';
-        });
+        $files = array_filter($files, static fn ($file) => substr(strrchr($file, '.'), 1) === 'md');
 
         $posts = [];
 
@@ -122,7 +119,7 @@ class Blog
                     }
                 }
                 // Don't fail if we can't find the file anymore...
-                catch (\Throwable $e) {
+                catch (Throwable $e) {
                     continue;
                 }
             }
