@@ -35,17 +35,15 @@ class GitHub
 
     /**
      * KnpLabs GitHub API Client.
-     *
-     * @var Client
      */
-    private $client;
+    private Client $client;
 
     /**
      * Store of recent API results.
      *
      * @var array<string,mixed>
      */
-    private $storage = [
+    private array $storage = [
         'contributors' => null,
         'releases'     => null,
         'repos'        => null,
@@ -59,7 +57,9 @@ class GitHub
     public static function urlFromTag(array $segments, string $tag): string
     {
         array_unshift($segments, 'https://github.com');
-        array_push($segments, 'releases', 'tag', $tag);
+        $segments[] = 'releases';
+        $segments[] = 'tag';
+        $segments[] = $tag;
 
         return implode('/', $segments);
     }

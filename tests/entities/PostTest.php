@@ -8,10 +8,7 @@ use Tests\Support\ProjectTestCase;
  */
 final class PostTest extends ProjectTestCase
 {
-    /**
-     * @var Post
-     */
-    protected $post;
+    protected Post $post;
 
     protected function setUp(): void
     {

@@ -55,7 +55,7 @@ class Blog
             // We only want .md files.
             $files = array_filter($files, static fn ($file) => substr(strrchr($file, '.'), 1) === 'md');
 
-            if (! count($files)) {
+            if ($files === []) {
                 throw BlogException::forInvalidContent();
             }
 
@@ -95,7 +95,7 @@ class Blog
 
         $lines = unserialize(file_get_contents($path));
 
-        if (! count($lines)) {
+        if (! (is_countable($lines) ? count($lines) : 0)) {
             return [];
         }
 
@@ -142,7 +142,7 @@ class Blog
         if (! $post = cache($cacheKey)) {
             $files = glob("{$this->config->contentPath}*.{$slug}.md");
 
-            if (! count($files)) {
+            if (! (is_countable($files) ? count($files) : 0)) {
                 throw PageNotFoundException::forPageNotFound();
             }
 
@@ -185,7 +185,7 @@ class Blog
     {
         $posts = $this->getRecentPosts($limit);
 
-        if (! count($posts)) {
+        if (! (is_countable($posts) ? count($posts) : 0)) {
             return '';
         }
 
@@ -203,7 +203,7 @@ class Blog
     {
         $posts = $this->getPopularPosts($limit);
 
-        if (! count($posts)) {
+        if (! (is_countable($posts) ? count($posts) : 0)) {
             return '';
         }
 
