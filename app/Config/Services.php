@@ -6,6 +6,7 @@ use App\Libraries\GitHub;
 use CodeIgniter\Config\BaseService;
 use CodeIgniter\Psr\Cache\Pool;
 use Config\GitHub as GitHubConfig;
+use Github\AuthMethod;
 use Github\Client;
 use RuntimeException;
 
@@ -47,7 +48,7 @@ class Services extends BaseService
         }
 
         // Authenticate against GH
-        $client->authenticate($token, Client::AUTH_ACCESS_TOKEN);
+        $client->authenticate($token, AuthMethod::ACCESS_TOKEN);
 
         return new GitHub($config ?? config(GitHubConfig::class), $client);
     }
