@@ -1,9 +1,9 @@
 # CodeIgniter Website
 
-[![](https://github.com/lonnieezell/ci-website/workflows/PHPUnit/badge.svg)](https://github.com/lonnieezell/ci-website/actions/workflows/test.yml)
-[![](https://github.com/lonnieezell/ci-website/workflows/PHPStan/badge.svg)](https://github.com/lonnieezell/ci-website/actions/workflows/analyze.yml)
-[![](https://github.com/lonnieezell/ci-website/workflows/Deptrac/badge.svg)](https://github.com/lonnieezell/ci-website/actions/workflows/inspect.yml)
-[![Coverage Status](https://coveralls.io/repos/github/lonnieezell/ci-website/badge.svg?branch=develop)](https://coveralls.io/github/lonnieezell/ci-website?branch=develop)
+[![](https://github.com/codeigniter4projects/website/workflows/PHPUnit/badge.svg)](https://github.com/codeigniter4projects/website/actions/workflows/phpunit.yml)
+[![](https://github.com/codeigniter4projects/website/workflows/PHPStan/badge.svg)](https://github.com/codeigniter4projects/website/actions/workflows/phpstan.yml)
+[![](https://github.com/codeigniter4projects/website/workflows/Deptrac/badge.svg)](https://github.com/codeigniter4projects/website/actions/workflows/deptrac.yml)
+[![Coverage Status](https://coveralls.io/repos/github/codeigniter4projects/website/badge.svg?branch=develop)](https://coveralls.io/github/codeigniter4projects/website?branch=develop)
 
 This is the official website for the CodeIgniter PHP framework. 
 

@@ -103,7 +103,7 @@ final class GitHubTest extends ProjectTestCase
 
         $result = cache()->getCacheInfo();
 
-        $this->assertNotSame([], $result);
+        $this->assertNotSame([], $result); // @phpstan-ignore-line
         $this->assertCount(1, $result);
     }
 
