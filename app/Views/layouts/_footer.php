@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </a>
-            
+
             <a href="https://twitter.com/CodeIgniterPhp" target="_blank" aria-label="Twitter">
                 <div class="links-icons">
                     <div class="icon">
@@ -59,7 +59,7 @@
                     </div>
                 </div>
             </a>
-            
+
         </div><!--footer-inner-right ends here-->
     </div><!--footer-inner ends here-->
 

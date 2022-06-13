@@ -1059,6 +1059,7 @@ a.news-left-years-active:visited{
 	border:1px dashed #fff;
 	border-bottom:1px dashed var(--primary-color);
 	transition:all 0.5s;
+    line-height: 1.4;
 }
 .news-box-title{
 	font-size:24px;
@@ -1124,6 +1125,32 @@ ul.tags li {
 	display: inline-block;
 	margin-right: 0.625rem;
 }
+.news-box li {
+    margin-bottom: 0.5rem;
+}
+.news-box blockquote {
+    margin: 0;
+    padding: 16px 60px 16px 40px;
+    background-color: hsl(15, 90%, 98%);
+    position: relative;
+}
+
+.news-box blockquote:before {
+    position: absolute;
+    font-family: "Raleway";
+    top: -50px;
+    left: 5px;
+    content:"\"";
+    font-size: 200px;
+    color: rgba(0,0,0,0.1);
+}
+.news-box p code {
+    font-weight: inherit;
+    font-family: inherit;
+    background: rgba(0,0,0,0.05);
+    padding: 0.1em 0.5em;
+}
+
 /* DISCOVER Page -------------------------------------------------------------- */
 
 section#content-outer-discover{
@@ -1521,3 +1548,5 @@ a.contributors-profile-link{
 	flex-direction: row;
 	flex-wrap: wrap;
 }
+
+/* FLEX --------------------------------------------------------------------------- */
