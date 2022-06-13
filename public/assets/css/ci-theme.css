@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* CodeIgniter 4 - Website
  ============================================================================ */
 /* Forum: 	https://forum.codeigniter.com
@@ -113,6 +114,9 @@
 
 pre {
 	overflow: auto;
+    background: #f5f5f5;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .clr {
@@ -998,7 +1002,7 @@ section#content-outer-discover{
 
 #news-left-column{
 	float:left;
-	width:15%;
+	width:20%;
 	height:100%;
 	margin-top:15px;
 	padding:15px;
@@ -1009,6 +1013,10 @@ section#content-outer-discover{
 
 #news-left-column h4 {
 	margin-bottom: 0;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 6px;
+    box-sizing: border-box;
 }
 
 .widget {
@@ -1043,7 +1051,7 @@ a.news-left-years-active:visited{
 
 #news-column{
 	float:left;
-	width:80%;
+	width:75%;
 	height:100%;
 	padding:15px;
 	box-sizing:border-box;
@@ -1059,7 +1067,6 @@ a.news-left-years-active:visited{
 	border:1px dashed #fff;
 	border-bottom:1px dashed var(--primary-color);
 	transition:all 0.5s;
-    line-height: 1.4;
 }
 .news-box-title{
 	font-size:24px;
@@ -1125,32 +1132,6 @@ ul.tags li {
 	display: inline-block;
 	margin-right: 0.625rem;
 }
-.news-box li {
-    margin-bottom: 0.5rem;
-}
-.news-box blockquote {
-    margin: 0;
-    padding: 16px 60px 16px 40px;
-    background-color: hsl(15, 90%, 98%);
-    position: relative;
-}
-
-.news-box blockquote:before {
-    position: absolute;
-    font-family: "Raleway";
-    top: -50px;
-    left: 5px;
-    content:"\"";
-    font-size: 200px;
-    color: rgba(0,0,0,0.1);
-}
-.news-box p code {
-    font-weight: inherit;
-    font-family: inherit;
-    background: rgba(0,0,0,0.05);
-    padding: 0.1em 0.5em;
-}
-
 /* DISCOVER Page -------------------------------------------------------------- */
 
 section#content-outer-discover{
@@ -1548,5 +1529,3 @@ a.contributors-profile-link{
 	flex-direction: row;
 	flex-wrap: wrap;
 }
-
-/* FLEX --------------------------------------------------------------------------- */
