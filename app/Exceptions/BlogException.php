@@ -2,7 +2,9 @@
 
 namespace App\Exceptions;
 
-class BlogException extends \Exception
+use Exception;
+
+class BlogException extends Exception
 {
     public static function forInvalidContent()
     {

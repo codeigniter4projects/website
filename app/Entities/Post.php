@@ -2,8 +2,9 @@
 
 namespace App\Entities;
 
-use CodeIgniter\Entity;
+use CodeIgniter\Entity\Entity;
 use CodeIgniter\I18n\Time;
+use Exception;
 
 /**
  * Class Post
@@ -34,27 +35,21 @@ class Post extends Entity
         }
 
         $tags = explode(',', $this->attributes['tags']);
-        $tags = array_map(static function ($item) {
-            return trim($item);
-        }, $tags);
 
-        return $tags;
+        return array_map(static fn ($item) => trim($item), $tags);
     }
 
-	/**
-	 * Formats the post date.
-	 *
-	 * @param string $format
-	 *
-	 * @return string
-	 * @throws \Exception
-	 */
-	public function formatDate(string $format = 'Y.m.d'): string
-	{
-		if (empty($this->date)) {
-			return '';
-		}
+    /**
+     * Formats the post date.
+     *
+     * @throws Exception
+     */
+    public function formatDate(string $format = 'Y.m.d'): string
+    {
+        if (empty($this->date)) {
+            return '';
+        }
 
-		return Time::parse($this->date)->format($format);
-	}
+        return Time::parse($this->date)->format($format);
+    }
 }

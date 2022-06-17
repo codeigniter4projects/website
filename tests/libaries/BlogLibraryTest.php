@@ -14,15 +14,10 @@ final class BlogLibraryTest extends ProjectTestCase
 {
     /**
      * Our fake filesystem
-     *
-     * @var vfsStream
      */
-    protected $root;
+    protected vfsStream $root;
 
-    /**
-     * @var Blog
-     */
-    protected $blog;
+    protected Blog $blog;
 
     protected function setUp(): void
     {
@@ -96,8 +91,8 @@ final class BlogLibraryTest extends ProjectTestCase
     {
         $widget = $this->blog->recentPostsWidget(1);
 
-        $this->assertTrue(strpos($widget, 'Recent Posts') !== false);
-        $this->assertTrue(strpos($widget, 'CodeIgniter 4.0.4 Released') !== false);
+        $this->assertStringContainsString('Recent Posts', $widget);
+        $this->assertStringContainsString('CodeIgniter 4.0.4 Released', $widget);
     }
 
     /**

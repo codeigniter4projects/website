@@ -7,6 +7,7 @@ use App\Exceptions\BlogException;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use Config\Blog as BlogConfig;
 use League\CommonMark\CommonMarkConverter;
+use Throwable;
 
 /**
  * Class Blog
@@ -52,11 +53,9 @@ class Blog
             $files = directory_map($this->config->contentPath, 1);
 
             // We only want .md files.
-            $files = array_filter($files, static function ($file) {
-                return substr(strrchr($file, '.'), 1) === 'md';
-            });
+            $files = array_filter($files, static fn ($file) => substr(strrchr($file, '.'), 1) === 'md');
 
-            if (! count($files)) {
+            if ($files === []) {
                 throw BlogException::forInvalidContent();
             }
 
@@ -96,7 +95,7 @@ class Blog
 
         $lines = unserialize(file_get_contents($path));
 
-        if (! count($lines)) {
+        if (! (is_countable($lines) ? count($lines) : 0)) {
             return [];
         }
 
@@ -108,9 +107,7 @@ class Blog
         $files = directory_map($this->config->contentPath, 1);
 
         // We only want .md files.
-        $files = array_filter($files, static function ($file) {
-            return substr(strrchr($file, '.'), 1) === 'md';
-        });
+        $files = array_filter($files, static fn ($file) => substr(strrchr($file, '.'), 1) === 'md');
 
         $posts = [];
 
@@ -122,7 +119,7 @@ class Blog
                     }
                 }
                 // Don't fail if we can't find the file anymore...
-                catch (\Throwable $e) {
+                catch (Throwable $e) {
                     continue;
                 }
             }
@@ -145,7 +142,7 @@ class Blog
         if (! $post = cache($cacheKey)) {
             $files = glob("{$this->config->contentPath}*.{$slug}.md");
 
-            if (! count($files)) {
+            if (! (is_countable($files) ? count($files) : 0)) {
                 throw PageNotFoundException::forPageNotFound();
             }
 
@@ -188,7 +185,7 @@ class Blog
     {
         $posts = $this->getRecentPosts($limit);
 
-        if (! count($posts)) {
+        if (! (is_countable($posts) ? count($posts) : 0)) {
             return '';
         }
 
@@ -206,7 +203,7 @@ class Blog
     {
         $posts = $this->getPopularPosts($limit);
 
-        if (! count($posts)) {
+        if (! (is_countable($posts) ? count($posts) : 0)) {
             return '';
         }
 

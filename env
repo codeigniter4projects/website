@@ -24,6 +24,8 @@ GITHUB_ACCESS_TOKEN=
 #--------------------------------------------------------------------
 
 # app.baseURL = ''
+# If you have trouble with `.`, you could also use `_`.
+# app_baseURL = ''
 # app.forceGlobalSecureRequests = false
 
 # app.sessionDriver = 'CodeIgniter\Session\Handlers\FileHandler'
@@ -63,7 +65,7 @@ GITHUB_ACCESS_TOKEN=
 # contentsecuritypolicy.scriptSrc = 'self'
 # contentsecuritypolicy.styleSrc = 'self'
 # contentsecuritypolicy.imageSrc = 'self'
-# contentsecuritypolicy.base_uri = null
+# contentsecuritypolicy.baseURI = null
 # contentsecuritypolicy.childSrc = null
 # contentsecuritypolicy.connectSrc = 'self'
 # contentsecuritypolicy.fontSrc = null
@@ -76,6 +78,9 @@ GITHUB_ACCESS_TOKEN=
 # contentsecuritypolicy.reportURI = null
 # contentsecuritypolicy.sandbox = false
 # contentsecuritypolicy.upgradeInsecureRequests = false
+# contentsecuritypolicy.styleNonceTag = '{csp-style-nonce}'
+# contentsecuritypolicy.scriptNonceTag = '{csp-script-nonce}'
+# contentsecuritypolicy.autoNonce = true
 
 #--------------------------------------------------------------------
 # COOKIE
@@ -114,6 +119,7 @@ GITHUB_ACCESS_TOKEN=
 #--------------------------------------------------------------------
 
 # security.csrfProtection = 'cookie'
+# security.tokenRandomize = false
 # security.tokenName = 'csrf_token_name'
 # security.headerName = 'X-CSRF-TOKEN'
 # security.cookieName = 'csrf_cookie_name'

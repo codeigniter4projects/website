@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/assets/css/ci-theme.css">
     <link rel="stylesheet" href="/assets/css/ci-responsive.css?ver=1.0">
     <link rel="stylesheet" href="/assets/css/animate.css">
+    <link rel="stylesheet" href="/assets/js/highlight/styles/dark.css">
 </head>
 <body>
     <?= $this->include('layouts/_top_nav') ?>
@@ -39,5 +40,7 @@
     </section><!--section ende-->
 
     <?= $this->include('layouts/_footer') ?>
+    <script src="/assets/js/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

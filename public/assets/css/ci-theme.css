@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* CodeIgniter 4 - Website
  ============================================================================ */
 /* Forum: 	https://forum.codeigniter.com
@@ -113,6 +114,9 @@
 
 pre {
 	overflow: auto;
+    background: #f5f5f5;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .clr {
@@ -792,7 +796,7 @@ footer#footer-outer {
 #footer-inner {
 	width:80%;
 	margin:0 auto;
-	height: 60px;
+	height: 100%;
 	margin-top:0;
 	}
 
@@ -800,6 +804,7 @@ footer#footer-outer {
 	float: left;
 	width: 70%;
 	height: 40px;
+	margin-top: 4px;
 	}
 
 /* Menu --------------------------------------------------------------------- */
@@ -843,7 +848,7 @@ a.footer-menu-item:hover {
 	float: right;
 	margin-top: 0;
 	width: 240px;
-	height: 60px;
+	height: 100%;
 	}
 
 #footer-inner-right .links-icons{
@@ -895,7 +900,8 @@ a.footer-menu-item:hover {
 #footer-copyrights {
 	float:left;
 	width: 100%;
-	height:120px;
+	height:100%;
+	padding: 10px 0;
 	background-color: var(--primary-dark);
 	color: #DFDFDF;
 	box-sizing:border-box;
@@ -907,7 +913,7 @@ a.footer-menu-item:hover {
 	width:45px;
 	height:45px;
 	cursor:pointer;
-	margin:15px;
+	margin:10px;
 	}
 
 
@@ -996,7 +1002,7 @@ section#content-outer-discover{
 
 #news-left-column{
 	float:left;
-	width:15%;
+	width:20%;
 	height:100%;
 	margin-top:15px;
 	padding:15px;
@@ -1007,6 +1013,10 @@ section#content-outer-discover{
 
 #news-left-column h4 {
 	margin-bottom: 0;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 6px;
+    box-sizing: border-box;
 }
 
 .widget {
@@ -1041,7 +1051,7 @@ a.news-left-years-active:visited{
 
 #news-column{
 	float:left;
-	width:80%;
+	width:75%;
 	height:100%;
 	padding:15px;
 	box-sizing:border-box;

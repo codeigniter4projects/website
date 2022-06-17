@@ -12,7 +12,7 @@
                 </svg>
             </a>
         </div>
-        
+
         <div id="menu-toggle">
             <button onclick="toggleMenu();">&#9776;</button>
         </div>
