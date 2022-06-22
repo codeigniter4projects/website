@@ -267,7 +267,7 @@ class Blog
 
         // Convert body using Markdown
         $markdown   = new CommonMarkConverter();
-        $post->html = $markdown->convertToHtml($post->body);
+        $post->html = $markdown->convert($post->body);
         $post->html = $this->parseVideoTags($post->html);
 
         return $post;
