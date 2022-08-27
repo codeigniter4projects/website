@@ -86,4 +86,6 @@
     $('#scroll-to-top').click(function(){
         $("html").animate({ scrollTop: 0 }, "slow");
     });
+
+    $("a[href$='https://github.com/apps/dependabot']").parent().css("display", "none");
 </script>
