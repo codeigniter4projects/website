@@ -16,10 +16,8 @@ class MockGitHub extends GitHub
     /**
      * Whether the next API call should throw
      * an exception.
-     *
-     * @var bool
      */
-    private $throws = false;
+    private bool $throws = false;
 
     /**
      * Skips the need for parameters
@@ -133,10 +131,10 @@ class MockGitHub extends GitHub
                 'assets_url' => 'https://api.github.com/repos/codeigniter4/CodeIgniter4/releases/37193785/assets',
                 'upload_url' => 'https://uploads.github.com/repos/codeigniter4/CodeIgniter4/releases/37193785/assets{?name,label}',
                 'html_url'   => 'https://github.com/codeigniter4/CodeIgniter4/releases/tag/v4.1.1',
-                'id'         => 37193785,
+                'id'         => 37_193_785,
                 'author'     => [
                     'login'      => 'MGatner',
-                    'id'         => 17572847,
+                    'id'         => 17_572_847,
                     'node_id'    => 'MDQ6VXNlcjE3NTcyODQ3',
                     'avatar_url' => 'https://avatars.githubusercontent.com/u/17572847?v=4',
                     'url'        => 'https://api.github.com/users/MGatner',
@@ -162,10 +160,10 @@ class MockGitHub extends GitHub
                 'assets_url' => 'https://api.github.com/repos/codeigniter4/CodeIgniter4/releases/37155037/assets',
                 'upload_url' => 'https://uploads.github.com/repos/codeigniter4/CodeIgniter4/releases/37155037/assets{?name,label}',
                 'html_url'   => 'https://github.com/codeigniter4/CodeIgniter4/releases/tag/v4.1.0',
-                'id'         => 37155037,
+                'id'         => 37_155_037,
                 'author'     => [
                     'login'      => 'MGatner',
-                    'id'         => 17572847,
+                    'id'         => 17_572_847,
                     'node_id'    => 'MDQ6VXNlcjE3NTcyODQ3',
                     'avatar_url' => 'https://avatars.githubusercontent.com/u/17572847?v=4',
                     'url'        => 'https://api.github.com/users/MGatner',
@@ -197,7 +195,7 @@ class MockGitHub extends GitHub
         return [
             [
                 'login'               => 'narfbg',
-                'id'                  => 1058011,
+                'id'                  => 1_058_011,
                 'node_id'             => 'MDQ6VXNlcjEwNTgwMTE=',
                 'avatar_url'          => 'https://avatars.githubusercontent.com/u/1058011?v=4',
                 'gravatar_id'         => '',
@@ -239,7 +237,7 @@ class MockGitHub extends GitHub
             ],
             [
                 'login'               => 'jim-parry',
-                'id'                  => 3203951,
+                'id'                  => 3_203_951,
                 'node_id'             => 'MDQ6VXNlcjMyMDM5NTE=',
                 'avatar_url'          => 'https://avatars.githubusercontent.com/u/3203951?v=4',
                 'gravatar_id'         => '',
@@ -267,14 +265,14 @@ class MockGitHub extends GitHub
     private function repoShow(): array
     {
         return [
-            'id'        => 205950333,
+            'id'        => 205_950_333,
             'node_id'   => 'MDEwOlJlcG9zaXRvcnkyMDU5NTAzMzM=',
             'name'      => 'website2',
             'full_name' => 'codeigniter4projects/website2',
             'private'   => false,
             'owner'     => [
                 'login'               => 'codeigniter4projects',
-                'id'                  => 53120982,
+                'id'                  => 53_120_982,
                 'node_id'             => 'MDEyOk9yZ2FuaXphdGlvbjUzMTIwOTgy',
                 'avatar_url'          => 'https://avatars.githubusercontent.com/u/53120982?v=4',
                 'gravatar_id'         => '',
@@ -368,7 +366,7 @@ class MockGitHub extends GitHub
             'temp_clone_token' => null,
             'organization'     => [
                 'login'               => 'codeigniter4projects',
-                'id'                  => 53120982,
+                'id'                  => 53_120_982,
                 'node_id'             => 'MDEyOk9yZ2FuaXphdGlvbjUzMTIwOTgy',
                 'avatar_url'          => 'https://avatars.githubusercontent.com/u/53120982?v=4',
                 'gravatar_id'         => '',
