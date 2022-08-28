@@ -253,10 +253,8 @@ class Blog
             }
 
             if (! $inBody) {
-                $key   = substr($line, 0, strpos($line, ':'));
-                $value = trim(substr($line, strpos($line, ':') + 1));
-
-                $post->{$key} = $value;
+                $key          = substr($line, 0, strpos($line, ':'));
+                $post->{$key} = trim(substr($line, strpos($line, ':') + 1));
 
                 continue;
             }

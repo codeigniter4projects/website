@@ -12,10 +12,7 @@ use Tests\Support\ProjectTestCase;
  */
 final class GitHubTest extends ProjectTestCase
 {
-    /**
-     * @var MockGitHub
-     */
-    private $github;
+    private MockGitHub $github;
 
     protected function setUp(): void
     {
@@ -112,7 +109,7 @@ final class GitHubTest extends ProjectTestCase
         $result = $this->github->getRepos();
 
         $this->assertIsArray($result);
-        $this->assertCount(count(config('GitHub')->repos), $result);
+        $this->assertCount(is_countable(config('GitHub')->repos) ? count(config('GitHub')->repos) : 0, $result);
         $this->assertInstanceOf(Repo::class, $result['framework4']);
     }
 
@@ -121,7 +118,7 @@ final class GitHubTest extends ProjectTestCase
         $result = $this->github->getContributors();
 
         $this->assertIsArray($result);
-        $this->assertCount(count(config('GitHub')->repos), $result);
+        $this->assertCount(is_countable(config('GitHub')->repos) ? count(config('GitHub')->repos) : 0, $result);
         $this->assertInstanceOf(Contributor::class, $result['framework4'][0]);
     }
 
@@ -165,7 +162,7 @@ final class GitHubTest extends ProjectTestCase
         $this->assertInstanceOf('Closure', $result);
 
         // Force the resolver to run
-        $count  = count(cache()->getCacheInfo());
+        $count  = is_countable(cache()->getCacheInfo()) ? count(cache()->getCacheInfo()) : 0;
         $author = $release->author;
 
         $this->assertIsString($author);
