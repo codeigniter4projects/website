@@ -143,16 +143,16 @@
         },
         {
             "name": "codeigniter4/framework",
-            "version": "v4.2.5",
+            "version": "v4.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/codeigniter4/framework.git",
-                "reference": "26ebf14a1e52687ec4e214e99da0530de9e4a9a0"
+                "reference": "872c8fb9d70dc1dbd8e4a85a5cf49d4fe2735525"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codeigniter4/framework/zipball/26ebf14a1e52687ec4e214e99da0530de9e4a9a0",
-                "reference": "26ebf14a1e52687ec4e214e99da0530de9e4a9a0",
+                "url": "https://api.github.com/repos/codeigniter4/framework/zipball/872c8fb9d70dc1dbd8e4a85a5cf49d4fe2735525",
+                "reference": "872c8fb9d70dc1dbd8e4a85a5cf49d4fe2735525",
                 "shasum": ""
             },
             "require": {
@@ -168,7 +168,7 @@
             "require-dev": {
                 "codeigniter/coding-standard": "^1.1",
                 "fakerphp/faker": "^1.9",
-                "friendsofphp/php-cs-fixer": "3.6.*",
+                "friendsofphp/php-cs-fixer": "~3.11.0",
                 "mikey179/vfsstream": "^1.6",
                 "nexusphp/cs-config": "^3.3",
                 "phpunit/phpunit": "^9.1",
@@ -208,7 +208,7 @@
                 "slack": "https://codeigniterchat.slack.com",
                 "source": "https://github.com/codeigniter4/CodeIgniter4"
             },
-            "time": "2022-08-29T01:43:28+00:00"
+            "time": "2022-09-05T00:16:30+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
