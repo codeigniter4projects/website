@@ -63,7 +63,7 @@ jobs:
             sudo ln -nsf $CONFIG_FILE .env
 
             echo $'Link current user guide\n'
-            sudo ln -nsf $USERGUIDE_DIR/user_guide_4 public/user_guide
+            sudo ln -nsf $USERGUIDE_DIR/userguide4 public/user_guide
 
             echo $'Set up Links\n'
             cd $RELEASE_DIR
