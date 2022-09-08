@@ -36,7 +36,7 @@ jobs:
         env:
           RELEASE_DIR: "/home/public_html/site/releases/"
           RSYNC_DIR: "/home/public_html/site/latest/"
-          USERGUIDE_DIR: "/home/public_html/userguides/"
+          USERGUIDE_DIR: "/home/public_html/userguides"
           CONFIG_FILE: "/home/public_html/config/.env.site"
         with:
           host: ${{ secrets.DEPLOY_SSH_BOX }}
@@ -63,7 +63,7 @@ jobs:
             sudo ln -nsf $CONFIG_FILE .env
 
             echo $'Link current user guide\n'
-            sudo ln -nsf $USERGUIDE_DIR/user_guide_4 public/user_guide
+            sudo ln -nsf $USERGUIDE_DIR/userguide4 public/user_guide
 
             echo $'Set up Links\n'
             cd $RELEASE_DIR
