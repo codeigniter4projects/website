@@ -20,7 +20,7 @@ class GitHub extends BaseConfig
      */
     public $repos = [
         'framework3'    => ['bcit-ci', 'CodeIgniter'],
-        'framework4'    => ['codeigniter4', 'CodeIgniter4'],
+        'framework4'    => ['codeigniter4', 'framework'],
         'translations3' => ['bcit-ci', 'codeigniter3-translations'],
         'translations4' => ['codeigniter4', 'translations'],
         'website3'      => ['bcit-ci', 'codeigniter-website'],

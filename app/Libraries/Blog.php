@@ -253,10 +253,8 @@ class Blog
             }
 
             if (! $inBody) {
-                $key   = substr($line, 0, strpos($line, ':'));
-                $value = trim(substr($line, strpos($line, ':') + 1));
-
-                $post->{$key} = $value;
+                $key          = substr($line, 0, strpos($line, ':'));
+                $post->{$key} = trim(substr($line, strpos($line, ':') + 1));
 
                 continue;
             }
@@ -267,7 +265,7 @@ class Blog
 
         // Convert body using Markdown
         $markdown   = new CommonMarkConverter();
-        $post->html = $markdown->convertToHtml($post->body);
+        $post->html = $markdown->convert($post->body);
         $post->html = $this->parseVideoTags($post->html);
 
         return $post;
