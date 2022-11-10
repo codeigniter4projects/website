@@ -35,6 +35,8 @@ class Blog
      * subfolder of that name.
      *
      * @throws BlogException
+     *
+     * @return Post[]
      */
     public function getRecentPosts(int $limit = 5, int $offset = 0, ?string $category = null)
     {
@@ -134,6 +136,8 @@ class Blog
 
     /**
      * Gets a single post
+     *
+     * @return Post|null
      */
     public function getPost(string $slug)
     {
@@ -142,7 +146,7 @@ class Blog
         if (! $post = cache($cacheKey)) {
             $files = glob("{$this->config->contentPath}*.{$slug}.md");
 
-            if (! (is_countable($files) ? count($files) : 0)) {
+            if (empty($files)) {
                 throw PageNotFoundException::forPageNotFound();
             }
 
@@ -185,7 +189,7 @@ class Blog
     {
         $posts = $this->getRecentPosts($limit);
 
-        if (! (is_countable($posts) ? count($posts) : 0)) {
+        if ($posts === []) {
             return '';
         }
 
@@ -203,7 +207,7 @@ class Blog
     {
         $posts = $this->getPopularPosts($limit);
 
-        if (! (is_countable($posts) ? count($posts) : 0)) {
+        if (is_countable($posts) ? count($posts) : 0) {
             return '';
         }
 
@@ -216,6 +220,8 @@ class Blog
     /**
      * Reads in a post from file and parses it
      * into a Post Entity.
+     *
+     * @return Post|null
      */
     protected function readPost(string $folder, string $filename)
     {
@@ -230,7 +236,7 @@ class Blog
         // Get slug and date
         preg_match('|^([\d-]+).(\S+).md$|i', $filename, $matches);
 
-        if (! count($matches)) {
+        if ($matches === []) {
             return null;
         }
 
@@ -289,7 +295,7 @@ class Blog
         //     ![[ https://youtube.com/watch?v=xlkjsdfhlk ]]
         preg_match_all('|!video\[([\s\w:/.?=&;]*)\]|i', $html, $matches);
 
-        if (! count($matches)) {
+        if ($matches === []) {
             return $html;
         }
 

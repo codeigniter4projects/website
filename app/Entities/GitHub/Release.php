@@ -14,12 +14,12 @@ use CodeIgniter\I18n\Time;
  *
  * @property string     $author
  * @property Time       $created_at
- * @property URI        $download_url
+ * @property URI|null   $download_url
  * @property int|string $id
  * @property string     $name
  * @property bool       $prerelease
  * @property string     $tag
- * @property URI        $url
+ * @property URI|null   $url
  */
 class Release extends Entity
 {
