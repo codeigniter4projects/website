@@ -35,7 +35,7 @@
                 </div>
             </a>
 
-            <a href="https://codeigniterchat.slack.com/" target="_blank" aria-label="Slack Chat">
+            <a href="https://join.slack.com/t/codeigniterchat/shared_invite/zt-rl30zw00-obL1Hr1q1ATvkzVkFp8S0Q" target="_blank" aria-label="Slack Chat">
                 <div class="links-icons">
                     <div class="icon">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50"><path d="M31 24c-2.757 0-5-2.243-5-5V7c0-2.757 2.243-5 5-5s5 2.243 5 5v12c0 2.757-2.243 5-5 5zM43 24h-4a1 1 0 0 1-1-1v-4c0-2.757 2.243-5 5-5s5 2.243 5 5-2.243 5-5 5zM19 24H7c-2.757 0-5-2.243-5-5s2.243-5 5-5h12c2.757 0 5 2.243 5 5s-2.243 5-5 5zM23 12h-4c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5v4a1 1 0 0 1-1 1zM19 48c-2.757 0-5-2.243-5-5V31c0-2.757 2.243-5 5-5s5 2.243 5 5v12c0 2.757-2.243 5-5 5zM7 36c-2.757 0-5-2.243-5-5s2.243-5 5-5h4a1 1 0 0 1 1 1v4c0 2.757-2.243 5-5 5zM43 36H31c-2.757 0-5-2.243-5-5s2.243-5 5-5h12c2.757 0 5 2.243 5 5s-2.243 5-5 5zM31 48c-2.757 0-5-2.243-5-5v-4a1 1 0 0 1 1-1h4c2.757 0 5 2.243 5 5s-2.243 5-5 5z"/></svg>
@@ -68,7 +68,7 @@
 <div class="clr"></div>
 
 <div id="footer-copyrights">
-    <p>&copy; <?= date('Y') ?> CodeIgniter Foundation. CodeIgniter is open source project released under the MIT
+    <p>&copy; <?php echo date('Y')?> CodeIgniter Foundation. CodeIgniter is open source project released under the MIT
         open source licence.</p>
 
     <img id="scroll-to-top" src="/assets/icons/ci-footer.png" alt="codeigniter logotype"/>

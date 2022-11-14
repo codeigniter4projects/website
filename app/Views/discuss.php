@@ -1,6 +1,6 @@
-<?= $this->extend('layouts/app') ?>
+<?php echo $this->extend('layouts/app')?>
 
-<?= $this->section('content') ?>
+<?php echo $this->section('content')?>
 
 <div class="clr"></div>
 
@@ -57,7 +57,7 @@
             </p>
 
             <p>
-                <a href="https://codeigniterchat.slack.com/" class="buttons-reverse" target="_blank">Slack</a>
+                <a href="https://join.slack.com/t/codeigniterchat/shared_invite/zt-rl30zw00-obL1Hr1q1ATvkzVkFp8S0Q" class="buttons-reverse" target="_blank">Slack</a>
             </p>
             <br /><br />
         </div><!--inner-page-text-box ends here-->
@@ -90,4 +90,4 @@
 
 <div class="clr"></div>
 
-<?= $this->endSection() ?>
+<?php echo $this->endSection()?>
