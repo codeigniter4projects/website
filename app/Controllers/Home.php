@@ -14,8 +14,8 @@ class Home extends BaseController
 
             $data = [
                 'html_url'         => $repos['framework4']->html_url,
-                'stargazers_count' => number_format($repos['framework4']->stargazers_count),
-                'forks_count'      => number_format($repos['framework4']->forks_count),
+                'stargazers_count' => number_format($repos['codeigniter4']->stargazers_count),
+                'forks_count'      => number_format($repos['codeigniter4']->forks_count),
             ];
         } catch (ExceptionInterface $e) {
             $data = [
