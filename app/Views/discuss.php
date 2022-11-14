@@ -1,6 +1,6 @@
-<?php echo $this->extend('layouts/app')?>
+<?= $this->extend('layouts/app')?>
 
-<?php echo $this->section('content')?>
+<?= $this->section('content')?>
 
 <div class="clr"></div>
 
@@ -90,4 +90,4 @@
 
 <div class="clr"></div>
 
-<?php echo $this->endSection()?>
+<?= $this->endSection()?>
