@@ -1700,7 +1700,7 @@ A Summer crop:
   fixes, including a pretty significant refactoring of Ruby.
 
 [mf]: https://github.com/mfornos
-[tm]: http://jmblog.github.com/color-themes-for-highlightjs/
+[tm]: https://jmblog.github.com/color-themes-for-highlightjs/
 [tm0]: https://github.com/ChrisKempson/Tomorrow-Theme
 [cd]: https://github.com/caseman
 [amd]: https://requirejs.org/docs/whyamd.html
@@ -1927,7 +1927,7 @@ New languages:
 - [Vladimir Moskva][vm] made a definition for TeX
 
 [pl]: http://kung-fu-tzu.ru/
-[vm]: http://fulc.ru/
+[vm]: https://fulc.ru/
 
 Fixes for existing languages:
 
@@ -2072,8 +2072,8 @@ Other changes:
 
 [f]: http://softwaremaniacs.org/forum/highlightjs/
 [voldmar]: http://voldmar.ya.ru/
-[mel]: http://en.wikipedia.org/wiki/Maya_Embedded_Language
-[drake]: http://drakeguan.org/
+[mel]: https://en.wikipedia.org/wiki/Maya_Embedded_Language
+[drake]: https://drakeguan.org/
 
 
 ## Version 4.1
@@ -2098,10 +2098,10 @@ Python and C++ which improved auto-detection for the latter (it was shame that
 thanks go to Sam for getting rid of my stylistic comments in code that were
 getting in the way of [JSMin][].
 
-[zenburn]: http://en.wikipedia.org/wiki/Zenburn
-[alenacpp]: http://alenacpp.blogspot.com/
+[zenburn]: https://en.wikipedia.org/wiki/Zenburn
+[alenacpp]: https://alenacpp.blogspot.com/
 [bug]: http://softwaremaniacs.org/forum/viewtopic.php?id=1823
-[jsmin]: http://code.google.com/p/jsmin-php/
+[jsmin]: https://code.google.com/p/jsmin-php/
 
 
 ## Version 4.0
@@ -2251,7 +2251,7 @@ already downloaded that one!
 - this same way allows now correct highlighting of keywords in some tricky
   places (like keyword "End" at the end of Delphi classes)
 
-[ak]: http://anton.kovalyov.net/
+[ak]: https://anton.kovalyov.net/
 
 
 ## Version 1.0
