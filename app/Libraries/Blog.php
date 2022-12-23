@@ -34,9 +34,9 @@ class Blog
      * If $category is present, will locate within a
      * subfolder of that name.
      *
-     * @throws BlogException
-     *
      * @return Post[]
+     *
+     * @throws BlogException
      */
     public function getRecentPosts(int $limit = 5, int $offset = 0, ?string $category = null)
     {
