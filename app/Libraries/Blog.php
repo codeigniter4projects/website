@@ -250,7 +250,8 @@ class Blog
 
         foreach ($contents as $line) {
             if (trim($line) === '---') {
-                $inFrontMatter = ! $inFrontMatter;
+                $inFrontMatter = $inFrontMatter ? false : true;
+
                 if (! $inFrontMatter) {
                     $inBody = true;
                 }
@@ -267,6 +268,7 @@ class Blog
 
             $body[] = trim($line);
         }
+
         $post->body = implode("\n", $body);
 
         // Convert body using Markdown

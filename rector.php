@@ -99,6 +99,11 @@ return static function (RectorConfig $rectorConfig): void {
 
         // May be uninitialized on purpose
         AddDefaultValueForUndefinedVariableRector::class,
+
+        // PHPStan will report false positive errors
+        UnnecessaryTernaryExpressionRector::class => [
+            __DIR__ . '/app/Libraries/Blog.php',
+        ],
     ]);
 
     // auto import fully qualified class names
