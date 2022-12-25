@@ -72,7 +72,7 @@ header {
                     <div class="ci-features-box-title">Framework with a small footprint</div>
                     <div class="clr"></div>
                     <div class="ci-features-box-text">
-                        CodeIgniter 4 is a 1.2MB download, plus 6MB for the user guide.
+                        CodeIgniter 4 is a 1.1MB download, plus 1.6MB for the user guide (epub).
                     </div><!--ci-features-box-text ends here-->
                 </div><!--ci-features-box-text ends here-->
             </div><!--ci-feature-box ends here-->
