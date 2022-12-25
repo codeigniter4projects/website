@@ -4,7 +4,6 @@ use App\Exceptions\BlogException;
 use App\Libraries\Blog;
 use CodeIgniter\Config\Factories;
 use Config\Blog as BlogConfig;
-use org\bovigo\vfs\vfsStream;
 use Tests\Support\ProjectTestCase;
 
 /**
@@ -12,12 +11,7 @@ use Tests\Support\ProjectTestCase;
  */
 final class BlogLibraryTest extends ProjectTestCase
 {
-    /**
-     * Our fake filesystem
-     */
-    protected vfsStream $root;
-
-    protected Blog $blog;
+    private Blog $blog;
 
     protected function setUp(): void
     {
