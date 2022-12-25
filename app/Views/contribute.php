@@ -15,8 +15,17 @@
         <div id="inner-page-opening-text">
             <p>
                 CodeIgniter is a community driven project and accepts contributions of code and documentation from the community.
-                These contributions are made in the form of Issues or Pull Requests on the <a href="https://github.com/codeigniter4/CodeIgniter4" target="_blank" class="link-primary">CodeIgniter repository</a> on GitHub.
+                These contributions are made in the form of <a href="https://github.com/codeigniter4/CodeIgniter4/issues" target="_blank" class="link-primary">Issues</a>
+                or <a href="https://github.com/codeigniter4/CodeIgniter4/pulls" target="_blank" class="link-primary">Pull Requests</a>
+                on the <a href="https://github.com/codeigniter4/CodeIgniter4" target="_blank" class="link-primary">CodeIgniter4 repository</a> on GitHub.
             </p>
+
+            <div class="inner-page-text-box">
+                <p>
+                    The CodeIgniter 4 roadmap is explained on <a href="https://forum.codeigniter.com/forum-28.html" target="_blank" class="link-primary">our forum</a>.
+                </p>
+            </div>
+
             <p>
                 Issues are a quick way to point out a bug. If you find a bug or documentation error in CodeIgniter then please check
                 a few things first:
@@ -38,12 +47,9 @@
         <div class="clr"></div>
 
         <div class="inner-page-text-box">
-            <div class="inner-page-text-box-title">CodeIgniter 4</div>
+            <div class="inner-page-text-box-title">CodeIgniter 3</div>
             <p>
-                CodeIgniter 4 has its own <a href="https://github.com/codeigniter4/CodeIgniter4" target="_blank" class="link-primary">Github repository</a>. It deviates enough from CodeIgniter 3 that we want to keep them separate.
-            </p>
-            <p>
-                The CodeIgniter 4 roadmap is explained on <a href="https://forum.codeigniter.com/forum-28.html" target="_blank" class="link-primary">our forum</a>, and work to be done is detailed in the <a href="https://github.com/codeigniter4/CodeIgniter4/issues" target="_blank" class="link-primary">repository issues</a>.
+                CodeIgniter 3 has its own <a href="https://github.com/bcit-ci/CodeIgniter" target="_blank" class="link-primary">Github repository</a>.
             </p>
         </div><!--contribute boxes ende-->
 
@@ -65,13 +71,13 @@
             <div class="inner-page-text-sub-box">
                 <div class="inner-page-text-sub-box-title">Testers</div>
                 <p>
-                    We always need feedback on what works and what does not! Most of the development effort is going into Version 3,
+                    We always need feedback on what works and what does not! Most of the development effort is going into Version 4,
                     so that is where the need is greatest. If you find something that is definitely a bug, and you are a Github user,
                     please create a new "issue". If you are not a Github user, or if you are unsure if you have found a bug, then start
-                    a new thread in the CodeIgniter forum <a href="https://forum.codeigniter.com/forum-19.html" target="_blank" class="link-primary">Issues section</a>!
+                    a new thread in the CodeIgniter forum <a href="https://forum.codeigniter.com/forum-30.html" target="_blank" class="link-primary">Issues section</a>!
                 </p>
                 <p>
-                    CodeIgniter 4 has its own <a href="https://forum.codeigniter.com/forum-30.html" target="_blank" class="link-primary boldy600">support subforum</a>.
+                    CodeIgniter 3 has its own <a href="https://forum.codeigniter.com/forum-19.html" target="_blank" class="link-primary boldy600">support subforum</a>.
                 </p>
             </div><!--inner-page-text-sub-box ende-->
 
@@ -80,11 +86,11 @@
             <div class="inner-page-text-sub-box">
                 <div class="inner-page-text-sub-box-title">Writers</div>
                 <p>
-                    Every project needs good documentation! The CodeIgniter user guide is part of the <a href="https://github.com/bcit-ci/CodeIgniter" target="_blank" class="link-primary">Github project</a> (mentioned above),
+                    Every project needs good documentation! The CodeIgniter user guide is part of the <a href="https://github.com/codeigniter4/CodeIgniter4" target="_blank" class="link-primary">Github project</a> (mentioned above),
                     and there is always room for more tutorials.
                 </p>
                 <p>
-                    CodeIgniter 4's user guide is part of its own <a href="https://github.com/codeigniter4/CodeIgniter4" target="_blank" class="link-primary">repository</a>.
+                    CodeIgniter 3's user guide is part of its own <a href="https://github.com/bcit-ci/CodeIgniter" target="_blank" class="link-primary">repository</a>.
                 </p>
             </div><!--inner-page-text-sub-box ende-->
 
@@ -123,15 +129,15 @@
         <div class="clr"></div>
 
         <div class="inner-page-text-box">
-            <div class="inner-page-text-box-title">{coderSection}</div>
+            <div class="inner-page-text-box-title">Coder Section</div>
             <div class="clr"></div>
 
             <div class="inner-page-text-sub-box">
                 <div class="inner-page-text-sub-box-title">Coders</div>
                 <p>
-                    If you would like to get involved in helping to build the next version of CodeIgniter, join us on <a href="https://github.com/codeigniter4/" target="_blank" class="link-primary">Github</a>!
-                    A detailed contribution guide is in the User Guide, but the main points are to make sure your code conforms
-                    to our <a href="https://github.com/codeigniter4/CodeIgniter4/blob/develop/contributing/styleguide.rst" target="_blank"> style guide</a>,
+                    If you would like to get involved in helping to build CodeIgniter4, join us on <a href="https://github.com/codeigniter4/" target="_blank" class="link-primary">Github</a>!
+                    A detailed contribution guide is in
+                    <a href="https://github.com/codeigniter4/CodeIgniter4/blob/develop/contributing/README.md" target="_blank">Contributing to CodeIgniter</a>,
                     that it is properly documented, and that you use the
                     <a href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank" class="link-primary">Git-Flow branching model</a>.
                 </p>
