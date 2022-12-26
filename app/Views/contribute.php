@@ -169,7 +169,7 @@
             <div class="inner-page-text-sub-box">
                 <div class="inner-page-text-sub-box-title">CodeIgniter 4</div>
 
-                <?= $this->setData(['heroes' => $contributors['framework4']])->include('layouts/_heroes') ?>
+                <?= $this->setData(['heroes' => $contributors['codeigniter4']])->include('layouts/_heroes') ?>
 
             </div><!--inner-page-text-sub-box ends here-->
 
