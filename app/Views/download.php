@@ -12,12 +12,12 @@
 				</div>
 			</div><!--cv-boxes-version end-->
 			<div class="cv-boxes-content">
-				<p>CodeIgniter 4 is the latest version of the framework, intended for use with PHP 7.3+ (including 8.1).</p>
+				<p>CodeIgniter 4 is the latest version of the framework, intended for use with PHP 7.4+ (including 8.2).</p>
 				<p>The initial release was February 24, 2020. The current version is <?= $v4name ?>. </p>
 				<p>
 					You *could* download this version of the framework using the button below, but we encourage you to check the
 					<a href="https://codeigniter.com/user_guide/installation/index.html" class="link-primary" target="_blank">Installation section</a>
-					of the User Guide, to choose from several different ways you can install the framework :)
+					of the User Guide, to use Composer :)
 				</p>
 				<div class="clr"></div>
 				<div class="cv-boxes-buttons-area">

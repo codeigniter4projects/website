@@ -18,7 +18,7 @@ final class ContributorTest extends ProjectTestCase
         $this->assertSame($expected, $contributor->stars);
     }
 
-    public function contributionsProvider(): array
+    public static function contributionsProvider(): array
     {
         return [
             [0, '★'],

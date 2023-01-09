@@ -100,7 +100,7 @@ class GitHub
         $this->client = $client;
     }
 
-    //---------------------------------------------------------------------
+    // ---------------------------------------------------------------------
 
     /**
      * Interfaces with the client to execute
@@ -127,7 +127,7 @@ class GitHub
         return $caller->{$final}(...$segments);
     }
 
-    //---------------------------------------------------------------------
+    // ---------------------------------------------------------------------
 
     /**
      * Retrieves releases and tags for configured repositories
@@ -244,7 +244,7 @@ class GitHub
         return $this->api(['repo', 'commits', 'show'], $segments);
     }
 
-    //---------------------------------------------------------------------
+    // ---------------------------------------------------------------------
 
     /**
      * Retrieves repo details for each configured repository as a Repo.
@@ -264,7 +264,7 @@ class GitHub
         return $this->storage['repos'];
     }
 
-    //---------------------------------------------------------------------
+    // ---------------------------------------------------------------------
 
     /**
      * Retrieves contributor information for a repository.
