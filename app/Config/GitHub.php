@@ -26,6 +26,11 @@ class GitHub extends BaseConfig
         'translations4' => ['codeigniter4', 'translations'],
         'website3'      => ['bcit-ci', 'codeigniter-website'],
         'website4'      => ['codeigniter4projects', 'website'],
+        'shield'        => ['codeigniter4', 'shield'],
+        'settings'      => ['codeigniter4', 'settings'],
+        'tasks'         => ['codeigniter4', 'tasks'],
+        'cache'         => ['codeigniter4', 'cache'],
+        'devkit'        => ['codeigniter4', 'devkit'],
     ];
 
     /**
