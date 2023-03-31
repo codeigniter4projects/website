@@ -6,7 +6,7 @@
 <section id="content-outer">
     <div id="content-inner">
         <div id="contribute-heart-holder">
-            <img src="/assets/icons/heart.png" id="contribute-heart" alt="heart icon"/>
+            <img src="/assets/icons/heart.png" id="contribute-heart" alt="heart icon">
             <p>Contribute to CodeIgniter</p>
         </div><!--heart ends here-->
 
@@ -160,74 +160,117 @@
 
         <div class="clr"></div>
 
-		<?php if (isset($contributors)): ?>
+        <?php if (isset($contributors)) : ?>
 
-        <div class="inner-page-text-box">
-            <div class="inner-page-text-box-title">Acknowledging Our Top Contributors</div>
-            <div class="clr"></div>
+            <div class="inner-page-text-box">
+                <div class="inner-page-text-box-title">Acknowledging Our Top Contributors</div>
+                <div class="clr"></div>
 
-            <div class="inner-page-text-sub-box">
-                <div class="inner-page-text-sub-box-title">CodeIgniter 4</div>
+                <div class="inner-page-text-sub-box">
+                    <div class="inner-page-text-sub-box-title">CodeIgniter 4</div>
 
-                <?= $this->setData(['heroes' => $contributors['codeigniter4']])->include('layouts/_heroes') ?>
+                    <?= $this->setData(['heroes' => $contributors['codeigniter4']])->include('layouts/_heroes') ?>
 
-            </div><!--inner-page-text-sub-box ends here-->
+                </div><!--inner-page-text-sub-box ends here-->
 
-            <div class="clr"></div>
+                <div class="clr"></div>
 
-            <div class="inner-page-text-sub-box">
-                <div class="inner-page-text-sub-box-title">CodeIgniter 4 Translations</div>
+                <div class="inner-page-text-sub-box">
+                    <div class="inner-page-text-sub-box-title">CodeIgniter 4 Translations</div>
 
-                <?= $this->setData(['heroes' => $contributors['translations4']])->include('layouts/_heroes') ?>
+                    <?= $this->setData(['heroes' => $contributors['translations4']])->include('layouts/_heroes') ?>
 
-            </div><!--inner-page-text-sub-box ends here-->
+                </div><!--inner-page-text-sub-box ends here-->
 
-            <div class="clr"></div>
+                <div class="clr"></div>
 
-            <div class="inner-page-text-sub-box">
-                <div class="inner-page-text-sub-box-title">CodeIgniter 3</div>
+                <div class="inner-page-text-sub-box">
+                    <div class="inner-page-text-sub-box-title">CodeIgniter 3</div>
 
-                <?= $this->setData(['heroes' => $contributors['framework3']])->include('layouts/_heroes') ?>
+                    <?= $this->setData(['heroes' => $contributors['framework3']])->include('layouts/_heroes') ?>
 
-            </div><!--inner-page-text-sub-box ends here-->
+                </div><!--inner-page-text-sub-box ends here-->
 
-            <div class="clr"></div>
+                <div class="clr"></div>
 
-            <div class="inner-page-text-sub-box">
-                <div class="inner-page-text-sub-box-title">CodeIgniter 3 Translations</div>
+                <div class="inner-page-text-sub-box">
+                    <div class="inner-page-text-sub-box-title">CodeIgniter 3 Translations</div>
 
-                <?= $this->setData(['heroes' => $contributors['translations3']])->include('layouts/_heroes') ?>
+                    <?= $this->setData(['heroes' => $contributors['translations3']])->include('layouts/_heroes') ?>
 
-            </div><!--inner-page-text-sub-box ends here-->
+                </div><!--inner-page-text-sub-box ends here-->
 
-            <div class="clr"></div>
+                <div class="clr"></div>
 
-            <div class="clr"></div>
+                <div class="inner-page-text-sub-box">
+                    <div class="inner-page-text-sub-box-title">our Website</div>
 
-            <div class="inner-page-text-sub-box">
-                <div class="inner-page-text-sub-box-title">our Website</div>
+                    <?= $this->setData(['heroes' => $contributors['website4']])->include('layouts/_heroes') ?>
 
-                <?= $this->setData(['heroes' => $contributors['website4']])->include('layouts/_heroes') ?>
+                </div><!--inner-page-text-sub-box ends here-->
 
-            </div><!--inner-page-text-sub-box ends here-->
+                <div class="clr"></div>
 
-            <div class="clr"></div>
+                <div class="inner-page-text-sub-box">
+                    <div class="inner-page-text-sub-box-title">our Old Website</div>
 
-            <div class="inner-page-text-sub-box">
-                <div class="inner-page-text-sub-box-title">our Old Website</div>
+                    <?= $this->setData(['heroes' => $contributors['website3']])->include('layouts/_heroes') ?>
 
-                <?= $this->setData(['heroes' => $contributors['website3']])->include('layouts/_heroes') ?>
+                </div><!--inner-page-text-sub-box ends here-->
 
-            </div><!--inner-page-text-sub-box ends here-->
+                <div class="clr"></div>
 
-        </div><!--inner-page-text-box ende-->
+                <div class="inner-page-text-sub-box">
+                    <div class="inner-page-text-sub-box-title">CodeIgniter 4 Shield</div>
 
-		<?php endif; ?>
+                    <?= $this->setData(['heroes' => $contributors['shield']])->include('layouts/_heroes') ?>
+
+                </div><!--inner-page-text-sub-box ends here-->
+
+                <div class="clr"></div>
+
+                <div class="inner-page-text-sub-box">
+                    <div class="inner-page-text-sub-box-title">CodeIgniter 4 Settings</div>
+
+                    <?= $this->setData(['heroes' => $contributors['settings']])->include('layouts/_heroes') ?>
+
+                </div><!--inner-page-text-sub-box ends here-->
+
+                <div class="clr"></div>
+
+                <div class="inner-page-text-sub-box">
+                    <div class="inner-page-text-sub-box-title">CodeIgniter 4 Tasks</div>
+
+                    <?= $this->setData(['heroes' => $contributors['tasks']])->include('layouts/_heroes') ?>
+
+                </div><!--inner-page-text-sub-box ends here-->
+
+                <div class="clr"></div>
+
+                <div class="inner-page-text-sub-box">
+                    <div class="inner-page-text-sub-box-title">CodeIgniter 4 PSR Cache</div>
+
+                    <?= $this->setData(['heroes' => $contributors['cache']])->include('layouts/_heroes') ?>
+
+                </div><!--inner-page-text-sub-box ends here-->
+
+                <div class="clr"></div>
+
+                <div class="inner-page-text-sub-box">
+                    <div class="inner-page-text-sub-box-title">CodeIgniter 4 DevKit</div>
+
+                    <?= $this->setData(['heroes' => $contributors['devkit']])->include('layouts/_heroes') ?>
+
+                </div><!--inner-page-text-sub-box ends here-->
+
+            </div><!--inner-page-text-box ende-->
+
+        <?php endif; ?>
 
     </div><!--content-inner ends here-->
 </section><!--section ende-->
 
 
-    <div class="clr"></div>
+<div class="clr"></div>
 
 <?= $this->endSection() ?>
