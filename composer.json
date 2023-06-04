@@ -32,7 +32,8 @@
         "psr/container": "^1.1"
     },
     "require-dev": {
-        "codeigniter4/devkit": "^1.0"
+        "codeigniter4/devkit": "^1.0",
+        "tatter/patches": "^2.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -48,7 +49,8 @@
     },
     "config": {
         "allow-plugins": {
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "php-http/discovery": true
         }
     },
     "scripts": {
