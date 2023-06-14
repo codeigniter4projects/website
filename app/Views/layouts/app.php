@@ -24,7 +24,12 @@
 
 	<?= $this->renderSection('headerAssets') ?>
 </head>
-<body>
+<body class="">
+    <script>
+        if(window.localStorage.getItem('ci_theme') == 'dark-theme'){
+        document.documentElement.classList.add('dark-theme');
+        }
+</script>
     <?= $this->include('layouts/_top_nav') ?>
 
     <?= $this->renderSection('content') ?>
