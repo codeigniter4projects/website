@@ -2,6 +2,13 @@
     <div id="header-inner">
         <div id="logo">
             <a href="/" title="CodeIgniter.com">
+				<img src="assets/icons/ci-logo.png" />
+				<div id="logo-text">Code<span class="boldy600">Igniter</span></div>
+            </a>
+        </div>
+        <!--
+        <div id="logo">
+            <a href="/" title="CodeIgniter.com">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2100 500" width="185" height="44">
                     <style>
                         tspan { white-space:pre }
@@ -12,6 +19,7 @@
                 </svg>
             </a>
         </div>
+        -->
 
         <div id="menu-toggle">
             <button onclick="toggleMenu();">&#9776;</button>
@@ -25,6 +33,9 @@
             <a href="/user_guide/index.html" class="top-menu-item hidden">Learn</a>
             <a href="/download" class="top-menu-item-download">Download</a>
         </div><!--top-menu ende-->
+        <div id="switch-theme-holder">
+            <div id="mode" class="switch-theme-icon">&nbsp;</div>
+        </div>
         <div class="clr"></div>
     </div><!--header inner ende-->
 
