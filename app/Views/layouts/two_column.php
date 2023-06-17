@@ -23,7 +23,12 @@
     <link rel="stylesheet" href="/assets/css/animate.css">
     <link rel="stylesheet" href="/assets/js/highlight/styles/dark.css">
 </head>
-<body>
+<body class="">
+    <script>
+        if(window.localStorage.getItem('ci_theme') == 'dark-theme'){
+        document.documentElement.classList.add('dark-theme');
+        }
+</script>
     <?= $this->include('layouts/_top_nav') ?>
 
     <div class="clr"></div>
