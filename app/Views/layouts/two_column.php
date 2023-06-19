@@ -27,8 +27,8 @@
     <?= $this->include('layouts/_top_nav') ?>
 
     <div class="clr"></div>
-    <section id="content-outer-news">
-        <div id="content-inner-news">
+    <section id="content-outer">
+        <div id="content-inner">
             <div id="news-left-column">
                 <?= $this->renderSection('sidebar') ?>
             </div>
