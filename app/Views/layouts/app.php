@@ -24,7 +24,7 @@
 
 	<?= $this->renderSection('headerAssets') ?>
 </head>
-<body class="">
+<body>
     <script>
         if(window.localStorage.getItem('ci_theme') == 'dark-theme'){
         document.documentElement.classList.add('dark-theme');
