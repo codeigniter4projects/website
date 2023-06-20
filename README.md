@@ -5,17 +5,17 @@
 [![](https://github.com/codeigniter4projects/website/workflows/Deptrac/badge.svg)](https://github.com/codeigniter4projects/website/actions/workflows/deptrac.yml)
 [![Coverage Status](https://coveralls.io/repos/github/codeigniter4projects/website/badge.svg?branch=develop)](https://coveralls.io/github/codeigniter4projects/website?branch=develop)
 
-This is the official website for the CodeIgniter PHP framework. 
+This is the official website for the CodeIgniter PHP framework.
 
 The website has been open-sourced in the interest of transparency.
-We welcome issues and pull requests, to handle corrections.  
+We welcome issues and pull requests, to handle corrections.
 New blog posts will not be accepted without prior authorization.
 
 ## Implementation
 
 The site has been built with CodeIgniter 4, and is meant to be an example
 of "good" programming style, although definitely not
-the only way to do things. 
+the only way to do things.
 
 Some of the programming design decisions reflected:
 
@@ -23,12 +23,12 @@ Some of the programming design decisions reflected:
 -   The architecture adheres more to the "model-view-adapter" convention,
     where the view is unaware of the source of data and the model is unaware of
     how any data might be presented. The controllers are go-betweens.
--   A "master template" lets each controller focus 
+-   A "master template" lets each controller focus
     only with building its part of a webpage.
--   A base controller takes care of assembling finished pages, using the 
+-   A base controller takes care of assembling finished pages, using the
     master template.
 -   Mock data for the recent news and most recently active threads, means
-    that the website can be tested locally, without needing access to 
+    that the website can be tested locally, without needing access to
     the live forum database.
 -   View fragments are used to style single "records" on their own,
     improving cohesion.
