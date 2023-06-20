@@ -80,4 +80,4 @@ At this point you should have a usable version of the current code! Try launchin
 1. From the repo directory start serving the website: `php spark serve`
 2. In your web browser of choice navigate to the local URL: `http://localhost:8080`
 
-> Note: The example commands above are for Linux-based systems. You may need to adjust for your operating system.
+> **Note** The example commands above are for Linux-based systems. You may need to adjust for your operating system.
