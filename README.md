@@ -63,17 +63,20 @@ Use these steps to create a local installation for development and testing.
 4. Install dependencies: `composer install`
 5. Create your **.env** file: `cp env .env`
 6. Edit **.env** and set at least the following:
-	* `CI_ENVIRONMENT = development`
-	* `database.default.database = ../writable/database.db`
-	* `database.default.DBDriver = SQLite3`
+    * `GITHUB_ACCESS_TOKEN = ghp_***`
+        * Set your GitHub Personal Access Token.
+    * `CI_ENVIRONMENT = development`
+    * `database.default.database = ../writable/database.db`
+    * `database.default.DBDriver = SQLite3`
+7. Seed fake Forum data
 
-The website is intended to live on the same server as the forums, and uses the forum
-database to pull in the most recent posts. When developing locally, this poses a challenge.
-To make local development simpler, a migration and seed have been provided to setup a 
-table with some mock data that can be used in place of having a local MyBB install.
+    The website is intended to live on the same server as the forums, and uses the forum
+    database to pull in the most recent posts. When developing locally, this poses a challenge.
+    To make local development simpler, a migration and seed have been provided to setup a
+    table with some mock data that can be used in place of having a local MyBB install.
 
-1. Migrate the database: `php spark migrate -all`
-2. Run the seeder: `php spark db:seed ForumSeeder`
+    1. Migrate the database: `php spark migrate -all`
+    2. Run the seeder: `php spark db:seed ForumSeeder`
 
 At this point you should have a usable version of the current code! Try launching it locally:
 
