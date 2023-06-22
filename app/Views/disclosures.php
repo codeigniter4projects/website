@@ -10,12 +10,12 @@
             <img src="/assets/icons/44521256.png" id="policies-icon"/>
         </div><!--icon ends here-->
 
-            <p>The following items have been reported to the CodeIgniter core team and addressed as potential security
+            <p class="inner-page-opening-text">The following items have been reported to the CodeIgniter core team and addressed as potential security
                 concerns. Not all of them will affect your sites, but you should periodically review this list to
                 determine any threats.
             </p>
 
-            <p>These disclosures are primarily aimed at the website and surrounding environment. Security disclosures
+            <p class="inner-page-opening-text">These disclosures are primarily aimed at the website and surrounding environment. Security disclosures
                 affecting the framework will be handled through GitHub's built-in Security Advisors functionality.
             </p>
 
