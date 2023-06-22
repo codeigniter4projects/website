@@ -21,11 +21,11 @@
 				</p>
 				<div class="clr"></div>
 				<div class="cv-boxes-buttons-area">
-					<a href="<?= $v4link ?>" class="buttons-reverse download-buttons" target="_blank">Download</a>
-					<a href="https://forum.codeigniter.com/forum-28.html" class="buttons-reverse download-buttons" target="_blank">Discuss</a>
-					<a href="https://github.com/codeigniter4/CodeIgniter4" class="buttons-reverse download-buttons" target="_blank">Sources</a>
-					<a href="https://github.com/codeigniter4/translations" class="buttons-reverse download-buttons" target="_blank">Translations</a>
-					<a href="/user_guide/index.html" class="buttons-reverse download-buttons">User Guide</a>
+					<a href="<?= $v4link ?>" class="buttons download-buttons" target="_blank">Download</a>
+					<a href="https://forum.codeigniter.com/forum-28.html" class="buttons download-buttons" target="_blank">Discuss</a>
+					<a href="https://github.com/codeigniter4/CodeIgniter4" class="buttons download-buttons" target="_blank">Sources</a>
+					<a href="https://github.com/codeigniter4/translations" class="buttons download-buttons" target="_blank">Translations</a>
+					<a href="/user_guide/index.html" class="buttons download-buttons">User Guide</a>
 				</div><!--cv-boxes-buttons-area end-->
 			</div><!--cv-boxes-content end-->
 		</div><!--ci-version-boxes end-->
@@ -42,10 +42,10 @@
 
 				<div class="clr"></div>
 				<div class="cv-boxes-buttons-area">
-					<a href="<?= $v3link ?>" class="buttons-reverse download-buttons" target="_blank">Download</a>
-					<a href="https://github.com/bcit-ci/CodeIgniter" class="buttons-reverse download-buttons" target="_blank">Sources</a>
-					<a href="https://github.com/bcit-ci/codeigniter3-translations" class="buttons-reverse download-buttons" target="_blank">Translations</a>
-					<a href="/userguide3" class="buttons-reverse download-buttons">User Guide</a>
+					<a href="<?= $v3link ?>" class="buttons download-buttons" target="_blank">Download</a>
+					<a href="https://github.com/bcit-ci/CodeIgniter" class="buttons download-buttons" target="_blank">Sources</a>
+					<a href="https://github.com/bcit-ci/codeigniter3-translations" class="buttons download-buttons" target="_blank">Translations</a>
+					<a href="/userguide3" class="buttons download-buttons">User Guide</a>
 				</div><!--cv-boxes-buttons-area end-->
 			</div><!--cv-boxes-content end-->
 		</div><!--ci-version-boxes end-->

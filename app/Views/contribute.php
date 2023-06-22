@@ -12,7 +12,7 @@
 
         <div class="clr"></div>
 
-        <div id="inner-page-opening-text">
+        <div class="inner-page-opening-text">
             <p>
                 CodeIgniter is a community driven project and accepts contributions of code and documentation from the community.
                 These contributions are made in the form of <a href="https://github.com/codeigniter4/CodeIgniter4/issues" target="_blank" class="link-primary">Issues</a>
