@@ -66,6 +66,7 @@ Use these steps to create a local installation for development and testing.
     * `GITHUB_ACCESS_TOKEN = ghp_***`
         * Set your GitHub Personal Access Token.
     * `CI_ENVIRONMENT = development`
+    * `app.forceGlobalSecureRequests = false`
     * `database.default.database = ../writable/database.db`
     * `database.default.DBDriver = SQLite3`
 7. Seed fake Forum data
