@@ -143,16 +143,16 @@
         },
         {
             "name": "codeigniter4/framework",
-            "version": "v4.3.5",
+            "version": "v4.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/codeigniter4/framework.git",
-                "reference": "b41bca4ff6efd9baffdb7a1bba33f946fb8580d9"
+                "reference": "7c663e1b51d36a49fcdfc151cf2991821d6aa4d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codeigniter4/framework/zipball/b41bca4ff6efd9baffdb7a1bba33f946fb8580d9",
-                "reference": "b41bca4ff6efd9baffdb7a1bba33f946fb8580d9",
+                "url": "https://api.github.com/repos/codeigniter4/framework/zipball/7c663e1b51d36a49fcdfc151cf2991821d6aa4d6",
+                "reference": "7c663e1b51d36a49fcdfc151cf2991821d6aa4d6",
                 "shasum": ""
             },
             "require": {
@@ -213,7 +213,7 @@
                 "slack": "https://codeigniterchat.slack.com",
                 "source": "https://github.com/codeigniter4/CodeIgniter4"
             },
-            "time": "2023-05-21T13:41:12+00:00"
+            "time": "2023-07-30T08:45:46+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
