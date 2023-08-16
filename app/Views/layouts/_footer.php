@@ -4,7 +4,6 @@
             <a href="/policies" class="footer-menu-item" >Policies</a>
             <a href="/the-fine-print" class="footer-menu-item" >The Fine Print</a>
             <a href="/security-disclosures" class="footer-menu-item" >Security Disclosures</a>
-            <a href="/news" class="footer-menu-item">News</a>
             <a href="/discuss" class="footer-menu-item" >Discuss</a>
             <a href="/contribute" class="footer-menu-item" >Contribute</a>
             <a href="/download" class="footer-menu-item" >Download</a>
@@ -83,11 +82,11 @@
         $('#menu-toggle button').click(function(){
             $("#top-menu").slideToggle("slow");
         });
-    
+
         $('#scroll-to-top').click(function(){
             $("html").animate({ scrollTop: 0 }, "slow");
         });
-    
+
         $("a[href$='https://github.com/apps/dependabot']").parent().css("display", "none");
         $('#mode').click(function(){
                 if($('html').hasClass('dark-theme')){
