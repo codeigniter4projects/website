@@ -1672,6 +1672,10 @@ html.dark-theme header {
 
 /* Menu --------------------------------------------------------------------- */
 
+html.dark-theme #top-menu {
+    background: #1a1a1a;
+}
+
 html.dark-theme #menu-toggle button,
 html.dark-theme #menu-toggle button:hover,
 html.dark-theme #menu-toggle button:focus {
