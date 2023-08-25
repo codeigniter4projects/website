@@ -23,7 +23,7 @@ class MyBB extends BaseConfig
      * An array of user names to restrict our search for news articles to.
      * This simply helps limit the work to do.
      */
-    public $newsUsernames = ['ciadmin', 'jlp', 'kilishan', 'Narf'];
+    public $newsUsernames = ['ciadmin', 'kilishan', 'kenjis', 'MGatner'];
 
     /**
      * --------------------------------------------------------------------------
