@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use CodeIgniter\Database\Exceptions\DatabaseException;
 use CodeIgniter\Model;
 
 /**
@@ -39,7 +38,7 @@ class MyBBModel extends Model
         $builder = $this->db->table('fx_threads');
         $query   = $builder->select('tid, subject, username, lastpost, lastposter')
             ->where($where)
-            ->where('fid != '. $forumId)
+            ->where('fid != ' . $forumId)
             ->limit($limit, 0)
             ->orderBy('lastpost', $order)
             ->get();
@@ -54,7 +53,7 @@ class MyBBModel extends Model
      */
     public function getRecentNews(int $limit = 5, string $order = 'desc')
     {
-        $admins = config('MyBB')->newsUsernames;
+        $admins  = config('MyBB')->newsUsernames;
         $forumId = config('MyBB')->newsForumId;
 
         $where = [
