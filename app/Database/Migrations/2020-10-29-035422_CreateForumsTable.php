@@ -20,6 +20,7 @@ class CreateForumsTable extends Migration
     {
         // fx_threads
         $this->forge->addField([
+            'fid'        => ['type' => 'int', 'constraint' => 11, 'unsigned' => true, 'autoincrement' => true],
             'tid'        => ['type' => 'int', 'constraint' => 11, 'unsigned' => true, 'autoincrement' => true],
             'subject'    => ['type' => 'varchar', 'constraint' => 255],
             'username'   => ['type' => 'varchar', 'constraint' => 255],

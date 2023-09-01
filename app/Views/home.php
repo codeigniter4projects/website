@@ -218,7 +218,7 @@
                 <div class="rnafp-name">Recent News</div>
                 <div class="clr"></div>
 
-                <?= view_cell('\App\Libraries\Blog::recentPostsWidget', 'limit=5, view=blog/_home_widget') ?>
+                <?= view_cell('\App\Libraries\Forums::news', 'limit=5') ?>
             </div><!--recent-news-and-forum-posts here-->
 
             <div class="recent-news-and-forum-posts">
@@ -236,4 +236,3 @@
 <div class="clr"></div>
 
 <?= $this->endSection() ?>
-
