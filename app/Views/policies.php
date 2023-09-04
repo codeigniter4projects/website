@@ -7,7 +7,7 @@
     <div id="content-inner">
         <div id="policies-icon-holder">
             <img src="/assets/icons/policies.png" id="policies-icon" alt="policies icon"/>
-            <p>
+            <p class="inner-page-opening-text">
                 CodeIgniter is a community-developed open source project, with several venues for the community members to gather
                 and exchange ideas.
             </p>

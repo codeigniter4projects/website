@@ -40,7 +40,7 @@
             </ul>
             <p>
                 The forum is where you can ask for help or discuss issues you are having with framework.<br />
-                <a href="https://forum.codeigniter.com" class="buttons-reverse" target="_blank">Visit The Forum</a>
+                <a href="https://forum.codeigniter.com" class="buttons" target="_blank">Visit The Forum</a>
             </p>
             <br /><br />
         </div><!--inner-page-text-box ende-->
@@ -57,7 +57,7 @@
             </p>
 
             <p>
-                <a href="https://join.slack.com/t/codeigniterchat/shared_invite/zt-rl30zw00-obL1Hr1q1ATvkzVkFp8S0Q" class="buttons-reverse" target="_blank">Slack</a>
+                <a href="https://join.slack.com/t/codeigniterchat/shared_invite/zt-rl30zw00-obL1Hr1q1ATvkzVkFp8S0Q" class="buttons" target="_blank">Slack</a>
             </p>
             <br /><br />
         </div><!--inner-page-text-box ends here-->
@@ -77,8 +77,8 @@
                 Github issues are also used for tracking planned and approved enhancements, often tied in to specific releases.
             </p>
             <p>
-                <a href="https://github.com/bcit-ci/CodeIgniter/" class="buttons-reverse" target="_blank">CodeIgniter 3</a>
-                <a href="https://github.com/codeigniter4/codeigniter4/" class="buttons-reverse" target="_blank">CodeIgniter 4</a>
+                <a href="https://github.com/bcit-ci/CodeIgniter/" class="buttons" target="_blank">CodeIgniter 3</a>
+                <a href="https://github.com/codeigniter4/codeigniter4/" class="buttons" target="_blank">CodeIgniter 4</a>
             </p>
             <br /><br />
         </div><!--inner-page-text-box ends here-->

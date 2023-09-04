@@ -5,12 +5,6 @@ namespace Config;
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
-// Load the system's routing file first, so that the app and ENVIRONMENT
-// can override as needed.
-if (is_file(SYSTEMPATH . 'Config/Routes.php')) {
-    require SYSTEMPATH . 'Config/Routes.php';
-}
-
 /*
  * --------------------------------------------------------------------
  * Router Setup
@@ -42,11 +36,6 @@ $routes->get('download', 'Download::index');
 $routes->get('policies', 'Policies::index');
 $routes->get('the-fine-print', 'FinePrint::index');
 $routes->get('security-disclosures', 'Disclosures::index');
-
-// Blog
-$routes->get('news', 'Blog::index');
-$routes->get('news/c/(:segment)', 'Blog::category/$1');
-$routes->get('news/(:segment)', 'Blog::post/$1');
 
 /**
  * --------------------------------------------------------------------
