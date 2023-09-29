@@ -66,6 +66,7 @@ class MyBBModel extends Model
         $query   = $builder->select('tid, subject, username, lastpost, lastposter')
             ->where($where)
             ->whereIn('username', $admins)
+            ->limit($limit, 0)
             ->orderBy('lastpost', $order)
             ->get();
 
