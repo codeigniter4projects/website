@@ -250,7 +250,7 @@ class Blog
 
         foreach ($contents as $line) {
             if (trim($line) === '---') {
-                $inFrontMatter = $inFrontMatter ? false : true;
+                $inFrontMatter = ! $inFrontMatter;
 
                 if (! $inFrontMatter) {
                     $inBody = true;

@@ -25,10 +25,8 @@ class ReleasePromise extends Release
 
     /**
      * API call to fetch the additional data.
-     *
-     * @var Closure|null
      */
-    private $resolver;
+    private ?Closure $resolver = null;
 
     /**
      * Stores the resolver along with data.
