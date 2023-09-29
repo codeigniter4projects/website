@@ -1,15 +1,15 @@
-name: 'Deploy to Production'
+name: "Deploy to Production"
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   deploy:
-    name: 'Deploy to Production'
+    name: "Deploy to Production"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: master
 
@@ -68,4 +68,4 @@ jobs:
             echo $'Set up Links\n'
             cd $RELEASE_DIR
             sudo ln -nsf $RELEASE_DIR/$RELEASE "../current"
-            sudo service php7.4-fpm reload
+            sudo service php8.1-fpm reload

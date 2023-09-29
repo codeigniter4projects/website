@@ -2,6 +2,11 @@
 
 namespace Config;
 
-class ForeignCharacters extends \CodeIgniter\Config\ForeignCharacters
+use CodeIgniter\Config\ForeignCharacters as BaseForeignCharacters;
+
+/**
+ * @immutable
+ */
+class ForeignCharacters extends BaseForeignCharacters
 {
 }

@@ -9,7 +9,7 @@ use Tests\Support\ProjectTestCase;
 final class ContributorTest extends ProjectTestCase
 {
     /**
-     * @dataProvider contributionsProvider
+     * @dataProvider provideStars
      */
     public function testStars(int $contributions, string $expected)
     {
@@ -18,7 +18,7 @@ final class ContributorTest extends ProjectTestCase
         $this->assertSame($expected, $contributor->stars);
     }
 
-    public static function contributionsProvider(): array
+    public static function provideStars(): iterable
     {
         return [
             [0, '★'],
