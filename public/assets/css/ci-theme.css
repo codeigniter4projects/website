@@ -1795,9 +1795,11 @@ html.dark-theme a.slogan-link:hover {
 html.dark-theme #github-scores {
     color: rgba(255, 255, 255, 0.5);
 }
-html.dark-theme .github-icon svg {
+html.dark-theme .github-icon svg,
+html.dark-theme .github-icon svg path {
     fill: #fff;
 }
+
 
 html.dark-theme .githubs:hover .github-data {
     color: #fff;
