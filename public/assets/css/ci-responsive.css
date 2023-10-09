@@ -98,10 +98,15 @@
         height: 180px;
         padding: 10px;
         box-sizing: border-box;
-        border: 1px solid var(--white);
+        border: 1px solid rgba(255, 255, 255, 0.2);/*var(--white);*/
         margin: 18px 10px 0 10px;
         transition: box-shadow 0.5s;
-        transition: margin-top 0.5s;
+        transition: margin-top 0.3s;
+        transition: border 0.3s;
+    }
+    .ci-features-box:hover {
+        border: 1px solid rgba(255, 255, 255, 0.5);/*var(--white);*/
+        margin: 18px 10px 0 10px;
     }
 
     .ci-features-box-icon {
@@ -265,10 +270,15 @@
         height: 190px;
         padding: 10px;
         box-sizing: border-box;
-        border: 1px solid var(--white);
+        border: 1px solid rgba(255, 255, 255, 0.2);/*var(--white);*/
         margin: 18px 10px 0 10px;
         transition: box-shadow 0.5s;
-        transition: margin-top 0.5s;
+        transition: margin-top 0.3s;
+        transition: border 0.3s;
+    }
+    .ci-features-box:hover {
+        border: 1px solid rgba(255, 255, 255, 0.5);/*var(--white);*/
+        margin: 18px 10px 0 10px;
     }
 
     footer#footer-outer {
@@ -411,19 +421,19 @@
         width: 90%;
         text-decoration: none;
         color: #434343;
-        font-weight: 300;
+        font-weight: 400;
         height: 30px;
         margin: 0;
         padding: 20px 15px 0 15px;
         text-align: center;
-        border-bottom: 1px solid var(--soft-white);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);/*var(--soft-white);*/
     }
 
     a.top-menu-item:hover,
     a.top-menu-item:focus {
         color: var(--primary-color);
         border-bottom: 1px solid var(--primary-color);
-        background: #fbf6f4;
+        /*background: #fbf6f4;*/
     }
 
     a.top-menu-item-active:link,
@@ -638,10 +648,15 @@
         height: 180px;
         padding: 10px;
         box-sizing: border-box;
-        border: 1px solid var(--white);
+        border: 1px solid rgba(255, 255, 255, 0.2);/*var(--white);*/
         margin: 18px 10px 0 10px;
         transition: box-shadow 0.5s;
         transition: margin-top 0.3s;
+        transition: border 0.3s;
+    }
+    .ci-features-box:hover {
+        border: 1px solid rgba(255, 255, 255, 0.5);/*var(--white);*/
+        margin: 18px 10px 0 10px;
     }
 
     footer#footer-outer {
