@@ -27,6 +27,7 @@ class Kint extends BaseConfig
      * @var list<class-string<ConstructablePluginInterface>|ConstructablePluginInterface>|null
      */
     public $plugins;
+
     public int $maxDepth           = 6;
     public bool $displayCalledFrom = true;
     public bool $expanded          = false;
