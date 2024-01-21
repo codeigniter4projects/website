@@ -143,4 +143,4 @@ GITHUB_ACCESS_TOKEN =
 # CURLRequest
 #--------------------------------------------------------------------
 
-# curlrequest.shareOptions = true
+# curlrequest.shareOptions = false

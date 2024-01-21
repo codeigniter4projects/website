@@ -23,6 +23,9 @@ class Kint extends BaseConfig
     |--------------------------------------------------------------------------
     */
 
+    /**
+     * @var list<class-string<ConstructablePluginInterface>|ConstructablePluginInterface>|null
+     */
     public $plugins;
     public int $maxDepth           = 6;
     public bool $displayCalledFrom = true;
@@ -37,11 +40,15 @@ class Kint extends BaseConfig
     public bool $richFolder  = false;
 
     /**
-     * @psalm-suppress UndefinedClass
+     * @var array<string, class-string<ValuePluginInterface>>|null
      */
     public int $richSort = AbstractRenderer::SORT_FULL;
 
     public $richObjectPlugins;
+
+    /**
+     * @var array<string, class-string<TabPluginInterface>>|null
+     */
     public $richTabPlugins;
 
     /*
