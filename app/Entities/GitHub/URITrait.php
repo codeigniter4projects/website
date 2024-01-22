@@ -22,7 +22,7 @@ trait URITrait
         $result = parent::__get($key);
 
         if (is_string($result) && is_int(strpos($key, 'url'))) {
-            return empty($result) ? null : new URI($result);
+            return ($result === '') ? null : new URI($result);
         }
 
         return $result;

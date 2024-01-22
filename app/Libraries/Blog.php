@@ -73,7 +73,7 @@ class Blog
                 $temp = $this->readPost($this->config->contentPath, $file);
 
                 // Only collect from the correct category.
-                if (! empty($category) && ! in_array($category, $temp->tags, true)) {
+                if ($category !== null && ! in_array($category, $temp->tags, true)) {
                     continue;
                 }
 
@@ -146,7 +146,7 @@ class Blog
         if (! $post = cache($cacheKey)) {
             $files = glob("{$this->config->contentPath}*.{$slug}.md");
 
-            if (empty($files)) {
+            if ($files === [] || $files === false) {
                 throw PageNotFoundException::forPageNotFound();
             }
 
@@ -227,7 +227,7 @@ class Blog
     {
         $contents = file($folder . $filename);
 
-        if (empty($contents)) {
+        if ($contents === [] || $contents === false) {
             return null;
         }
 

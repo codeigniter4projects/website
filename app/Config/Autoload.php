@@ -41,7 +41,7 @@ class Autoload extends AutoloadConfig
      *       'App'	       => APPPATH
      *   ];
      *
-     * @var array<string, string>
+     * @var array<string, list<string>|string>
      */
     public $psr4 = [
         APP_NAMESPACE => APPPATH, // For custom app namespace
@@ -80,8 +80,7 @@ class Autoload extends AutoloadConfig
      *       '/path/to/my/file.php',
      *   ];
      *
-     * @var string[]
-     * @phpstan-var list<string>
+     * @var list<string>
      */
     public $files = [];
 
@@ -94,8 +93,7 @@ class Autoload extends AutoloadConfig
      *       'form',
      *   ];
      *
-     * @var string[]
-     * @phpstan-var list<string>
+     * @var list<string>
      */
     public $helpers = [];
 }

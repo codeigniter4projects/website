@@ -5,6 +5,10 @@ namespace Config;
 use CodeIgniter\Config\View as BaseView;
 use CodeIgniter\View\ViewDecoratorInterface;
 
+/**
+ * @phpstan-type ParserCallable (callable(mixed): mixed)
+ * @phpstan-type ParserCallableString (callable(mixed): mixed)&string
+ */
 class View extends BaseView
 {
     /**
@@ -31,7 +35,7 @@ class View extends BaseView
      *  { created_on|date(Y-m-d)|esc(attr) }
      *
      * @var array<string, string>
-     * @phpstan-var array<string, callable-string>
+     * @phpstan-var array<string, ParserCallableString>
      */
     public $filters = [];
 
@@ -40,8 +44,8 @@ class View extends BaseView
      * by the core Parser by creating aliases that will be replaced with
      * any callable. Can be single or tag pair.
      *
-     * @var array<string, string>
-     * @phpstan-var array<string, callable-string>
+     * @var array<string, array<string>|callable|string>
+     * @phpstan-var array<string, array<ParserCallableString>|ParserCallableString|ParserCallable>
      */
     public $plugins = [];
 
