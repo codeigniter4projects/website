@@ -707,7 +707,7 @@ section.content-outer {
 .ci-features-box-icon svg {
     width: 51px;
     height: 59px;
-    fill: var(--primary-color);
+    fill: transparent; /*var(--primary-color);*/
     stroke: var(--primary-color);
 }
 
@@ -751,7 +751,7 @@ section.content-outer {
     color: var(--primary-color);
 }
 .ci-features-box:hover .ci-features-box-icon svg {
-    fill: var(--primary-color);
+    fill: rgba(221, 72, 20, 0.8); /*var(--primary-color);*/
     stroke: var(--primary-color);
 }
 
@@ -1663,6 +1663,10 @@ html.dark-theme a:hover {
     color: rgba(221, 72, 20, 1);
 }
 
+html.dark-theme .dark {
+    color: rgba(255, 255, 255, 0.5);
+}
+
 /* HEADER =================================================================== */
 
 html.dark-theme header {
@@ -1679,8 +1683,8 @@ html.dark-theme #top-menu {
 html.dark-theme #menu-toggle button,
 html.dark-theme #menu-toggle button:hover,
 html.dark-theme #menu-toggle button:focus {
-    background-color: #000000;
-    color: #333333;
+    background-color: var(--primary-color);/*#000000;*/
+    color: rgba(255, 255, 255, 0.8);/*#333333;*/
     font-size: 1.3rem;
 }
 
@@ -1795,9 +1799,11 @@ html.dark-theme a.slogan-link:hover {
 html.dark-theme #github-scores {
     color: rgba(255, 255, 255, 0.5);
 }
-html.dark-theme .github-icon svg {
+html.dark-theme .github-icon svg,
+html.dark-theme .github-icon svg path {
     fill: #fff;
 }
+
 
 html.dark-theme .githubs:hover .github-data {
     color: #fff;

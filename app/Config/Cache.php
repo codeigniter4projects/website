@@ -2,6 +2,7 @@
 
 namespace Config;
 
+use CodeIgniter\Cache\CacheInterface;
 use CodeIgniter\Cache\Handlers\DummyHandler;
 use CodeIgniter\Cache\Handlers\FileHandler;
 use CodeIgniter\Cache\Handlers\MemcachedHandler;
@@ -156,7 +157,7 @@ class Cache extends BaseConfig
      * This is an array of cache engine alias' and class names. Only engines
      * that are listed here are allowed to be used.
      *
-     * @var array<string, string>
+     * @var array<string, class-string<CacheInterface>>
      */
     public array $validHandlers = [
         'dummy'     => DummyHandler::class,
