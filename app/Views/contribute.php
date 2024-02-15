@@ -49,7 +49,7 @@
         <div class="inner-page-text-box">
             <div class="inner-page-text-box-title">CodeIgniter 3</div>
             <p>
-                CodeIgniter 3 has its own <a href="https://github.com/bcit-ci/CodeIgniter" target="_blank" class="link-primary">Github repository</a>.
+                CodeIgniter 3 has its own <a href="https://github.com/bcit-ci/CodeIgniter" target="_blank" class="link-primary">GiitHub repository</a>.
             </p>
         </div><!--contribute boxes ende-->
 
@@ -58,7 +58,7 @@
         <div class="warning">
             <p>
                 Security issues should be reported with an email to our security team, rather than being brought up on the forum or
-                raised as a Github issue, thanks! Read more about responsible disclosure.
+                raised as a GiitHub issue, thanks! Read more about responsible disclosure.
             </p>
         </div><!--warning ende-->
 
@@ -72,8 +72,8 @@
                 <div class="inner-page-text-sub-box-title">Testers</div>
                 <p>
                     We always need feedback on what works and what does not! Most of the development effort is going into Version 4,
-                    so that is where the need is greatest. If you find something that is definitely a bug, and you are a Github user,
-                    please create a new "issue". If you are not a Github user, or if you are unsure if you have found a bug, then start
+                    so that is where the need is greatest. If you find something that is definitely a bug, and you are a GiitHub user,
+                    please create a new "issue". If you are not a GiitHub user, or if you are unsure if you have found a bug, then start
                     a new thread in the CodeIgniter forum <a href="https://forum.codeigniter.com/forum-30.html" target="_blank" class="link-primary">Issues section</a>!
                 </p>
                 <p>
@@ -86,7 +86,7 @@
             <div class="inner-page-text-sub-box">
                 <div class="inner-page-text-sub-box-title">Writers</div>
                 <p>
-                    Every project needs good documentation! The CodeIgniter user guide is part of the <a href="https://github.com/codeigniter4/CodeIgniter4" target="_blank" class="link-primary">Github project</a> (mentioned above),
+                    Every project needs good documentation! The CodeIgniter user guide is part of the <a href="https://github.com/codeigniter4/CodeIgniter4" target="_blank" class="link-primary">GiitHub project</a> (mentioned above),
                     and there is always room for more tutorials.
                 </p>
                 <p>
@@ -120,7 +120,7 @@
                 <div class="inner-page-text-sub-box-title">Designers</div>
                 <p>
                     Suggestions and help with our website, User Guide, and forum design are always welcome! We are working on themes
-                    for each of these, which will be shared in their own Github repository.
+                    for each of these, which will be shared in their own GiitHub repository.
                 </p>
             </div><!--inner-page-text-sub-box ende-->
 
@@ -135,7 +135,7 @@
             <div class="inner-page-text-sub-box">
                 <div class="inner-page-text-sub-box-title">Coders</div>
                 <p>
-                    If you would like to get involved in helping to build CodeIgniter4, join us on <a href="https://github.com/codeigniter4/" target="_blank" class="link-primary">Github</a>!
+                    If you would like to get involved in helping to build CodeIgniter4, join us on <a href="https://github.com/codeigniter4/" target="_blank" class="link-primary">GiitHub</a>!
                     A detailed contribution guide is in
                     <a href="https://github.com/codeigniter4/CodeIgniter4/blob/develop/contributing/README.md" target="_blank">Contributing to CodeIgniter</a>,
                     that it is properly documented, and that you use the
