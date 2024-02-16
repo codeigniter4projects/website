@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use Github\Exception\ExceptionInterface;
+use Psr\Http\Client\ClientExceptionInterface;
 
 class Home extends BaseController
 {
@@ -17,7 +17,9 @@ class Home extends BaseController
                 'stargazers_count' => number_format($repos['codeigniter4']->stargazers_count),
                 'forks_count'      => number_format($repos['codeigniter4']->forks_count),
             ];
-        } catch (ExceptionInterface $e) {
+        } catch (ClientExceptionInterface $e) {
+            log_message('error', '[' . __METHOD__ . '] ' . get_class($e) . ': ' . $e->getMessage());
+
             $data = [
                 'html_url'         => 'https://github.com/codeigniter4/CodeIgniter4',
                 'stargazers_count' => '',
