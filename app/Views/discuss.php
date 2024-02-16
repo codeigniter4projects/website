@@ -19,7 +19,7 @@
         <div class="warning">
             <p>
                 Security issues should be reported with an email to our <a href="mailto:security@codeigniter.com" class="link-reverse">security team</a>, rather than being brought up on the forum or
-                raised as a Github issue, thanks!
+                raised as a GitHub issue, thanks!
             </p>
         </div><!--warning ends here-->
 
@@ -65,16 +65,16 @@
         <div class="clr"></div>
 
         <div class="inner-page-text-box">
-            <div class="inner-page-text-box-title">Github</div>
+            <div class="inner-page-text-box-title">GitHub</div>
             <p>
-                The development action takes place on Github. See the contribute page for more details.
+                The development action takes place on GitHub. See the contribute page for more details.
             </p>
             <p class="boldy600">
-                The Github repository is where you can file bug reports (github issues), or where you can submit pull requests
-                for enhancements to or fixes for framework. Github is *not* for support or help ... use the forum instead.
+                The GitHub repository is where you can file bug reports (github issues), or where you can submit pull requests
+                for enhancements to or fixes for framework. GitHub is *not* for support or help ... use the forum instead.
             </p>
             <p>
-                Github issues are also used for tracking planned and approved enhancements, often tied in to specific releases.
+                GitHub issues are also used for tracking planned and approved enhancements, often tied in to specific releases.
             </p>
             <p>
                 <a href="https://github.com/bcit-ci/CodeIgniter/" class="buttons" target="_blank">CodeIgniter 3</a>
