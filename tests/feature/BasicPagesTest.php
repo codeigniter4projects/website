@@ -4,6 +4,8 @@ use App\Libraries\GitHub;
 use CodeIgniter\Test\DatabaseTestTrait;
 use CodeIgniter\Test\FeatureTestTrait;
 use Config\Services;
+use GuzzleHttp\Exception\ConnectException;
+use GuzzleHttp\Psr7\Request;
 use Tests\Support\ProjectTestCase;
 
 /**
@@ -32,9 +34,9 @@ final class BasicPagesTest extends ProjectTestCase
             ->onlyMethods(['getRepos'])
             ->getMock();
         $github->method('getRepos')->willThrowException(
-            new GuzzleHttp\Exception\ConnectException(
+            new ConnectException(
                 'cURL error 6: Could not resolve host: api.github.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.github.com/repos/bcit-ci/CodeIgniter',
-                new GuzzleHttp\Psr7\Request(
+                new Request(
                     'GET',
                     'https://api.github.com/repos/bcit-ci/CodeIgniter'
                 )
