@@ -41,7 +41,7 @@ Some of the programming design decisions reflected:
 
 ## Server Requirements
 
-PHP version 7.4 or higher is required, with the following extensions installed:
+PHP version 8.1 or higher is required, with the following extensions installed:
 
 - [intl](https://php.net/manual/en/intl.requirements.php)
 - [libcurl](https://php.net/manual/en/curl.requirements.php) if you plan to use the `HTTP\CURLRequest` library
