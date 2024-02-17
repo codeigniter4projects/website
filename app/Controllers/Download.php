@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use Github\Exception\ExceptionInterface;
+use Psr\Http\Client\ClientExceptionInterface;
 
 class Download extends BaseController
 {
@@ -18,7 +18,9 @@ class Download extends BaseController
                 'v3link' => end($releases['framework3'])->download_url,
                 'v4link' => end($releases['framework4'])->download_url,
             ];
-        } catch (ExceptionInterface $e) {
+        } catch (ClientExceptionInterface $e) {
+            log_message('error', '[' . __METHOD__ . '] ' . get_class($e) . ': ' . $e->getMessage());
+
             $data = [
                 'v3name' => '<em>unknown</em>',
                 'v4name' => '<em>unknown</em>',

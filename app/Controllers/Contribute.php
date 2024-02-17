@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use Github\Exception\ExceptionInterface;
+use Psr\Http\Client\ClientExceptionInterface;
 
 class Contribute extends BaseController
 {
@@ -16,7 +16,9 @@ class Contribute extends BaseController
                 // Contributors are already sorted, so grab the first 12
                 $data['contributors'][$id] = array_slice($contributors, 0, 12);
             }
-        } catch (ExceptionInterface $e) {
+        } catch (ClientExceptionInterface $e) {
+            log_message('error', '[' . __METHOD__ . '] ' . get_class($e) . ': ' . $e->getMessage());
+
             $data['contributors'] = null;
         }
 
