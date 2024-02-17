@@ -1,7 +1,11 @@
 <?php
 
+use App\Libraries\GitHub;
 use CodeIgniter\Test\DatabaseTestTrait;
 use CodeIgniter\Test\FeatureTestTrait;
+use Config\Services;
+use GuzzleHttp\Exception\ConnectException;
+use GuzzleHttp\Psr7\Request;
 use Tests\Support\ProjectTestCase;
 
 /**
@@ -14,6 +18,32 @@ final class BasicPagesTest extends ProjectTestCase
 
     public function testCanViewHome()
     {
+        $result = $this->get('/');
+
+        $result->assertStatus(200);
+        $result->assertSee('The small framework with powerful features');
+    }
+
+    public function testCanViewHomeWhenConnectException()
+    {
+        $github = $this->getMockBuilder(GitHub::class)
+            ->disableOriginalConstructor()
+            ->disableOriginalClone()
+            ->disableArgumentCloning()
+            ->disallowMockingUnknownTypes()
+            ->onlyMethods(['getRepos'])
+            ->getMock();
+        $github->method('getRepos')->willThrowException(
+            new ConnectException(
+                'cURL error 6: Could not resolve host: api.github.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.github.com/repos/bcit-ci/CodeIgniter',
+                new Request(
+                    'GET',
+                    'https://api.github.com/repos/bcit-ci/CodeIgniter'
+                )
+            )
+        );
+        Services::injectMock('github', $github);
+
         $result = $this->get('/');
 
         $result->assertStatus(200);
