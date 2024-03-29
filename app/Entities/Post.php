@@ -26,7 +26,7 @@ class Post extends Entity
     /**
      * Returns all tags for this post.
      *
-     * @return array|string[]
+     * @return array|list<string>
      */
     public function getTags(): array
     {
