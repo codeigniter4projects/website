@@ -249,7 +249,7 @@ class GitHub
     /**
      * Retrieves repo details for each configured repository as a Repo.
      *
-     * @return list<Repo>
+     * @return array<string, Repo>
      */
     public function getRepos(): array
     {
