@@ -34,7 +34,7 @@ class Blog
      * If $category is present, will locate within a
      * subfolder of that name.
      *
-     * @return Post[]
+     * @return list<Post>
      *
      * @throws BlogException
      */
@@ -286,7 +286,7 @@ class Blog
      * Embed syntax:
      *   !video[ https://www.youtube.com/watch?v=1GYoEMiXcX0&feature=youtu.be ]
      *
-     * @return string|string[]|null
+     * @return list<string>|string|null
      */
     protected function parseVideoTags(?string $html = null)
     {

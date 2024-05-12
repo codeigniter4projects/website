@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.20.0@3f284e96c9d9be6fe6b15c79416e1d1903dcfef4">
+<files psalm-version="5.23.1@8471a896ccea3526b26d082f4461eeea467f10a4">
   <file src="app/Config/Kint.php">
     <UndefinedClass>
-      <code>AbstractRenderer</code>
+      <code><![CDATA[AbstractRenderer]]></code>
     </UndefinedClass>
     <UndefinedDocblockClass>
       <code><![CDATA[array<string, class-string<TabPluginInterface>>|null]]></code>
@@ -12,12 +12,12 @@
   </file>
   <file src="app/Config/View.php">
     <UndefinedDocblockClass>
-      <code><![CDATA[array<string, ParserCallableString>]]></code>
-      <code><![CDATA[array<string, array<ParserCallableString>|ParserCallableString|ParserCallable>]]></code>
-      <code><![CDATA[array<string, array<ParserCallableString>|ParserCallableString|ParserCallable>]]></code>
-      <code>public $filters = [];</code>
-      <code>public $plugins = [];</code>
-      <code>public $plugins = [];</code>
+      <code><![CDATA[array<string, list<parser_callable_string>|parser_callable_string|parser_callable>]]></code>
+      <code><![CDATA[array<string, list<parser_callable_string>|parser_callable_string|parser_callable>]]></code>
+      <code><![CDATA[array<string, parser_callable_string>]]></code>
+      <code><![CDATA[public $filters = [];]]></code>
+      <code><![CDATA[public $plugins = [];]]></code>
+      <code><![CDATA[public $plugins = [];]]></code>
     </UndefinedDocblockClass>
   </file>
 </files>

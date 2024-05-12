@@ -3,6 +3,7 @@
 namespace Tests\Support;
 
 use App\Database\Seeds\ForumSeeder;
+use CodeIgniter\Database\Seeder;
 use CodeIgniter\Test\CIUnitTestCase;
 
 /**
@@ -21,7 +22,7 @@ abstract class ProjectTestCase extends CIUnitTestCase
      * The seed file(s) used for all tests within this test case.
      * Should be fully-namespaced or relative to $basePath
      *
-     * @var array|string
+     * @var class-string<Seeder>
      */
     protected $seed = ForumSeeder::class;
 

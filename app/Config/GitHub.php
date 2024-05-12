@@ -16,7 +16,7 @@ class GitHub extends BaseConfig
     /**
      * Repository paths
      *
-     * @var array<string,string[]> In the format [organization, repository]
+     * @var array<string,list<string>> In the format [organization, repository]
      */
     public $repos = [
         'framework3'    => ['bcit-ci', 'CodeIgniter'],
@@ -31,7 +31,7 @@ class GitHub extends BaseConfig
     /**
      * List of repos that track releases via tags
      *
-     * @var string[]
+     * @var list<string>
      */
     public $tagged = [
         'framework3',

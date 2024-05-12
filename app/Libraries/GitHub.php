@@ -52,7 +52,7 @@ class GitHub
     /**
      * Converts tag parts into a browser URL.
      *
-     * @param string[] $segments
+     * @param list<string> $segments
      */
     public static function urlFromTag(array $segments, string $tag): string
     {
@@ -67,7 +67,7 @@ class GitHub
     /**
      * Converts tag parts into a browser URL.
      *
-     * @param Release[] $releases
+     * @param list<Release> $releases
      */
     public static function sortReleases(array &$releases): void
     {
@@ -134,7 +134,7 @@ class GitHub
      * and standardizes each result as a Release (releases)
      * or ReleasePromise (tags).
      *
-     * @return array<string,Release[]>
+     * @return array<string,list<Release>>
      */
     public function getReleases(): array
     {
@@ -165,7 +165,7 @@ class GitHub
      *
      * @param array $segments [organization, repository] from Config
      *
-     * @return Release[]
+     * @return list<Release>
      */
     private function fetchReleasesAsReleases(array $segments): array
     {
@@ -193,7 +193,7 @@ class GitHub
      *
      * @param array $segments [organization, repository] from Config
      *
-     * @return Release[]
+     * @return list<Release>
      */
     private function fetchTagsAsReleases(array $segments): array
     {
@@ -249,7 +249,7 @@ class GitHub
     /**
      * Retrieves repo details for each configured repository as a Repo.
      *
-     * @return Repo[]
+     * @return array<string, Repo>
      */
     public function getRepos(): array
     {
@@ -269,7 +269,7 @@ class GitHub
     /**
      * Retrieves contributor information for a repository.
      *
-     * @return array<string,Contributor[]>
+     * @return array<string,list<Contributor>>
      */
     public function getContributors(): array
     {
