@@ -16,7 +16,7 @@ cp -r ../latest ./$RELEASE
 
 echo $'Install composer dependencies\n'
 cd $RELEASE_DIR/$RELEASE
-composer install
+composer install --no-dev
 
 echo $'Setup FS\n'
 cd $RELEASE_DIR/$RELEASE
