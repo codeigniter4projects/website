@@ -29,5 +29,4 @@ defined('SHOW_DEBUG_BACKTRACE') || define('SHOW_DEBUG_BACKTRACE', true);
   | the system. It's not widely used currently, and may not survive
   | release of the framework.
  */
-
 defined('CI_DEBUG') || define('CI_DEBUG', true);
