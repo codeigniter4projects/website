@@ -21,7 +21,7 @@ jobs:
           known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
 
       - name: Deploy to Webserver
-        uses: yeshan333/rsync-deploy-action@main
+        uses: yeshan333/rsync-deploy-action@v1
         id: rsync-deploy-action
         with:
           ssh_login_username: ${{ secrets.DEPLOY_USER }}
@@ -32,7 +32,7 @@ jobs:
           destination_path: "/home/public_html/site/latest"
 
       - name: Finalize deployment
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.DEPLOY_SSH_BOX }}
           username: ${{ secrets.DEPLOY_USER }}
