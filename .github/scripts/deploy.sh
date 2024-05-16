@@ -5,7 +5,6 @@
 REPO="/opt/website"
 RELEASE_DIR="/home/public_html/site/releases"
 SHARED_DIR="/home/public_html/site/shared"
-#RSYNC_DIR="/home/public_html/site/latest"
 USERGUIDE_DIR="/home/public_html/userguides"
 CONFIG_FILE="/home/public_html/config/.env.site"
 
