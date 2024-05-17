@@ -1,6 +1,7 @@
 #!/bin/sh -e
 
-# Deploys to the production server.
+# Deploys the official site to the production server.
+# See ../workflows/deploy.yml
 
 REPO="/opt/website"
 RELEASE_DIR="/home/public_html/site/releases"
