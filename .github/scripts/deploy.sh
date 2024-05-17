@@ -9,6 +9,11 @@ SHARED_DIR="/home/public_html/site/shared"
 USERGUIDE_DIR="/home/public_html/userguides"
 CONFIG_FILE="/home/public_html/config/.env.site"
 
+if [ "$(id -u)" = "0" ]; then
+    echo "Cannot be run as root. Please run as the user for deployment."
+    exit 1
+fi
+
 RELEASE=`date +"%Y-%m-%d-%H-%M-%S"`
 
 echo $'Update website repository\n'
