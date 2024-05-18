@@ -33,6 +33,7 @@
     },
     "require-dev": {
         "codeigniter4/devkit": "^1.0",
+        "phpunit/phpunit": "^9.6",
         "tatter/patches": "^2.0"
     },
     "minimum-stability": "dev",
