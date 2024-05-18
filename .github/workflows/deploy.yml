@@ -20,4 +20,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
+          fingerprint: ${{ secrets.FINGERPRINT }}
           script: /opt/website/.github/scripts/deploy.sh
