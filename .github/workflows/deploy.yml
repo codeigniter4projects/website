@@ -21,4 +21,5 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           fingerprint: ${{ secrets.FINGERPRINT }}
+          debug: true
           script: /opt/website/.github/scripts/deploy.sh
