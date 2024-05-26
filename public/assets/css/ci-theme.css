@@ -2124,3 +2124,34 @@ html.dark-theme #discuss-icon-holder {
 html.dark-theme #discuss-icon {
     fill: rgba(221, 72, 20, 0.9);
 }
+
+.inner-page-text-box {
+    padding: 32px;
+}
+
+.cta-btn {
+    margin: 0;
+    float: none;
+    display: inline-block;
+}
+
+.cta-btn:not(:first-of-type) {
+    margin-left: 1rem;
+}
+
+ul li {
+    margin-top: 1rem;
+    line-height: 1.5em;
+}
+
+.warning {
+    padding: 10px 32px;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+.inner-page-text-box {
+    margin: 32px auto;
+}
