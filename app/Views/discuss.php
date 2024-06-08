@@ -28,7 +28,7 @@
         <div class="inner-page-text-box">
             <div class="inner-page-text-box-title">Forum</div>
             <p>
-                Our forum has been setup using MyBB, with five main categories: <br />
+                Our forum has been setup using MyBB (MyBulletinBoard), with five main categories:
             </p>
             <ul>
                 <li>General (news & discussion, lounge, events, and regional user groups)</li>
@@ -39,11 +39,10 @@
                 <li>External Resources (addins, jobs, learn more, and spotlight)</li>
             </ul>
             <p>
-                The forum is where you can ask for help or discuss issues you are having with framework.<br />
-                <a href="https://forum.codeigniter.com" class="buttons" target="_blank">Visit The Forum</a>
+              The forum is where you can ask for help or discuss issues you are having with framework.
             </p>
-            <br /><br />
-        </div><!--inner-page-text-box ende-->
+            <a href="https://forum.codeigniter.com" class="buttons cta-btn" target="_blank">Visit The Forum</a>
+        </div><!--inner-page-text-box ends here-->
 
         <div class="clr"></div>
 
@@ -56,10 +55,7 @@
                    class="link-primary" target="_blank">signup</a> for it :)
             </p>
 
-            <p>
-                <a href="https://join.slack.com/t/codeigniterchat/shared_invite/zt-rl30zw00-obL1Hr1q1ATvkzVkFp8S0Q" class="buttons" target="_blank">Slack</a>
-            </p>
-            <br /><br />
+            <a href="https://join.slack.com/t/codeigniterchat/shared_invite/zt-rl30zw00-obL1Hr1q1ATvkzVkFp8S0Q" class="buttons cta-btn" target="_blank">Visit Slack Channel</a>
         </div><!--inner-page-text-box ends here-->
 
         <div class="clr"></div>
@@ -76,11 +72,10 @@
             <p>
                 GitHub issues are also used for tracking planned and approved enhancements, often tied in to specific releases.
             </p>
-            <p>
-                <a href="https://github.com/bcit-ci/CodeIgniter/" class="buttons" target="_blank">CodeIgniter 3</a>
-                <a href="https://github.com/codeigniter4/codeigniter4/" class="buttons" target="_blank">CodeIgniter 4</a>
-            </p>
-            <br /><br />
+
+            <a href="https://github.com/bcit-ci/CodeIgniter/" class="buttons cta-btn" target="_blank">CodeIgniter 3</a>
+            <a href="https://github.com/codeigniter4/codeigniter4/" class="buttons cta-btn" target="_blank">CodeIgniter 4</a>
+
         </div><!--inner-page-text-box ends here-->
 
         <div class="clr"></div>
