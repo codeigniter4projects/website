@@ -32,6 +32,7 @@
         "psr/container": "^2.0"
     },
     "require-dev": {
+        "codeigniter/coding-standard": "1.7.*",
         "codeigniter4/devkit": "^1.0",
         "phpunit/phpunit": "^9.6",
         "tatter/patches": "^2.0"
