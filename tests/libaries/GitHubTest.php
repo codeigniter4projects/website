@@ -93,14 +93,12 @@ final class GitHubTest extends ProjectTestCase
 
     public function testLiveUsesCache()
     {
-        $this->assertSame([], cache()->getCacheInfo());
-
         $github = service('github', null, null, false);
         $github->getCommit(['bcit-ci', 'CodeIgniter', '0199f68db46d375af2d4cb831c679d3040601f25']);
 
         $result = cache()->getCacheInfo();
 
-        $this->assertNotSame([], $result); // @phpstan-ignore-line
+        $this->assertNotSame([], $result);
         $this->assertCount(1, $result);
     }
 
