@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d8cb7d500fbd44646bd14269b53f5e9",
+    "content-hash": "159838e853da675888ca4fa4a5bd4ac4",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -2495,28 +2495,28 @@
         },
         {
             "name": "codeigniter/coding-standard",
-            "version": "v1.7.16",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CodeIgniter/coding-standard.git",
-                "reference": "8b2c0de625e4b5c9d7cd3c0b34bc30fba61a86ea"
+                "reference": "a523fd030be6360123a88655f39f0eb1650ee4bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CodeIgniter/coding-standard/zipball/8b2c0de625e4b5c9d7cd3c0b34bc30fba61a86ea",
-                "reference": "8b2c0de625e4b5c9d7cd3c0b34bc30fba61a86ea",
+                "url": "https://api.github.com/repos/CodeIgniter/coding-standard/zipball/a523fd030be6360123a88655f39f0eb1650ee4bf",
+                "reference": "a523fd030be6360123a88655f39f0eb1650ee4bf",
                 "shasum": ""
             },
             "require": {
                 "ext-tokenizer": "*",
                 "friendsofphp/php-cs-fixer": "^3.50",
-                "nexusphp/cs-config": "<=3.18.0",
-                "php": "^7.4 || ^8.0"
+                "nexusphp/cs-config": "^3.19.0",
+                "php": "^8.1"
             },
             "require-dev": {
-                "nexusphp/tachycardia": "^1.3",
+                "nexusphp/tachycardia": "^2.1",
                 "phpstan/phpstan": "^1.0",
-                "phpunit/phpunit": "^9.5"
+                "phpunit/phpunit": "^10.5"
             },
             "type": "library",
             "autoload": {
@@ -2545,7 +2545,7 @@
                 "slack": "https://codeigniterchat.slack.com",
                 "source": "https://github.com/CodeIgniter/coding-standard"
             },
-            "time": "2024-05-18T12:39:28+00:00"
+            "time": "2024-06-16T15:51:42+00:00"
         },
         {
             "name": "codeigniter4/devkit",
@@ -3522,33 +3522,33 @@
         },
         {
             "name": "nexusphp/cs-config",
-            "version": "v3.18.0",
+            "version": "v3.23.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NexusPHP/cs-config.git",
-                "reference": "8187fab52c7c4822579e3bbcb3c8bee0c0058b05"
+                "reference": "323c8ca9c86a85d8cf9990e95079a7734bfbf4e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NexusPHP/cs-config/zipball/8187fab52c7c4822579e3bbcb3c8bee0c0058b05",
-                "reference": "8187fab52c7c4822579e3bbcb3c8bee0c0058b05",
+                "url": "https://api.github.com/repos/NexusPHP/cs-config/zipball/323c8ca9c86a85d8cf9990e95079a7734bfbf4e6",
+                "reference": "323c8ca9c86a85d8cf9990e95079a7734bfbf4e6",
                 "shasum": ""
             },
             "require": {
                 "ext-tokenizer": "*",
-                "friendsofphp/php-cs-fixer": "^3.35",
-                "php": "^8.0.1"
+                "friendsofphp/php-cs-fixer": "^3.57.1",
+                "php": "^8.1"
             },
             "conflict": {
                 "liaison/cs-config": "*"
             },
             "require-dev": {
-                "nexusphp/tachycardia": "^1.4",
+                "nexusphp/tachycardia": "^2.1",
                 "phpstan/extension-installer": "^1.3",
                 "phpstan/phpstan": "^1.10",
                 "phpstan/phpstan-phpunit": "^1.3",
                 "phpstan/phpstan-strict-rules": "^1.5",
-                "phpunit/phpunit": "^9.6"
+                "phpunit/phpunit": "^10.5 || ^11.0"
             },
             "type": "library",
             "extra": {
@@ -3577,17 +3577,7 @@
                 "slack": "https://nexusphp.slack.com",
                 "source": "https://github.com/NexusPHP/cs-config.git"
             },
-            "funding": [
-                {
-                    "url": "https://www.paypal.me/paulbalandan",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/paulbalandan",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-10-13T04:02:43+00:00"
+            "time": "2024-06-16T15:46:10+00:00"
         },
         {
             "name": "nexusphp/tachycardia",
