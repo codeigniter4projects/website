@@ -295,9 +295,9 @@ class Blog
         // Since the plugin doesn't support video embeds, yet,
         // wire our own up. The syntax for video embeds is
         //     ![[ https://youtube.com/watch?v=xlkjsdfhlk ]]
-        preg_match_all('|!video\[([\s\w:/.?=&;]*)\]|i', $html, $matches);
+        $result = preg_match_all('|!video\[([\s\w:/.?=&;]*)\]|i', $html, $matches);
 
-        if ($matches === []) {
+        if ($result === false || $result === 0) {
             return $html;
         }
 
