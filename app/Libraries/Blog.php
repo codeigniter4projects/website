@@ -297,7 +297,7 @@ class Blog
         //     ![[ https://youtube.com/watch?v=xlkjsdfhlk ]]
         $result = preg_match_all('|!video\[([\s\w:/.?=&;]*)\]|i', $html, $matches);
 
-        if ($result === false || $result === 0) {
+        if ($result < 1) {
             return $html;
         }
 
