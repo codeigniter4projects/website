@@ -1,4 +1,5 @@
 <?php
+
 /**
  *  embedVideo ()
  * -----------------------------------------------------------------------
@@ -36,7 +37,7 @@ if (! function_exists('embedVideo')) {
             $code = $result['v'] ?? null;
         }
 
-        if (isset($code) && ! empty($code)) {
+        if (! in_array($code, ['', null, '0', []], true)) {
             return '
 				<iframe width="' . $width . '" height="' . $height . '"
 					src="https://www.youtube.com/embed/' . $code . '" frameborder="0"
