@@ -19,7 +19,7 @@ class Download extends BaseController
                 'v4link' => end($releases['framework4'])->download_url,
             ];
         } catch (ClientExceptionInterface $e) {
-            log_message('error', '[' . __METHOD__ . '] ' . get_class($e) . ': ' . $e->getMessage());
+            log_message('error', '[' . __METHOD__ . '] ' . $e::class . ': ' . $e->getMessage());
 
             $data = [
                 'v3name' => '<em>unknown</em>',

@@ -18,7 +18,7 @@ class Home extends BaseController
                 'forks_count'      => number_format($repos['codeigniter4']->forks_count),
             ];
         } catch (ClientExceptionInterface $e) {
-            log_message('error', '[' . __METHOD__ . '] ' . get_class($e) . ': ' . $e->getMessage());
+            log_message('error', '[' . __METHOD__ . '] ' . $e::class . ': ' . $e->getMessage());
 
             $data = [
                 'html_url'         => 'https://github.com/codeigniter4/CodeIgniter4',

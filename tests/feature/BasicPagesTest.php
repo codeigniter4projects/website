@@ -29,8 +29,6 @@ final class BasicPagesTest extends ProjectTestCase
         $github = $this->getMockBuilder(GitHub::class)
             ->disableOriginalConstructor()
             ->disableOriginalClone()
-            ->disableArgumentCloning()
-            ->disallowMockingUnknownTypes()
             ->onlyMethods(['getRepos'])
             ->getMock();
         $github->method('getRepos')->willThrowException(
@@ -38,9 +36,9 @@ final class BasicPagesTest extends ProjectTestCase
                 'cURL error 6: Could not resolve host: api.github.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.github.com/repos/bcit-ci/CodeIgniter',
                 new Request(
                     'GET',
-                    'https://api.github.com/repos/bcit-ci/CodeIgniter'
-                )
-            )
+                    'https://api.github.com/repos/bcit-ci/CodeIgniter',
+                ),
+            ),
         );
         Services::injectMock('github', $github);
 
