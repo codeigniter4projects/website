@@ -17,7 +17,7 @@ class Contribute extends BaseController
                 $data['contributors'][$id] = array_slice($contributors, 0, 12);
             }
         } catch (ClientExceptionInterface $e) {
-            log_message('error', '[' . __METHOD__ . '] ' . get_class($e) . ': ' . $e->getMessage());
+            log_message('error', '[' . __METHOD__ . '] ' . $e::class . ': ' . $e->getMessage());
 
             $data['contributors'] = null;
         }

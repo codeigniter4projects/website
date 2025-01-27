@@ -1,6 +1,7 @@
 <?php
 
 use App\Entities\GitHub\Contributor;
+use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\Support\ProjectTestCase;
 
 /**
@@ -8,9 +9,7 @@ use Tests\Support\ProjectTestCase;
  */
 final class ContributorTest extends ProjectTestCase
 {
-    /**
-     * @dataProvider provideStars
-     */
+    #[DataProvider('provideStars')]
     public function testStars(int $contributions, string $expected)
     {
         $contributor = new Contributor(['contributions' => $contributions]);

@@ -143,7 +143,7 @@ class GitHub
 
             foreach ($this->config->repos as $id => $segments) {
                 // We only care about frameworks
-                if (strpos($id, 'framework') === false) {
+                if (! str_contains($id, 'framework')) {
                     continue;
                 }
 
