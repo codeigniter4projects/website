@@ -116,7 +116,7 @@ class Blog
         foreach ($files as $file) {
             foreach ($slugs as $slug => $count) {
                 try {
-                    if (stripos($file, $slug) !== false) {
+                    if (str_contains(strtolower($file), strtolower($slug))) {
                         $posts[$count] = $this->getPost($slug);
                     }
                 }
