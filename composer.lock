@@ -2495,16 +2495,16 @@
         },
         {
             "name": "codeigniter/coding-standard",
-            "version": "v1.8.6",
+            "version": "v1.8.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CodeIgniter/coding-standard.git",
-                "reference": "af02350f465bce02cc7f26266a3c3e2d4adf1323"
+                "reference": "ad9452b16378111f30deb6da67b3fcd95c12658c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CodeIgniter/coding-standard/zipball/af02350f465bce02cc7f26266a3c3e2d4adf1323",
-                "reference": "af02350f465bce02cc7f26266a3c3e2d4adf1323",
+                "url": "https://api.github.com/repos/CodeIgniter/coding-standard/zipball/ad9452b16378111f30deb6da67b3fcd95c12658c",
+                "reference": "ad9452b16378111f30deb6da67b3fcd95c12658c",
                 "shasum": ""
             },
             "require": {
@@ -2545,7 +2545,7 @@
                 "slack": "https://codeigniterchat.slack.com",
                 "source": "https://github.com/CodeIgniter/coding-standard"
             },
-            "time": "2025-07-05T13:58:17+00:00"
+            "time": "2025-07-18T15:04:10+00:00"
         },
         {
             "name": "codeigniter4/devkit",
@@ -3196,16 +3196,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v3.80.0",
+            "version": "v3.84.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git",
-                "reference": "e49ed46b8f7adcc451d4cd2ed34eaae33372bc60"
+                "reference": "38dad0767bf2a9b516b976852200ae722fe984ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/e49ed46b8f7adcc451d4cd2ed34eaae33372bc60",
-                "reference": "e49ed46b8f7adcc451d4cd2ed34eaae33372bc60",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/38dad0767bf2a9b516b976852200ae722fe984ca",
+                "reference": "38dad0767bf2a9b516b976852200ae722fe984ca",
                 "shasum": ""
             },
             "require": {
@@ -3289,7 +3289,7 @@
             ],
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues",
-                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.80.0"
+                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.84.0"
             },
             "funding": [
                 {
@@ -3297,7 +3297,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-07-06T21:00:51+00:00"
+            "time": "2025-07-15T18:21:57+00:00"
         },
         {
             "name": "mikey179/vfsstream",
@@ -3464,21 +3464,21 @@
         },
         {
             "name": "nexusphp/cs-config",
-            "version": "v3.26.0",
+            "version": "v3.26.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NexusPHP/cs-config.git",
-                "reference": "4a76244ff425c1b91aa88d24541d7a1a44d6fe34"
+                "reference": "fbbeb83f0601af5737174682cc7fae1da6d0a7db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NexusPHP/cs-config/zipball/4a76244ff425c1b91aa88d24541d7a1a44d6fe34",
-                "reference": "4a76244ff425c1b91aa88d24541d7a1a44d6fe34",
+                "url": "https://api.github.com/repos/NexusPHP/cs-config/zipball/fbbeb83f0601af5737174682cc7fae1da6d0a7db",
+                "reference": "fbbeb83f0601af5737174682cc7fae1da6d0a7db",
                 "shasum": ""
             },
             "require": {
                 "ext-tokenizer": "*",
-                "friendsofphp/php-cs-fixer": "^3.76",
+                "friendsofphp/php-cs-fixer": "^3.84",
                 "php": "^8.1"
             },
             "conflict": {
@@ -3514,7 +3514,7 @@
                 "slack": "https://nexusphp.slack.com",
                 "source": "https://github.com/NexusPHP/cs-config.git"
             },
-            "time": "2025-07-04T13:37:29+00:00"
+            "time": "2025-07-15T18:41:26+00:00"
         },
         {
             "name": "nexusphp/tachycardia",
@@ -8444,15 +8444,15 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.1"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.1"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
