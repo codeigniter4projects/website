@@ -65,6 +65,6 @@ jobs:
       - name: Run Infection for added files only
         run: |
           git fetch --depth=1 origin $GITHUB_BASE_REF
-          infection --threads=max --git-diff-lines --git-diff-base=origin/$GITHUB_BASE_REF --ignore-msi-with-no-mutations --only-covered --logger-github
+          infection --threads=max --git-diff-lines --git-diff-base=origin/$GITHUB_BASE_REF --ignore-msi-with-no-mutations --logger-github
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
