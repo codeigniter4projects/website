@@ -32,7 +32,7 @@
 
 
         <div class="inner-page-text-box">
-            <div class="inner-page-text-box-title">Privacy Policy</div>
+            <div class="inner-page-text-box-title">Trademark Use Policy</div>
             <p>
                 You are welcome to use the CodeIgniter logo in your project, provided that you ...
             </p>
@@ -72,7 +72,7 @@
         <div class="clr"></div>
 
         <div class="inner-page-text-box">
-            <div class="inner-page-text-box-title">Website data</div>
+            <div class="inner-page-text-box-title">Third Party Policy</div>
             <p>
                 Mention of third party companies and products on this web site is for informational purposes
                 only and constitutes neither an endorsement nor a recommendation.
