@@ -22,7 +22,7 @@
         "slack": "https://codeigniterchat.slack.com"
     },
     "require": {
-        "php": "^8.1",
+        "php": "^8.2",
         "codeigniter4/cache": "^1.0",
         "codeigniter4/framework": "^4.2",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -59,7 +59,7 @@
             "php-http/discovery": true
         },
         "platform": {
-            "php": "8.1"
+            "php": "8.2"
         },
         "optimize-autoloader": true,
         "preferred-install": "dist",
