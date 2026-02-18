@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7d6da86402c6ba44ddfc733a60355b7d",
+    "content-hash": "1127e64811ff884eabfaaed7f8a5a54e",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -2507,28 +2507,28 @@
         },
         {
             "name": "codeigniter/coding-standard",
-            "version": "v1.8.9",
+            "version": "v1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CodeIgniter/coding-standard.git",
-                "reference": "2f04b8daf72c3afa2da032c4d912c2c108b3762b"
+                "reference": "c7d227d3d3d0f2270405c8317c5e8c55f2262956"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CodeIgniter/coding-standard/zipball/2f04b8daf72c3afa2da032c4d912c2c108b3762b",
-                "reference": "2f04b8daf72c3afa2da032c4d912c2c108b3762b",
+                "url": "https://api.github.com/repos/CodeIgniter/coding-standard/zipball/c7d227d3d3d0f2270405c8317c5e8c55f2262956",
+                "reference": "c7d227d3d3d0f2270405c8317c5e8c55f2262956",
                 "shasum": ""
             },
             "require": {
                 "ext-tokenizer": "*",
-                "friendsofphp/php-cs-fixer": "^3.92",
-                "nexusphp/cs-config": "^3.27",
-                "php": "^8.1"
+                "friendsofphp/php-cs-fixer": "^3.94",
+                "nexusphp/cs-config": "^3.28",
+                "php": "^8.2"
             },
             "require-dev": {
                 "nexusphp/tachycardia": "^2.4",
                 "phpstan/phpstan": "^2.1",
-                "phpunit/phpunit": "^10.5 || ^11.5"
+                "phpunit/phpunit": "^11.5 || ^12.5"
             },
             "type": "library",
             "autoload": {
@@ -2557,7 +2557,7 @@
                 "slack": "https://codeigniterchat.slack.com",
                 "source": "https://github.com/CodeIgniter/coding-standard"
             },
-            "time": "2025-12-12T13:19:32+00:00"
+            "time": "2026-02-17T18:41:24+00:00"
         },
         {
             "name": "codeigniter4/devkit",
@@ -3471,33 +3471,30 @@
         },
         {
             "name": "nexusphp/cs-config",
-            "version": "v3.27.0",
+            "version": "v3.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NexusPHP/cs-config.git",
-                "reference": "c2bfb57a4eb780e6a75dbd13551964da5d32c450"
+                "reference": "9ec3b8f99dc6eb1b96c32dc341ab8066529af2ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NexusPHP/cs-config/zipball/c2bfb57a4eb780e6a75dbd13551964da5d32c450",
-                "reference": "c2bfb57a4eb780e6a75dbd13551964da5d32c450",
+                "url": "https://api.github.com/repos/NexusPHP/cs-config/zipball/9ec3b8f99dc6eb1b96c32dc341ab8066529af2ba",
+                "reference": "9ec3b8f99dc6eb1b96c32dc341ab8066529af2ba",
                 "shasum": ""
             },
             "require": {
                 "ext-tokenizer": "*",
-                "friendsofphp/php-cs-fixer": "^3.92",
-                "php": "^8.1"
-            },
-            "conflict": {
-                "liaison/cs-config": "*"
+                "friendsofphp/php-cs-fixer": "^3.94",
+                "php": "^8.2"
             },
             "require-dev": {
-                "nexusphp/tachycardia": "^2.1",
+                "nexusphp/tachycardia": "^2.4",
                 "phpstan/extension-installer": "^1.4",
                 "phpstan/phpstan": "^2.1",
                 "phpstan/phpstan-phpunit": "^2.0",
                 "phpstan/phpstan-strict-rules": "^2.0",
-                "phpunit/phpunit": "^10.5 || ^11.0"
+                "phpunit/phpunit": "^11.5 || ^12.5"
             },
             "type": "library",
             "autoload": {
@@ -3521,7 +3518,7 @@
                 "slack": "https://nexusphp.slack.com",
                 "source": "https://github.com/NexusPHP/cs-config.git"
             },
-            "time": "2025-12-12T13:07:34+00:00"
+            "time": "2026-02-17T12:08:09+00:00"
         },
         {
             "name": "nexusphp/tachycardia",
@@ -8720,5 +8717,5 @@
     "platform-overrides": {
         "php": "8.2"
     },
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.6.0"
 }
