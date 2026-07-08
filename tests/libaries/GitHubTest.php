@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Entities\GitHub;
 
 use App\Libraries\GitHub;

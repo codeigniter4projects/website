@@ -7,11 +7,13 @@ parameters:
 	bootstrapFiles:
 		- vendor/codeigniter4/framework/system/Test/bootstrap.php
 	excludePaths:
-		- app/Commands/Test.php
 		- app/Config/Routes.php
 		- app/Views/*
 	ignoreErrors:
 		- '#Unsafe usage of new static\(\)*#'
+		-
+			identifier: method.alreadyNarrowedType
+			path: tests/libaries/GitHubTest.php
 	universalObjectCratesClasses:
 		- CodeIgniter\Entity\Entity
 		- Faker\Generator

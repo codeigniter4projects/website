@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Exceptions\BlogException;
 use App\Libraries\Blog;
 use CodeIgniter\Config\Factories;

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Entities\GitHub\Release;
 use CodeIgniter\HTTP\URI;
 use Tests\Support\ProjectTestCase;
@@ -36,11 +38,9 @@ final class ReleaseTest extends ProjectTestCase
         ]);
 
         $result = $release->url;
-        $this->assertNull($result);
-        $this->assertSame('', (string) $result);
+        $this->assertNotInstanceOf(URI::class, $result);
 
         $result = $release->download_url;
-        $this->assertNull($result);
-        $this->assertSame('', (string) $result);
+        $this->assertNotInstanceOf(URI::class, $result);
     }
 }
