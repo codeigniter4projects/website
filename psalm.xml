@@ -10,6 +10,7 @@
     findUnusedBaselineEntry="true"
     findUnusedCode="false"
     errorBaseline="psalm-baseline.xml"
+    ensureOverrideAttribute="false"
 >
     <projectFiles>
         <directory name="app/" />
