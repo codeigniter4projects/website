@@ -301,11 +301,7 @@ class Blog
             return $html;
         }
 
-        for ($i = 0; $i < count($matches) - 1; $i++) {
-            if (empty($matches[0]) || empty($matches[1])) {
-                continue;
-            }
-
+        for ($i = 0; $i < count($matches[0]); $i++) {
             $html = str_replace($matches[0][$i], embedVideo($matches[1][$i]), $html);
         }
 

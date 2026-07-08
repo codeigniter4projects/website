@@ -37,10 +37,8 @@ final class ReleaseTest extends ProjectTestCase
 
         $result = $release->url;
         $this->assertNull($result);
-        $this->assertSame('', (string) $result);
 
         $result = $release->download_url;
         $this->assertNull($result);
-        $this->assertSame('', (string) $result);
     }
 }

@@ -40,7 +40,7 @@ abstract class ProjectTestCase extends CIUnitTestCase
      * Note that running "all" runs migrations in date order,
      * but specifying namespaces runs them in namespace order (then date)
      *
-     * @var array<int, string>|string|null
+     * @var list<string>|string|null
      */
     protected $namespace = 'App';
 
