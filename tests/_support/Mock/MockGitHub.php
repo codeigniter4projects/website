@@ -30,8 +30,6 @@ class MockGitHub extends GitHub
 
     /**
      * Sets the next API call to throw an exception.
-     *
-     * @return $this
      */
     public function throws(bool $throws = true): self
     {

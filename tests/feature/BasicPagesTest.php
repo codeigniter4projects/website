@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Libraries\GitHub;
 use CodeIgniter\Test\DatabaseTestTrait;
 use CodeIgniter\Test\FeatureTestTrait;

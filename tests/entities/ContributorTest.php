@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Entities\GitHub\Contributor;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\Support\ProjectTestCase;
